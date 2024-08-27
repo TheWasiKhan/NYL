@@ -1,5 +1,0 @@
-SRC_fchdfsUILNM1_OUTPUT --> ds_staging_conv/uw_datamart_upto_uilnm1_bo_2_bo
-
-SRC_HiveHorebdWaivedCnt	-->	pdm.fact_nb_cnt_insured_reqr AS cir
-	and upper(trim(cir.reqr_cd_nk)) in ('HOR','HOR-EBD')
-	and cir.reqr_uw_sts_cd = 'Waived'
