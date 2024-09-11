@@ -1,1 +1,15 @@
-m_RsUWTAContractDatamartGetReqCnt_BO
+PzUWTAContractDataMartUptoINFDCSSet3_BO	uw_datamart_upto_infdcs_bo_3_bo	Truncate & load
+
+15--
+PzFactNbMVR1_Adv	fact_nb_mvr_srcrecs1	Truncate & load
+PzFactNbMVR2	fact_nb_mvr_srcrecs2	Truncate & load
+PzFactNbMVR3_Adv	fact_nb_mvr	SCD TYPE1
+PzFactNbPrescriptionTracking	fact_nb_prescription_tracking	SCD TYPE1
+PzFactNbPrescriptionTracking1	fact_nb_prescription_tracking_interim1	Truncate & load
+PzFactNbPrescriptionTracking2	fact_nb_prescription_tracking_interim2	Truncate & load
+PzFactNbPrescriptionTrackingCDC	fact_nb_prescription_tracking	SCD TYPE1
+
+PzFactNbSurgery_1	fact_nb_surgery	Truncate & load
+	
+PzFactNbSurgery_SrcRecs1	fact_nb_surgery_source1	Truncate & load
+PzFactNbSurgery_SrcRecs2	fact_nb_surgery_source2	Truncate & load
