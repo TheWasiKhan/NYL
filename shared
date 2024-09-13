@@ -1,3 +1,1 @@
-if Trim(NullToEmpty(lnkSrcRecs.client_ref)) <> '' Then num(lnkSrcRecs.client_ref) else Trim(NullToEmpty(lnkSrcRecs.client_ref))
-[11:11 AM] Sharma, Kuldeep
-IIF(IIF(ISNULL(LTRIM(RTRIM(client_ref))),'',client_ref)!='',(client_ref),IIF(ISNULL(LTRIM(RTRIM(client_ref))),'',client_ref))
+
