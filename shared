@@ -1,16 +1,9 @@
-original:
-I have observed in the source Query which is shared by you the data counts between the production and QA environments. 
-Data count in the production environment matches; however, with PBC schema it does not match in the QA environment .
-For your reference, I have attached the relevant query with PBC Schema.
-Please let me know if you require any further information or assistance regarding this Issue.
- 
- 
- 
-#1.
-Upon reviewing the source query you provided, I noticed discrepancies in data counts between the production and QA environments. The data count matches in the production environment, but there is a mismatch with the PBC schema in QA.
- 
-For your reference, I have attached the relevant query with the PBC schema. Please let me know if you need any further information or assistance with this issue.
- 
-#2.Upon reviewing the source query you provided, I noticed differences in data counts between the production and QA environments. The data count aligns with the production environment but does not match the PBC schema in QA.
- 
-I’ve attached the relevant query with the PBC schema for reference. Please let me know if you need any further details or support with this issue.
+PzLiftPegaConsolidatedDetailLoad
+PzLiftPegaConsolidatedDetailSrc1EdbStat
+PzLiftPegaConsolidatedDetailSrc1MaxAudit
+PzLiftPegaConsolidatedDetailSrc1ModlElig
+PzLiftPegaConsolidatedDetailSrc1ModlExcl
+PzLiftPegaConsolidatedDetailSrc1MortStat
+PzLiftPegaConsolidatedDetailSrc1SmkStat
+PzLiftPegaConsolidatedDetailSrc1Trans
+PzLiftPegaConsolidatedDetailSrc2Trans
