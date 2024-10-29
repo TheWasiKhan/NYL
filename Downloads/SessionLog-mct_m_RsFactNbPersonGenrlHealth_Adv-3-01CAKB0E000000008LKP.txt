@@ -1,0 +1,6 @@
+2024-07-28T09:55:55.505+00:00 <DisnextAsyncThread-1622> INFO: ExecutionId [01CAKB0E000000008LKP].
+2024-07-28T09:55:55.505+00:00 <DisnextAsyncThread-1622> INFO: RequestId [a4d526cbdc684caa8af556015a632509].
+2024-07-28T09:55:55.950+00:00 <DisnextAsyncThread-1622> INFO: Sending request to Job compilation service.
+2024-07-28T09:55:58.677+00:00 <DisnextAsyncThread-1622> INFO: Job compilation service responded with status: [false]
+2024-07-28T09:55:59.094+00:00 <DisnextAsyncThread-1622> SEVERE: Disnext_internal_error_The job compilation service failed with message [The mapping compilation failed. Cause: [Cannot cast bigint to date/time].]. Please refer to the compilation log for further details.
+2024-07-28T09:55:59.094+00:00 <DisnextAsyncThread-1622> INFO: Spark Mapping Ended with state: Failed

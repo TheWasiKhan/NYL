@@ -1,0 +1,623 @@
+Agent Group Id: 01CAKB25000000000009
+Agent Group Name: EDM_CDI_SA_GRP
+Agent Name: edm.idmc.sa4.dev.nylcloud.com
+Agent Id: 01CAKB0800000000000W
+Task Name: m_RsFactNbDeclarationDetailTrans3Set1
+Task Type: MTT_DP
+Task Id: 01CAKB17000000000CZA
+Run Id: 6
+Service Id: 2451861
+Started By: wkhan01
+Run Context Type: ICS_UI
+07/31/2024 17:47:19 **** Importing Connection: Conn_01CAKB0B00000000002M ...
+07/31/2024 17:47:19 **** Importing Source Definition: DUMMY_SRC_HiveDimNbRequirementRef ...
+07/31/2024 17:47:19 **** Importing Source Definition: DUMMY_SRC_HiveRequirement ...
+07/31/2024 17:47:19 **** Importing Source Definition: fact_nb_declaration_detail_declaration2 ...
+07/31/2024 17:47:19 **** Importing Source Definition: fact_nb_declaration_detail_declaration1 ...
+07/31/2024 17:47:19 **** Importing Target Definition: preview_01CAKB17000000000CZA_DataPreviewTarget_0002_01_csv ...
+07/31/2024 17:47:19 **** Importing Target Definition: preview_01CAKB17000000000CZA_DataPreviewTarget_0003_01_csv ...
+07/31/2024 17:47:19 **** Importing Target Definition: preview_01CAKB17000000000CZA_DataPreviewTarget_0004_01_csv ...
+07/31/2024 17:47:19 **** Importing Target Definition: preview_01CAKB17000000000CZA_DataPreviewTarget_0007_01_csv ...
+07/31/2024 17:47:19 **** Importing Target Definition: preview_01CAKB17000000000CZA_DataPreviewTarget_000B_01_csv ...
+07/31/2024 17:47:19 **** Importing Target Definition: preview_01CAKB17000000000CZA_DataPreviewTarget_0008_01_csv ...
+07/31/2024 17:47:19 **** Importing Target Definition: preview_01CAKB17000000000CZA_DataPreviewTarget_0005_01_csv ...
+07/31/2024 17:47:19 **** Importing Target Definition: preview_01CAKB17000000000CZA_DataPreviewTarget_0006_01_csv ...
+07/31/2024 17:47:19 **** Importing Target Definition: preview_01CAKB17000000000CZA_DataPreviewTarget_000C_01_csv ...
+07/31/2024 17:47:19 **** Importing Target Definition: preview_01CAKB17000000000CZA_DataPreviewTarget_0009_01_csv ...
+07/31/2024 17:47:19 **** Importing Target Definition: preview_01CAKB17000000000CZA_DataPreviewTarget_000D_01_csv ...
+07/31/2024 17:47:19 **** Importing Target Definition: preview_01CAKB17000000000CZA_DataPreviewTarget_0001_01_csv ...
+07/31/2024 17:47:19 **** Importing Target Definition: preview_01CAKB17000000000CZA_DataPreviewTarget_000A_01_csv ...
+07/31/2024 17:47:19 **** Importing SessionConfig: default_session_config ...
+    <Warning> :  The Error Log DB Connection value should have Relational: as the prefix.
+    <Warning> :  Invalid value  for attribute Error Log DB Connection. Will use the default value 
+    Validating Source Definition  DUMMY_SRC_HiveRequirement...
+    Validating Source Definition  DUMMY_SRC_HiveDimNbRequirementRef...
+    Validating Source Definition  fact_nb_declaration_detail_declaration1...
+    Validating Source Definition  fact_nb_declaration_detail_declaration2...
+    Validating Target Definition  preview_01CAKB17000000000CZA_DataPreviewTarget_000A_01_csv...
+    Validating Target Definition  preview_01CAKB17000000000CZA_DataPreviewTarget_0001_01_csv...
+    Validating Target Definition  preview_01CAKB17000000000CZA_DataPreviewTarget_000D_01_csv...
+    Validating Target Definition  preview_01CAKB17000000000CZA_DataPreviewTarget_0009_01_csv...
+    Validating Target Definition  preview_01CAKB17000000000CZA_DataPreviewTarget_000C_01_csv...
+    Validating Target Definition  preview_01CAKB17000000000CZA_DataPreviewTarget_0006_01_csv...
+    Validating Target Definition  preview_01CAKB17000000000CZA_DataPreviewTarget_0005_01_csv...
+    Validating Target Definition  preview_01CAKB17000000000CZA_DataPreviewTarget_0008_01_csv...
+    Validating Target Definition  preview_01CAKB17000000000CZA_DataPreviewTarget_000B_01_csv...
+    Validating Target Definition  preview_01CAKB17000000000CZA_DataPreviewTarget_0007_01_csv...
+    Validating Target Definition  preview_01CAKB17000000000CZA_DataPreviewTarget_0004_01_csv...
+    Validating Target Definition  preview_01CAKB17000000000CZA_DataPreviewTarget_0003_01_csv...
+    Validating Target Definition  preview_01CAKB17000000000CZA_DataPreviewTarget_0002_01_csv...
+07/31/2024 17:47:20 **** Importing Mapping: Mapping0 ...
+    <Warning> :  transformation: JNR_JoinRequirementTbl - Invalid value Null is Higest Value for attribute Null ordering in detail. Will use the default value Null Is Highest Value    [transformation< JNR_JoinRequirementTbl > ] 
+    <Warning> :  transformation: JNR_JoinDimNbRequirementRef - Invalid value Null is Higest Value for attribute Null ordering in detail. Will use the default value Null Is Highest Value    [transformation< JNR_JoinDimNbRequirementRef > ] 
+Validating transformations of mapping Mapping0...
+Validating mapping variable(s).
+    <Warning> :  Invalid table attribute: Exec SQL
+    <Warning> :  Invalid table attribute: Exec SQL
+    <Warning> :  Invalid table attribute: Exec SQL
+    <Warning> :  Invalid table attribute: Exec SQL
+07/31/2024 17:47:20 **** Importing Workflow: wf_mtt_01CAKB17000000000CZA ...
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup source is static for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  invalid attribute Lookup cache directory name for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  invalid attribute Lookup Index Cache Size for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  invalid attribute Tracing Level for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  invalid attribute Lookup Data Cache Size for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  invalid attribute Cache File Name Prefix for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  invalid attribute Insert Else Update for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  invalid attribute Case Sensitive String Comparison for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  invalid attribute Re-cache from lookup source for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  invalid attribute Dynamic Lookup Cache for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  invalid attribute Null ordering for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  invalid attribute Subsecond Precision for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  invalid attribute Update Dynamic Cache Condition for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  invalid attribute Optional for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  invalid attribute Output Old Value On Update for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  invalid attribute Pre-build lookup cache for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  invalid attribute Lookup caching enabled for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  invalid attribute Lookup cache persistent for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  invalid attribute Sorted Input for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  invalid attribute Lookup Source Filter for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  invalid attribute Lookup Sql Override for element ATTRIBUTE    [Session< s_mtt_01CAKB17000000000CZA >  --> AmazonRedshiftV2_amazonredshift Lookup< AmazonRedshiftV2_amazonredshift Lookup > ] 
+    <Warning> :  Invalid value None for attribute Pushdown Optimization Context. Will use the default value None     [Session< s_mtt_01CAKB17000000000CZA > ] 
+    <Warning> :  The value entered is not a valid integer.
+    <Warning> :  Invalid value NO for attribute Fail task after wait time. Will use the default value 
+[Summary for Application Source Qualifier SRC_fchdfsDeclarationDetailTrans_2]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Application Source Qualifier SRC_fchdfsDeclarationDetailTrans_1]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Application Source Qualifier SRC_HiveDimNbRequirementRef]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Application Source Qualifier SRC_HiveRequirement]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Custom Transformation UN_FnlSrcRec]
+     Is a new repartition point.
+     Number of groups changed from 1 to 2.
+
+[Summary for Joiner JNR_JoinDimNbRequirementRef]
+     Is a new repartition point.
+     Partition type changed from None to Hash Auto Keys.
+Successfully extracted session instance [s_mtt_01CAKB17000000000CZA].  Starting repository sequence id is [-1783799828]
+======================================================================
+DIRECTOR> VAR_27085 [2024-07-31 17:47:20.343] Parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB17000000000CZA.param] is opened for [session [wf_mtt_01CAKB17000000000CZA.s_mtt_01CAKB17000000000CZA]].
+DIRECTOR> VAR_27062 [2024-07-31 17:47:20.344] Warning! Cannot find section for worklet [wf_mtt_01CAKB17000000000CZA] and folder [] in parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB17000000000CZA.param].
+DIRECTOR> TM_6014 [2024-07-31 17:47:20.344] Initializing session [s_mtt_01CAKB17000000000CZA] at [Wed Jul 31 17:47:20 2024].
+DIRECTOR> TM_6683 [2024-07-31 17:47:20.344] Repository Name: [XMLRepository]
+DIRECTOR> TM_6684 [2024-07-31 17:47:20.344] Server Name: [rDTM]
+DIRECTOR> TM_6686 [2024-07-31 17:47:20.344] Folder: []
+DIRECTOR> TM_6685 [2024-07-31 17:47:20.344] Workflow: [wf_mtt_01CAKB17000000000CZA] Run Instance Name: [] Run Id: [0]
+DIRECTOR> TM_6992 [2024-07-31 17:47:20.344] Operating System Type [Linux]
+DIRECTOR> TM_6101 [2024-07-31 17:47:20.344] Mapping name: Mapping0.
+DIRECTOR> TM_6964 [2024-07-31 17:47:20.346] Date format for the Session is [MM/DD/YYYY HH24:MI:SS.US]
+DIRECTOR> TM_6703 [2024-07-31 17:47:20.346] Session [s_mtt_01CAKB17000000000CZA] is run by 64-bit Integration Service  [], version [10.2.0 HotFix2], build [0320].
+MANAGER> PETL_24091 [2024-07-31 17:47:20.385] Thread [MANAGER] has the ID [1].
+MANAGER> PETL_24058 [2024-07-31 17:47:20.385] Running Partition Group [1].
+MANAGER> PETL_24000 [2024-07-31 17:47:20.385] Parallel Pipeline Engine initializing.
+MONITOR> PETL_24091 [2024-07-31 17:47:20.386] Thread [MONITOR] has the ID [2].
+MANAGER> PETL_24001 [2024-07-31 17:47:20.386] Parallel Pipeline Engine running.
+MANAGER> PETL_24003 [2024-07-31 17:47:20.386] Initializing session run.
+MAPPING> PETL_24091 [2024-07-31 17:47:20.387] Thread [MAPPING] has the ID [3].
+MAPPING> CMN_1569 [2024-07-31 17:47:20.390] Server Mode: [UNICODE]
+MAPPING> CMN_1570 [2024-07-31 17:47:20.390] Server Code page: [ISO 8859-1 Western European]
+MAPPING> TM_6151 [2024-07-31 17:47:20.390] The session sort order is [Binary].
+MAPPING> TM_6185 [2024-07-31 17:47:20.390] Warning. Code page validation is disabled in this session.
+MAPPING> CMN_65110 [2024-07-31 17:47:20.390] Current Timezone:[UTC -5:0]
+MAPPING> CMN_65111 [2024-07-31 17:47:20.391] Current Process ID:[59377]
+MAPPING> TM_6705 [2024-07-31 17:47:20.391] Session is running with test load option turned on for 10 rows.
+MAPPING> TM_6155 [2024-07-31 17:47:20.391] Using HIGH precision processing.
+MAPPING> TM_6180 [2024-07-31 17:47:20.391] Deadlock retry logic will not be implemented.
+MAPPING> TM_6187 [2024-07-31 17:47:20.391] Session target-based commit interval is [10000].
+MAPPING> PMJVM_42020 [2024-07-31 17:47:20.397] [INFO] Loaded library : /app/iics_agent_dir/apps/jdk/zulu8.70.0.52-sa-fx-jdk8.0.372/jre/lib/amd64/server/libjvm.so.
+MAPPING> PMJVM_42009 [2024-07-31 17:47:20.490] [INFO] Created Java VM successfully.
+MAPPING> SDKS_38029 [2024-07-31 17:47:20.586] Loaded plug-in 451600: [plugin description].
+MAPPING> SDKS_38024 [2024-07-31 17:47:20.623] Plug-in 451600 initialization complete.
+MAPPING> SDKS_38016 [2024-07-31 17:47:20.625] Reader SDK plug-in initialization complete.
+MAPPING> TM_6307 [2024-07-31 17:47:20.626] DTM error log disabled. 
+MAPPING> TE_7022 [2024-07-31 17:47:20.639] TShmWriter: Initialized
+MAPPING> DBG_21693 [2024-07-31 17:47:21.296] SRT_JoinDimNbRequirementRef_Srt1: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-07-31 17:47:21.472] For Transformation [SRT_JoinDimNbRequirementRef_Srt1], memory used is [1073741824] bytes and row size is 272 bytes.
+MAPPING> DBG_21693 [2024-07-31 17:47:21.489] SRT_JoinRequirementTbl_Srt0: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-07-31 17:47:21.622] For Transformation [SRT_JoinRequirementTbl_Srt0], memory used is [1073741824] bytes and row size is 180 bytes.
+MAPPING> DBG_21693 [2024-07-31 17:47:21.650] SRT_JoinRequirementTbl_Srt1: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-07-31 17:47:21.785] For Transformation [SRT_JoinRequirementTbl_Srt1], memory used is [1073741824] bytes and row size is 2188 bytes.
+MAPPING> DBG_21694 [2024-07-31 17:47:21.803] JNR_JoinRequirementTbl Partition [0]: Index cache size = [89478485], Data cache size = [178956970]
+MAPPING> TT_11098 [2024-07-31 17:47:21.803] The Joiner transformation [JNR_JoinRequirementTbl] is configured with the join algorithm: Sorted-Merge.
+MAPPING> DBG_21077 [2024-07-31 17:47:21.804] Create joiner cache on master relation : (Wed Jul 31 17:47:21 2024)
+MAPPING> CMN_1690 [2024-07-31 17:47:21.830] Created new data file [/data/EDM_Agency/Cache//PMJNR-1783799083_35_0.dat] and index file [/data/EDM_Agency/Cache//PMJNR-1783799083_35_0.idx] for Joiner [JNR_JoinRequirementTbl].
+MAPPING> DBG_21603 [2024-07-31 17:47:21.830] Open master relation cache for detail joiner : (Wed Jul 31 17:47:21 2024)
+MAPPING> DBG_21693 [2024-07-31 17:47:21.831] SRT_JoinDimNbRequirementRef_Srt0: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-07-31 17:47:21.965] For Transformation [SRT_JoinDimNbRequirementRef_Srt0], memory used is [1073741824] bytes and row size is 2352 bytes.
+MAPPING> DBG_21694 [2024-07-31 17:47:21.992] JNR_JoinDimNbRequirementRef Partition [0]: Index cache size = [89478485], Data cache size = [178956970]
+MAPPING> TT_11098 [2024-07-31 17:47:21.992] The Joiner transformation [JNR_JoinDimNbRequirementRef] is configured with the join algorithm: Sorted-Merge.
+MAPPING> DBG_21077 [2024-07-31 17:47:21.992] Create joiner cache on master relation : (Wed Jul 31 17:47:21 2024)
+MAPPING> CMN_1690 [2024-07-31 17:47:22.018] Created new data file [/data/EDM_Agency/Cache//PMJNR-1783799083_39_0.dat] and index file [/data/EDM_Agency/Cache//PMJNR-1783799083_39_0.idx] for Joiner [JNR_JoinDimNbRequirementRef].
+MAPPING> DBG_21603 [2024-07-31 17:47:22.018] Open master relation cache for detail joiner : (Wed Jul 31 17:47:22 2024)
+MAPPING> CONNECTOR_10000 [2024-07-31 17:47:23.733] [INFO] TPL's are loaded from /app/iics_agent_dir/apps/Data_Integration_Server/70.0.1.1/connectors/../connectors/thirdparty/informatica.amazonredshift/upgraded
+MAPPING> TM_6007 [2024-07-31 17:47:24.579] DTM initialized successfully for session [s_mtt_01CAKB17000000000CZA]
+DIRECTOR> PETL_24033 [2024-07-31 17:47:24.581] All DTM Connection Info: [<NONE>].
+MANAGER> PETL_24004 [2024-07-31 17:47:24.581] Starting pre-session tasks. : (Wed Jul 31 17:47:24 2024)
+PRE-SESS> PETL_24091 [2024-07-31 17:47:24.582] Thread [PRE-SESS] has the ID [4].
+MANAGER> PETL_24027 [2024-07-31 17:47:24.584] Pre-session task completed successfully. : (Wed Jul 31 17:47:24 2024)
+DIRECTOR> PETL_24006 [2024-07-31 17:47:24.584] Starting data movement.
+MAPPING> TM_6660 [2024-07-31 17:47:24.585] Total Buffer Pool size is 104588040 bytes and Block size is 672568 bytes.
+MAPPING> CONNECTOR_10000 [2024-07-31 17:47:24.730] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = fact_nb_declaration_detail_declaration2 table name = fact_nb_declaration_detail_declaration2.
+MAPPING> CONNECTOR_10000 [2024-07-31 17:47:24.828] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = fact_nb_declaration_detail_declaration1 table name = fact_nb_declaration_detail_declaration1.
+MAPPING> CONNECTOR_10000 [2024-07-31 17:47:24.880] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+MAPPING> CONNECTOR_10000 [2024-07-31 17:47:24.927] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+READER_1_1_1> PETL_24091 [2024-07-31 17:47:24.951] Thread [READER_1_1_1] has the ID [5].
+READER_1_1_1> CONNECTOR_10000 [2024-07-31 17:47:25.753] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Read data
+TRANSF_1_1_1> PETL_24091 [2024-07-31 17:47:27.881] Thread [TRANSF_1_1_1] has the ID [6].
+READER_1_2_1> PETL_24091 [2024-07-31 17:47:27.881] Thread [READER_1_2_1] has the ID [7].
+READER_1_2_1> CONNECTOR_10000 [2024-07-31 17:47:28.011] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Read data
+TRANSF_1_2_1> PETL_24091 [2024-07-31 17:47:28.263] Thread [TRANSF_1_2_1] has the ID [8].
+READER_1_3_1> PETL_24091 [2024-07-31 17:47:28.264] Thread [READER_1_3_1] has the ID [9].
+READER_1_3_1> CONNECTOR_10000 [2024-07-31 17:47:28.291] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Read data
+TRANSF_1_3_1> PETL_24091 [2024-07-31 17:47:28.516] Thread [TRANSF_1_3_1] has the ID [10].
+READER_1_4_1> PETL_24091 [2024-07-31 17:47:28.517] Thread [READER_1_4_1] has the ID [11].
+READER_1_4_1> CONNECTOR_10000 [2024-07-31 17:47:28.547] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Read data
+TRANSF_1_4_1> PETL_24091 [2024-07-31 17:47:28.777] Thread [TRANSF_1_4_1] has the ID [12].
+TRANSF_1_5_1> PETL_24091 [2024-07-31 17:47:28.778] Thread [TRANSF_1_5_1] has the ID [13].
+TRANSF_1_6_1> PETL_24091 [2024-07-31 17:47:28.780] Thread [TRANSF_1_6_1] has the ID [14].
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:29.020] [INFO] The uncached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:29.053] [INFO] The S3 bucket name for staging the data during the read operation is nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/.
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:29.053] [INFO] The value of Enable Compression is set to true.
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:29.053] [INFO] The value of the S3 Client Encryption is set to false.
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:29.055] [INFO] Unload Options ADDQUOTES : 
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:29.055] [INFO] Unload Options PARALLEL : ON
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:29.055] [INFO] Unload Options ESCAPE : 
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:29.057] [INFO] Temporary Credentials valid for [21,600] seconds will be used.
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:29.130] [INFO] Encryption Type : None
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:29.130] [INFO] S3 Client Encryption : false
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:29.130] [INFO] S3 Server Side Encryption : false
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:29.130] [INFO] The Encryption type honored is : NONE
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:32.919] [INFO] The local staging directory location is set to /data/EDM_Agency/Cache/.
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:32.920] [INFO] The value of Download S3 Files In Multiple Parts is set to true.
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:32.920] [INFO] The Multipart Download Threshold size of an object is set as 5,242,880 bytes.
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:32.929] [INFO] Staging dir location: /data/EDM_Agency/Cache//InfaRedshiftStaging00073117473292430
+WRITER_1_*_1> PETL_24091 [2024-07-31 17:47:32.932] Thread [WRITER_1_*_1] has the ID [15].
+WRITER_1_*_1> WRT_8397 [2024-07-31 17:47:32.934] Appending output data to file [/app/iics_agent_dir/apps/Data_Integration_Server/data/error/output1.bad] (initial size [23890]).
+WRITER_1_*_1> TM_6708 [2024-07-31 17:47:32.935] Using configuration property [__PMOV_FFW_ESCAPE_QUOTE,Yes]
+WRITER_1_*_1> WRT_8124 [2024-07-31 17:47:32.935] Target Table preview_01CAKB17000000000CZA_DataPreviewTarget_0002_01_csv :Writing output to: /app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_0002_01.csv
+WRITER_1_*_1> WRT_8222 [2024-07-31 17:47:32.935] Target file [/app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_0002_01.csv] code page: [UTF-8 encoding of Unicode]
+WRITER_1_*_1> WRT_8397 [2024-07-31 17:47:32.939] Appending output data to file [/app/iics_agent_dir/apps/Data_Integration_Server/data/error/output1.bad] (initial size [23890]).
+WRITER_1_*_1> TM_6708 [2024-07-31 17:47:32.939] Using configuration property [__PMOV_FFW_ESCAPE_QUOTE,Yes]
+WRITER_1_*_1> WRT_8124 [2024-07-31 17:47:32.940] Target Table preview_01CAKB17000000000CZA_DataPreviewTarget_0003_01_csv :Writing output to: /app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_0003_01.csv
+WRITER_1_*_1> WRT_8222 [2024-07-31 17:47:32.940] Target file [/app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_0003_01.csv] code page: [UTF-8 encoding of Unicode]
+WRITER_1_*_1> WRT_8397 [2024-07-31 17:47:32.940] Appending output data to file [/app/iics_agent_dir/apps/Data_Integration_Server/data/error/output1.bad] (initial size [23890]).
+WRITER_1_*_1> TM_6708 [2024-07-31 17:47:32.940] Using configuration property [__PMOV_FFW_ESCAPE_QUOTE,Yes]
+WRITER_1_*_1> WRT_8124 [2024-07-31 17:47:32.940] Target Table preview_01CAKB17000000000CZA_DataPreviewTarget_0004_01_csv :Writing output to: /app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_0004_01.csv
+WRITER_1_*_1> WRT_8222 [2024-07-31 17:47:32.940] Target file [/app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_0004_01.csv] code page: [UTF-8 encoding of Unicode]
+WRITER_1_*_1> WRT_8397 [2024-07-31 17:47:32.941] Appending output data to file [/app/iics_agent_dir/apps/Data_Integration_Server/data/error/output1.bad] (initial size [23890]).
+WRITER_1_*_1> TM_6708 [2024-07-31 17:47:32.941] Using configuration property [__PMOV_FFW_ESCAPE_QUOTE,Yes]
+WRITER_1_*_1> WRT_8124 [2024-07-31 17:47:32.941] Target Table preview_01CAKB17000000000CZA_DataPreviewTarget_0008_01_csv :Writing output to: /app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_0008_01.csv
+WRITER_1_*_1> WRT_8222 [2024-07-31 17:47:32.941] Target file [/app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_0008_01.csv] code page: [UTF-8 encoding of Unicode]
+WRITER_1_*_1> WRT_8397 [2024-07-31 17:47:32.942] Appending output data to file [/app/iics_agent_dir/apps/Data_Integration_Server/data/error/output1.bad] (initial size [23890]).
+WRITER_1_*_1> TM_6708 [2024-07-31 17:47:32.942] Using configuration property [__PMOV_FFW_ESCAPE_QUOTE,Yes]
+WRITER_1_*_1> WRT_8124 [2024-07-31 17:47:32.942] Target Table preview_01CAKB17000000000CZA_DataPreviewTarget_0007_01_csv :Writing output to: /app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_0007_01.csv
+WRITER_1_*_1> WRT_8222 [2024-07-31 17:47:32.942] Target file [/app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_0007_01.csv] code page: [UTF-8 encoding of Unicode]
+WRITER_1_*_1> WRT_8397 [2024-07-31 17:47:32.942] Appending output data to file [/app/iics_agent_dir/apps/Data_Integration_Server/data/error/output1.bad] (initial size [23890]).
+WRITER_1_*_1> TM_6708 [2024-07-31 17:47:32.943] Using configuration property [__PMOV_FFW_ESCAPE_QUOTE,Yes]
+WRITER_1_*_1> WRT_8124 [2024-07-31 17:47:32.943] Target Table preview_01CAKB17000000000CZA_DataPreviewTarget_0005_01_csv :Writing output to: /app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_0005_01.csv
+WRITER_1_*_1> WRT_8222 [2024-07-31 17:47:32.943] Target file [/app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_0005_01.csv] code page: [UTF-8 encoding of Unicode]
+WRITER_1_*_1> WRT_8397 [2024-07-31 17:47:32.944] Appending output data to file [/app/iics_agent_dir/apps/Data_Integration_Server/data/error/output1.bad] (initial size [23890]).
+WRITER_1_*_1> TM_6708 [2024-07-31 17:47:32.944] Using configuration property [__PMOV_FFW_ESCAPE_QUOTE,Yes]
+WRITER_1_*_1> WRT_8124 [2024-07-31 17:47:32.945] Target Table preview_01CAKB17000000000CZA_DataPreviewTarget_000B_01_csv :Writing output to: /app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_000B_01.csv
+WRITER_1_*_1> WRT_8222 [2024-07-31 17:47:32.945] Target file [/app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_000B_01.csv] code page: [UTF-8 encoding of Unicode]
+WRITER_1_*_1> WRT_8397 [2024-07-31 17:47:32.945] Appending output data to file [/app/iics_agent_dir/apps/Data_Integration_Server/data/error/output1.bad] (initial size [23890]).
+WRITER_1_*_1> TM_6708 [2024-07-31 17:47:32.946] Using configuration property [__PMOV_FFW_ESCAPE_QUOTE,Yes]
+WRITER_1_*_1> WRT_8124 [2024-07-31 17:47:32.946] Target Table preview_01CAKB17000000000CZA_DataPreviewTarget_0006_01_csv :Writing output to: /app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_0006_01.csv
+WRITER_1_*_1> WRT_8222 [2024-07-31 17:47:32.946] Target file [/app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_0006_01.csv] code page: [UTF-8 encoding of Unicode]
+WRITER_1_*_1> WRT_8397 [2024-07-31 17:47:32.947] Appending output data to file [/app/iics_agent_dir/apps/Data_Integration_Server/data/error/output1.bad] (initial size [23890]).
+WRITER_1_*_1> TM_6708 [2024-07-31 17:47:32.947] Using configuration property [__PMOV_FFW_ESCAPE_QUOTE,Yes]
+WRITER_1_*_1> WRT_8124 [2024-07-31 17:47:32.947] Target Table preview_01CAKB17000000000CZA_DataPreviewTarget_000C_01_csv :Writing output to: /app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_000C_01.csv
+WRITER_1_*_1> WRT_8222 [2024-07-31 17:47:32.947] Target file [/app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_000C_01.csv] code page: [UTF-8 encoding of Unicode]
+WRITER_1_*_1> WRT_8397 [2024-07-31 17:47:32.948] Appending output data to file [/app/iics_agent_dir/apps/Data_Integration_Server/data/error/output1.bad] (initial size [23890]).
+WRITER_1_*_1> TM_6708 [2024-07-31 17:47:32.948] Using configuration property [__PMOV_FFW_ESCAPE_QUOTE,Yes]
+WRITER_1_*_1> WRT_8124 [2024-07-31 17:47:32.949] Target Table preview_01CAKB17000000000CZA_DataPreviewTarget_0009_01_csv :Writing output to: /app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_0009_01.csv
+WRITER_1_*_1> WRT_8222 [2024-07-31 17:47:32.949] Target file [/app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_0009_01.csv] code page: [UTF-8 encoding of Unicode]
+WRITER_1_*_1> WRT_8397 [2024-07-31 17:47:32.950] Appending output data to file [/app/iics_agent_dir/apps/Data_Integration_Server/data/error/output1.bad] (initial size [23890]).
+WRITER_1_*_1> TM_6708 [2024-07-31 17:47:32.950] Using configuration property [__PMOV_FFW_ESCAPE_QUOTE,Yes]
+WRITER_1_*_1> WRT_8124 [2024-07-31 17:47:32.950] Target Table preview_01CAKB17000000000CZA_DataPreviewTarget_000D_01_csv :Writing output to: /app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_000D_01.csv
+WRITER_1_*_1> WRT_8222 [2024-07-31 17:47:32.950] Target file [/app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_000D_01.csv] code page: [UTF-8 encoding of Unicode]
+WRITER_1_*_1> WRT_8397 [2024-07-31 17:47:32.952] Appending output data to file [/app/iics_agent_dir/apps/Data_Integration_Server/data/error/output1.bad] (initial size [23890]).
+WRITER_1_*_1> TM_6708 [2024-07-31 17:47:32.952] Using configuration property [__PMOV_FFW_ESCAPE_QUOTE,Yes]
+WRITER_1_*_1> WRT_8124 [2024-07-31 17:47:32.952] Target Table preview_01CAKB17000000000CZA_DataPreviewTarget_0001_01_csv :Writing output to: /app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_0001_01.csv
+WRITER_1_*_1> WRT_8222 [2024-07-31 17:47:32.952] Target file [/app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_0001_01.csv] code page: [UTF-8 encoding of Unicode]
+WRITER_1_*_1> WRT_8397 [2024-07-31 17:47:32.954] Appending output data to file [/app/iics_agent_dir/apps/Data_Integration_Server/data/error/output1.bad] (initial size [23890]).
+WRITER_1_*_1> TM_6708 [2024-07-31 17:47:32.954] Using configuration property [__PMOV_FFW_ESCAPE_QUOTE,Yes]
+WRITER_1_*_1> WRT_8124 [2024-07-31 17:47:32.954] Target Table preview_01CAKB17000000000CZA_DataPreviewTarget_000A_01_csv :Writing output to: /app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_000A_01.csv
+WRITER_1_*_1> WRT_8222 [2024-07-31 17:47:32.955] Target file [/app/iics_agent_dir/apps/Data_Integration_Server/data/cache/preview/preview_01CAKB17000000000CZA_DataPreviewTarget_000A_01.csv] code page: [UTF-8 encoding of Unicode]
+WRITER_1_*_1> WRT_8270 [2024-07-31 17:47:32.955] Target connection group #1 consists of target(s) [preview_01CAKB17000000000CZA_DataPreviewTarget_0002_01_csv]
+WRITER_1_*_1> WRT_8270 [2024-07-31 17:47:32.955] Target connection group #2 consists of target(s) [preview_01CAKB17000000000CZA_DataPreviewTarget_0003_01_csv]
+WRITER_1_*_1> WRT_8270 [2024-07-31 17:47:32.955] Target connection group #3 consists of target(s) [preview_01CAKB17000000000CZA_DataPreviewTarget_0004_01_csv]
+WRITER_1_*_1> WRT_8270 [2024-07-31 17:47:32.955] Target connection group #4 consists of target(s) [preview_01CAKB17000000000CZA_DataPreviewTarget_0008_01_csv]
+WRITER_1_*_1> WRT_8270 [2024-07-31 17:47:32.955] Target connection group #5 consists of target(s) [preview_01CAKB17000000000CZA_DataPreviewTarget_0007_01_csv]
+WRITER_1_*_1> WRT_8270 [2024-07-31 17:47:32.955] Target connection group #6 consists of target(s) [preview_01CAKB17000000000CZA_DataPreviewTarget_0005_01_csv]
+WRITER_1_*_1> WRT_8270 [2024-07-31 17:47:32.955] Target connection group #7 consists of target(s) [preview_01CAKB17000000000CZA_DataPreviewTarget_000B_01_csv]
+WRITER_1_*_1> WRT_8270 [2024-07-31 17:47:32.955] Target connection group #8 consists of target(s) [preview_01CAKB17000000000CZA_DataPreviewTarget_0006_01_csv]
+WRITER_1_*_1> WRT_8270 [2024-07-31 17:47:32.955] Target connection group #9 consists of target(s) [preview_01CAKB17000000000CZA_DataPreviewTarget_000C_01_csv]
+WRITER_1_*_1> WRT_8270 [2024-07-31 17:47:32.955] Target connection group #10 consists of target(s) [preview_01CAKB17000000000CZA_DataPreviewTarget_0009_01_csv]
+WRITER_1_*_1> WRT_8270 [2024-07-31 17:47:32.955] Target connection group #11 consists of target(s) [preview_01CAKB17000000000CZA_DataPreviewTarget_000D_01_csv]
+WRITER_1_*_1> WRT_8270 [2024-07-31 17:47:32.955] Target connection group #12 consists of target(s) [preview_01CAKB17000000000CZA_DataPreviewTarget_0001_01_csv]
+WRITER_1_*_1> WRT_8270 [2024-07-31 17:47:32.955] Target connection group #13 consists of target(s) [preview_01CAKB17000000000CZA_DataPreviewTarget_000A_01_csv]
+WRITER_1_*_1> WRT_8003 [2024-07-31 17:47:32.955] Writer initialization complete.
+WRITER_1_*_1> WRT_8005 [2024-07-31 17:47:32.956] Writer run started.
+WRITER_1_*_1> WRT_8158 [2024-07-31 17:47:32.956] 
+
+*****START LOAD SESSION*****
+
+Load Start Time: Wed Jul 31 17:47:32 2024
+
+Target tables:
+
+     preview_01CAKB17000000000CZA_DataPreviewTarget_0002_01_csv
+     preview_01CAKB17000000000CZA_DataPreviewTarget_0003_01_csv
+     preview_01CAKB17000000000CZA_DataPreviewTarget_0004_01_csv
+     preview_01CAKB17000000000CZA_DataPreviewTarget_0008_01_csv
+     preview_01CAKB17000000000CZA_DataPreviewTarget_0007_01_csv
+     preview_01CAKB17000000000CZA_DataPreviewTarget_0005_01_csv
+     preview_01CAKB17000000000CZA_DataPreviewTarget_000B_01_csv
+     preview_01CAKB17000000000CZA_DataPreviewTarget_0006_01_csv
+     preview_01CAKB17000000000CZA_DataPreviewTarget_000C_01_csv
+     preview_01CAKB17000000000CZA_DataPreviewTarget_0009_01_csv
+     preview_01CAKB17000000000CZA_DataPreviewTarget_000D_01_csv
+     preview_01CAKB17000000000CZA_DataPreviewTarget_0001_01_csv
+     preview_01CAKB17000000000CZA_DataPreviewTarget_000A_01_csv
+
+
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-31 17:47:33.011] [INFO] Executing query for data preview "pdm_conv"."fact_nb_declaration_detail_declaration2"
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-31 17:47:33.011] [INFO] Executing Query: SELECT * FROM "pdm_conv"."fact_nb_declaration_detail_declaration2" LIMIT 10
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-31 17:47:33.011] [INFO]  Total rows to read for data preview : 10 
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-31 17:47:33.011] [INFO] Read : 10  rows for data preview
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-31 17:47:33.015] [INFO]  No more data to read for data Preview 
+TRANSF_1_1_1> DBG_21216 [2024-07-31 17:47:33.015] Finished transformations for Source Qualifier [SRC_fchdfsDeclarationDetailTrans_2]. Total errors [0] 
+WRITER_1_*_1> WRT_8167 [2024-07-31 17:47:33.015] Start loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_0002_01_csv] at: Wed Jul 31 17:47:32 2024
+TRANSF_1_5_1> SORT_40420 [2024-07-31 17:47:33.015] Start of input for Transformation [SRT_JoinRequirementTbl_Srt1]. : (Wed Jul 31 17:47:33 2024)
+WRITER_1_*_1> WRT_8168 [2024-07-31 17:47:33.018] End loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_0002_01_csv] at: Wed Jul 31 17:47:32 2024
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-31 17:47:33.031] [INFO] Executing query for data preview "pdm_conv"."fact_nb_declaration_detail_declaration1"
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-31 17:47:33.031] [INFO] Executing Query: SELECT * FROM "pdm_conv"."fact_nb_declaration_detail_declaration1" LIMIT 10
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-31 17:47:33.031] [INFO]  Total rows to read for data preview : 0 
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-31 17:47:33.031] [INFO]  No more data to read for data Preview 
+TRANSF_1_5_1> SORT_40421 [2024-07-31 17:47:33.032] End of input for Transformation [SRT_JoinRequirementTbl_Srt1]. : (Wed Jul 31 17:47:33 2024)
+TRANSF_1_2_1> DBG_21216 [2024-07-31 17:47:33.032] Finished transformations for Source Qualifier [SRC_fchdfsDeclarationDetailTrans_1]. Total errors [0] 
+WRITER_1_*_1> WRT_8167 [2024-07-31 17:47:33.032] Start loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_0003_01_csv] at: Wed Jul 31 17:47:32 2024
+WRITER_1_*_1> WRT_8168 [2024-07-31 17:47:33.034] End loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_0003_01_csv] at: Wed Jul 31 17:47:32 2024
+TRANSF_1_5_1> SORT_40422 [2024-07-31 17:47:33.092] End of output from Sorter Transformation [SRT_JoinRequirementTbl_Srt1]. Processed 10 rows (1840 input bytes; 0 temp I/O bytes). : (Wed Jul 31 17:47:33 2024)
+TRANSF_1_5_1> SORT_40423 [2024-07-31 17:47:33.103] End of sort for Sorter Transformation [SRT_JoinRequirementTbl_Srt1]. : (Wed Jul 31 17:47:33 2024)
+TRANSF_1_5_1> DBG_21216 [2024-07-31 17:47:33.103] Finished transformations for Source Qualifier [UN_FnlSrcRec]. Total errors [0] 
+WRITER_1_*_1> WRT_8167 [2024-07-31 17:47:33.104] Start loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_000B_01_csv] at: Wed Jul 31 17:47:32 2024
+WRITER_1_*_1> WRT_8167 [2024-07-31 17:47:33.105] Start loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_0006_01_csv] at: Wed Jul 31 17:47:32 2024
+WRITER_1_*_1> WRT_8168 [2024-07-31 17:47:33.107] End loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_000B_01_csv] at: Wed Jul 31 17:47:32 2024
+WRITER_1_*_1> WRT_8168 [2024-07-31 17:47:33.107] End loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_0006_01_csv] at: Wed Jul 31 17:47:32 2024
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-31 17:47:45.117] [INFO] The agent is running the following custom query for data preview: 
+/* partner: Informatica -v 2.0 */
+select 
+reqmntid_ref,
+cntrctid_ref,
+trim(kvndrid_code) kvndrid_code,
+trim(upper(requirement.kvndrid_code)) vendr_cd_nk,
+kvndrid_ref, 
+trim(upper(reqown_ent_name)) reqown_ent_name,
+reqown_inst_ref cntrctid_ref_req, 
+reqown_inst_ref,
+trim(upper(owner_ent_name)) as owner_ent_name 
+from ext_lake_oracle_orap12_nyldprod60cl.requirement where reqmntid_ref>999  and edh_record_status_in='A'.
+READER_1_4_1> CMN_1761 [2024-07-31 17:47:45.117] Timestamp Event: [Wed Jul 31 17:47:45 2024]
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-31 17:47:45.117] [ERROR] Closing of ResultSet or PreparedStatement failed due to the following error: [com.amazon.redshift.util.RedshiftException: Cannot commit when autoCommit is enabled.].
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-31 17:47:45.118] [INFO]  Total rows to read for data preview : 10 
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-31 17:47:45.118] [INFO] Read : 10  rows for data preview
+TRANSF_1_4_1> SORT_40420 [2024-07-31 17:47:45.118] Start of input for Transformation [SRT_JoinRequirementTbl_Srt0]. : (Wed Jul 31 17:47:45 2024)
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-31 17:47:45.118] [INFO]  No more data to read for data Preview 
+TRANSF_1_4_1> SORT_40421 [2024-07-31 17:47:45.118] End of input for Transformation [SRT_JoinRequirementTbl_Srt0]. : (Wed Jul 31 17:47:45 2024)
+TRANSF_1_4_1> SORT_40420 [2024-07-31 17:47:45.165] Start of input for Transformation [SRT_JoinDimNbRequirementRef_Srt0]. : (Wed Jul 31 17:47:45 2024)
+TRANSF_1_4_1> SORT_40422 [2024-07-31 17:47:45.166] End of output from Sorter Transformation [SRT_JoinRequirementTbl_Srt0]. Processed 10 rows (1040 input bytes; 0 temp I/O bytes). : (Wed Jul 31 17:47:45 2024)
+TRANSF_1_4_1> SORT_40423 [2024-07-31 17:47:45.175] End of sort for Sorter Transformation [SRT_JoinRequirementTbl_Srt0]. : (Wed Jul 31 17:47:45 2024)
+TRANSF_1_4_1> SORT_40421 [2024-07-31 17:47:45.175] End of input for Transformation [SRT_JoinDimNbRequirementRef_Srt0]. : (Wed Jul 31 17:47:45 2024)
+WRITER_1_*_1> WRT_8167 [2024-07-31 17:47:45.175] Start loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_0005_01_csv] at: Wed Jul 31 17:47:44 2024
+WRITER_1_*_1> WRT_8168 [2024-07-31 17:47:45.177] End loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_0005_01_csv] at: Wed Jul 31 17:47:44 2024
+TRANSF_1_4_1> SORT_40422 [2024-07-31 17:47:45.256] End of output from Sorter Transformation [SRT_JoinDimNbRequirementRef_Srt0]. Processed 10 rows (1920 input bytes; 0 temp I/O bytes). : (Wed Jul 31 17:47:45 2024)
+TRANSF_1_4_1> SORT_40423 [2024-07-31 17:47:45.263] End of sort for Sorter Transformation [SRT_JoinDimNbRequirementRef_Srt0]. : (Wed Jul 31 17:47:45 2024)
+TRANSF_1_4_1> DBG_21215 [2024-07-31 17:47:45.263] Finished processing detail relation : (Wed Jul 31 17:47:45 2024)
+WRITER_1_*_1> WRT_8167 [2024-07-31 17:47:45.263] Start loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_000C_01_csv] at: Wed Jul 31 17:47:44 2024
+WRITER_1_*_1> WRT_8167 [2024-07-31 17:47:45.265] Start loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_0009_01_csv] at: Wed Jul 31 17:47:44 2024
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:45.266] [INFO] Lookup Strategy FIRST_ROW
+TRANSF_1_4_1> DBG_21216 [2024-07-31 17:47:45.266] Finished transformations for Source Qualifier [SRC_HiveRequirement]. Total errors [0] 
+WRITER_1_*_1> WRT_8167 [2024-07-31 17:47:45.267] Start loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_0007_01_csv] at: Wed Jul 31 17:47:44 2024
+WRITER_1_*_1> WRT_8168 [2024-07-31 17:47:45.269] End loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_0007_01_csv] at: Wed Jul 31 17:47:44 2024
+WRITER_1_*_1> WRT_8168 [2024-07-31 17:47:45.269] End loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_000C_01_csv] at: Wed Jul 31 17:47:44 2024
+WRITER_1_*_1> WRT_8168 [2024-07-31 17:47:45.269] End loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_0009_01_csv] at: Wed Jul 31 17:47:44 2024
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:45.274] [INFO] The agent is running the following SQL query : [
+/* partner: Informatica -v 2.0 */
+null ORDER BY "INFARS_CUSTOM_SCHEMA"."dim_nb_vendor_sk" , "INFARS_CUSTOM_SCHEMA"."vendr_cd_nk" LIMIT 1].
+TRANSF_1_6_1> CMN_1761 [2024-07-31 17:47:45.274] Timestamp Event: [Wed Jul 31 17:47:45 2024]
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:45.274] [FATAL] ERROR: syntax error at or near "null"
+  Position: 36
+TRANSF_1_6_1> CMN_1761 [2024-07-31 17:47:45.275] Timestamp Event: [Wed Jul 31 17:47:45 2024]
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:45.275] [ERROR] Error occured while reading data using CCI Data Adapter  com.informatica.cci.runtime.internal.utils.impl.CExceptionImpl: Unable to get result data: Adapter read method has returned failure.
+TRANSF_1_6_1> CMN_1761 [2024-07-31 17:47:45.275] Timestamp Event: [Wed Jul 31 17:47:45 2024]
+TRANSF_1_6_1> CONNECTOR_10000 [2024-07-31 17:47:45.275] [ERROR] Multiple Row Matches for the lookup Condition
+TRANSF_1_6_1> CMN_1761 [2024-07-31 17:47:45.275] Timestamp Event: [Wed Jul 31 17:47:45 2024]
+TRANSF_1_6_1> EP_13248 [2024-07-31 17:47:45.275] DLL Error Msg: Lookup query failed.
+TRANSF_1_6_1> CMN_1761 [2024-07-31 17:47:45.275] Timestamp Event: [Wed Jul 31 17:47:45 2024]
+TRANSF_1_6_1> TT_11141 [2024-07-31 17:47:45.275] Transformation [LKP_LkpDimNbVendor] returned a row error status on receiving an input row on group [INPUT] due to the following error [Lookup query failed.].
+TRANSF_1_6_1> DBG_21082 [2024-07-31 17:47:45.275] LKP_LkpDimNbVendor (Input Group 1):  : Current Input data:
+TRANSF_1_6_1> CMN_1053 [2024-07-31 17:47:45.275]   Input row from JNR_JoinDimNbRequirementRef: Rowdata: ( RowType=0(insert) Src Rowid=1 Targ Rowid=1
+  dim_nb_requirement_ref_sk (dim_nb_requirement_ref_sk:BigInt:): "(NULL)"
+  reqr_cd (reqr_cd:UniChar.20:): "(NULL)"
+  ent_ref_cd (ent_ref_cd:UniChar.100:): "(NULL)"
+  o_reqmntid_ref (o_reqmntid_ref:BigInt:): "(NULL)"
+  o_cntrctid_ref (o_cntrctid_ref:BigInt:): "(NULL)"
+  o_kvndrid_code (o_kvndrid_code:UniChar.10:): "(NULL)"
+  o_vendr_cd_nk (o_vendr_cd_nk:UniChar.10:): "(NULL)"
+  o_kvndrid_ref (o_kvndrid_ref:BigInt:): "(NULL)"
+  o_reqown_ent_name (o_reqown_ent_name:UniChar.18:): "(NULL)"
+  o_cntrctid_ref_req (o_cntrctid_ref_req:BigInt:): "(NULL)"
+  o_reqown_inst_ref (o_reqown_inst_ref:BigInt:): "(NULL)"
+  o_owner_ent_name (o_owner_ent_name:UniChar.18:): "(NULL)"
+  pname_fname (pname_fname:UniChar.50:): "(NULL)"
+  status_code (status_code:UniChar.10:): "Active"
+  decl_signee_cd_nk (decl_signee_cd_nk:UniChar.20:): "(NULL)"
+  edh_record_status_in_dec (edh_record_status_in_dec:UniChar.1:): "(NULL)"
+  signee_signed_decode (signee_signed_decode:UniChar.32:): "Yes"
+  countersign_code (countersign_code:BigInt:): "(NULL)"
+  edh_record_status_in_reqd (edh_record_status_in_reqd:UniChar.1:): "(NULL)"
+  kirdsgid_code (kirdsgid_code:UniChar.20:): "(NULL)"
+  kcountyid_code (kcountyid_code:UniChar.10:): "UNKNOWN"
+  d_kcntryid_code (d_kcntryid_code:UniChar.10:): "(NULL)"
+  dim_nb_declaration_signee_sk (dim_nb_declaration_signee_sk:BigInt:): "(NULL)"
+  ksttrgid_code (ksttrgid_code:UniChar.10:): "UNKNOWN"
+  pname_sname (pname_sname:UniChar.50:): "(NULL)"
+  examnr_appdstat_decode (examnr_appdstat_decode:UniChar.32:): "(NULL)"
+  address_add1 (address_add1:UniChar.40:): "(NULL)"
+  reqdecid_ref (reqdecid_ref:BigInt:): "22045996"
+  pname_mname (pname_mname:UniChar.50:): "(NULL)"
+  address_add2 (address_add2:UniChar.40:): "(NULL)"
+  address_add3 (address_add3:UniChar.40:): "(NULL)"
+  address_add4 (address_add4:UniChar.40:): "(NULL)"
+  address_citytown (address_citytown:UniChar.40:): "(NULL)"
+  status_ref_reqd (status_ref_reqd:BigInt:): "10000000"
+  suffixid_code (suffixid_code:UniChar.10:): "(NULL)"
+  kcntryid_code (kcntryid_code:UniChar.10:): "UNKNOWN"
+  examnr_details (examnr_details:UniChar.200:): "(NULL)"
+  status_ref_dec (status_ref_dec:BigInt:): "(NULL)"
+  kirdsgid_ref (kirdsgid_ref:BigInt:): "10000019"
+  d_ksttrgid_code (d_ksttrgid_code:UniChar.10:): "(NULL)"
+  signed_date (signed_date:UniChar.50:): "2009-04-16"
+  signed_citytown (signed_citytown:UniChar.40:): "(NULL)"
+  prefixid_code (prefixid_code:UniChar.10:): "(NULL)"
+  d_kcountyid_code (d_kcountyid_code:UniChar.10:): "(NULL)"
+  address_zip (address_zip:UniChar.40:): "(NULL)"
+  examnr_company (examnr_company:UniChar.60:): "(NULL)"
+  examnr_id (examnr_id:UniChar.4:): "(NULL)"
+  title_onbehalf (title_onbehalf:UniChar.60:): "(NULL)"
+)
+
+TRANSF_1_6_1> CMN_1761 [2024-07-31 17:47:45.276] Timestamp Event: [Wed Jul 31 17:47:45 2024]
+TRANSF_1_6_1> JAVA PLUGIN_1762 [2024-07-31 17:47:45.276] [ERROR] java.lang.NullPointerException
+TRANSF_1_6_1> CMN_1761 [2024-07-31 17:47:45.276] Timestamp Event: [Wed Jul 31 17:47:45 2024]
+TRANSF_1_6_1> JAVA PLUGIN_1762 [2024-07-31 17:47:45.276] [ERROR] 	at com.informatica.cloud.api.adapter.cci.lookup.CCILookupPartitionDriver.execute(CCILookupPartitionDriver.java:248)
+TRANSF_1_6_1> CMN_1761 [2024-07-31 17:47:45.276] Timestamp Event: [Wed Jul 31 17:47:45 2024]
+TRANSF_1_6_1> TM_6085 [2024-07-31 17:47:45.276] A fatal error occurred at  transformation [LKP_LkpDimNbVendor], and the session is terminating. 
+TRANSF_1_6_1> CMN_1761 [2024-07-31 17:47:45.276] Timestamp Event: [Wed Jul 31 17:47:45 2024]
+TRANSF_1_6_1> TM_6085 [2024-07-31 17:47:45.276] A fatal error occurred at  transformation [JNR_JoinDimNbRequirementRef], and the session is terminating. 
+WRITER_1_*_1> WRT_8165 [2024-07-31 17:48:45.000] TIMEOUT BASED COMMIT POINT
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-31 17:48:59.762] [INFO] The agent is running the following custom query for data preview: 
+/* partner: Informatica -v 2.0 */
+select 
+	reqr_ref_id_nk reqmntid_ref,
+	dim_nb_requirement_ref_sk,
+	trim(reqr_cd) reqr_cd,ent_ref_cd
+from pdm.dim_nb_requirement_ref where dim_nb_requirement_ref_sk not in (-97,-98,-99) and edh_updated_batch_key is null and edh_record_status_in in ('A','D') and src_sys_nm_nk='NB21'.
+READER_1_3_1> CMN_1761 [2024-07-31 17:48:59.762] Timestamp Event: [Wed Jul 31 17:48:59 2024]
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-31 17:48:59.762] [ERROR] Closing of ResultSet or PreparedStatement failed due to the following error: [com.amazon.redshift.util.RedshiftException: Cannot commit when autoCommit is enabled.].
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-31 17:48:59.762] [INFO]  Total rows to read for data preview : 10 
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-31 17:48:59.762] [INFO] Read : 10  rows for data preview
+TRANSF_1_3_1> SORT_40420 [2024-07-31 17:48:59.763] Start of input for Transformation [SRT_JoinDimNbRequirementRef_Srt1]. : (Wed Jul 31 17:48:59 2024)
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-31 17:48:59.763] [INFO]  No more data to read for data Preview 
+TRANSF_1_3_1> SORT_40421 [2024-07-31 17:48:59.763] End of input for Transformation [SRT_JoinDimNbRequirementRef_Srt1]. : (Wed Jul 31 17:48:59 2024)
+TRANSF_1_3_1> SORT_40422 [2024-07-31 17:48:59.817] End of output from Sorter Transformation [SRT_JoinDimNbRequirementRef_Srt1]. Processed 10 rows (448 input bytes; 0 temp I/O bytes). : (Wed Jul 31 17:48:59 2024)
+TRANSF_1_3_1> SORT_40423 [2024-07-31 17:48:59.825] End of sort for Sorter Transformation [SRT_JoinDimNbRequirementRef_Srt1]. : (Wed Jul 31 17:48:59 2024)
+TRANSF_1_3_1> DBG_21216 [2024-07-31 17:48:59.826] Finished transformations for Source Qualifier [SRC_HiveDimNbRequirementRef]. Total errors [0] 
+WRITER_1_*_1> WRT_8167 [2024-07-31 17:48:59.826] Start loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_0008_01_csv] at: Wed Jul 31 17:48:59 2024
+TRANSF_1_6_1> CMN_1761 [2024-07-31 17:48:59.826] Timestamp Event: [Wed Jul 31 17:48:59 2024]
+TRANSF_1_6_1> TM_6085 [2024-07-31 17:48:59.826] A fatal error occurred at  transformation [JNR_JoinDimNbRequirementRef], and the session is terminating. 
+TRANSF_1_6_1> CMN_1761 [2024-07-31 17:48:59.826] Timestamp Event: [Wed Jul 31 17:48:59 2024]
+TRANSF_1_6_1> TM_6085 [2024-07-31 17:48:59.826] A fatal error occurred at  transformation [JNR_JoinDimNbRequirementRef], and the session is terminating. 
+TRANSF_1_6_1> CMN_1761 [2024-07-31 17:48:59.826] Timestamp Event: [Wed Jul 31 17:48:59 2024]
+TRANSF_1_6_1> TM_6085 [2024-07-31 17:48:59.826] A fatal error occurred at  transformation [JNR_JoinDimNbRequirementRef], and the session is terminating. 
+TRANSF_1_6_1> CMN_1761 [2024-07-31 17:48:59.826] Timestamp Event: [Wed Jul 31 17:48:59 2024]
+TRANSF_1_6_1> TM_6085 [2024-07-31 17:48:59.826] A fatal error occurred at  transformation [JNR_JoinDimNbRequirementRef], and the session is terminating. 
+TRANSF_1_6_1> CMN_1761 [2024-07-31 17:48:59.826] Timestamp Event: [Wed Jul 31 17:48:59 2024]
+TRANSF_1_6_1> TM_6085 [2024-07-31 17:48:59.826] A fatal error occurred at  transformation [JNR_JoinDimNbRequirementRef], and the session is terminating. 
+TRANSF_1_6_1> DBG_21511 [2024-07-31 17:48:59.826] TE: Fatal Transformation Error.
+WRITER_1_*_1> WRT_8167 [2024-07-31 17:48:59.827] Start loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_0004_01_csv] at: Wed Jul 31 17:48:59 2024
+WRITER_1_*_1> WRT_8167 [2024-07-31 17:48:59.829] Start loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_000D_01_csv] at: Wed Jul 31 17:48:59 2024
+WRITER_1_*_1> WRT_8333 [2024-07-31 17:48:59.830] Rolling back all the targets due to fatal session error.
+WRITER_1_*_1> CMN_1761 [2024-07-31 17:48:59.830] Timestamp Event: [Wed Jul 31 17:48:59 2024]
+WRITER_1_*_1> WRT_8170 [2024-07-31 17:48:59.831] Writer run terminated: Abort Session request received from the DTM
+WRITER_1_*_1> CMN_1761 [2024-07-31 17:48:59.831] Timestamp Event: [Wed Jul 31 17:48:59 2024]
+WRITER_1_*_1> WRT_8179 [2024-07-31 17:48:59.831] Error occurred while trying to close output file [preview_01CAKB17000000000CZA_DataPreviewTarget_0002_01_csv]
+WRITER_1_*_1> CMN_1761 [2024-07-31 17:48:59.831] Timestamp Event: [Wed Jul 31 17:48:59 2024]
+WRITER_1_*_1> WRT_8179 [2024-07-31 17:48:59.831] Error occurred while trying to close output file [preview_01CAKB17000000000CZA_DataPreviewTarget_0003_01_csv]
+WRITER_1_*_1> WRT_8168 [2024-07-31 17:48:59.831] End loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_0004_01_csv] at: Wed Jul 31 17:48:59 2024
+WRITER_1_*_1> WRT_8168 [2024-07-31 17:48:59.831] End loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_0008_01_csv] at: Wed Jul 31 17:48:59 2024
+WRITER_1_*_1> CMN_1761 [2024-07-31 17:48:59.831] Timestamp Event: [Wed Jul 31 17:48:59 2024]
+WRITER_1_*_1> WRT_8179 [2024-07-31 17:48:59.831] Error occurred while trying to close output file [preview_01CAKB17000000000CZA_DataPreviewTarget_0007_01_csv]
+WRITER_1_*_1> CMN_1761 [2024-07-31 17:48:59.831] Timestamp Event: [Wed Jul 31 17:48:59 2024]
+WRITER_1_*_1> WRT_8179 [2024-07-31 17:48:59.831] Error occurred while trying to close output file [preview_01CAKB17000000000CZA_DataPreviewTarget_0005_01_csv]
+WRITER_1_*_1> CMN_1761 [2024-07-31 17:48:59.831] Timestamp Event: [Wed Jul 31 17:48:59 2024]
+WRITER_1_*_1> WRT_8179 [2024-07-31 17:48:59.831] Error occurred while trying to close output file [preview_01CAKB17000000000CZA_DataPreviewTarget_000B_01_csv]
+WRITER_1_*_1> CMN_1761 [2024-07-31 17:48:59.831] Timestamp Event: [Wed Jul 31 17:48:59 2024]
+WRITER_1_*_1> WRT_8179 [2024-07-31 17:48:59.831] Error occurred while trying to close output file [preview_01CAKB17000000000CZA_DataPreviewTarget_0006_01_csv]
+WRITER_1_*_1> CMN_1761 [2024-07-31 17:48:59.831] Timestamp Event: [Wed Jul 31 17:48:59 2024]
+WRITER_1_*_1> WRT_8179 [2024-07-31 17:48:59.831] Error occurred while trying to close output file [preview_01CAKB17000000000CZA_DataPreviewTarget_000C_01_csv]
+WRITER_1_*_1> CMN_1761 [2024-07-31 17:48:59.831] Timestamp Event: [Wed Jul 31 17:48:59 2024]
+WRITER_1_*_1> WRT_8179 [2024-07-31 17:48:59.831] Error occurred while trying to close output file [preview_01CAKB17000000000CZA_DataPreviewTarget_0009_01_csv]
+WRITER_1_*_1> WRT_8168 [2024-07-31 17:48:59.831] End loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_000D_01_csv] at: Wed Jul 31 17:48:59 2024
+WRITER_1_*_1> WRT_8168 [2024-07-31 17:48:59.843] End loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_0001_01_csv] at: Wed Jul 31 17:48:59 2024
+WRITER_1_*_1> WRT_8168 [2024-07-31 17:48:59.845] End loading table [preview_01CAKB17000000000CZA_DataPreviewTarget_000A_01_csv] at: Wed Jul 31 17:48:59 2024
+WRITER_1_*_1> WRT_8035 [2024-07-31 17:48:59.845] Load complete time: Wed Jul 31 17:48:59 2024
+
+LOAD SUMMARY
+============
+
+WRT_8250 Target (test load not supported for this target type): preview_01CAKB17000000000CZA_DataPreviewTarget_0002_01_csv (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_0002_01_csv])
+WRT_8038 Inserted rows - Requested: 10         Applied: 10         Rejected: 0          Affected: 10        
+
+WRT_8250 Target (test load not supported for this target type): preview_01CAKB17000000000CZA_DataPreviewTarget_0003_01_csv (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_0003_01_csv])
+WRT_8044 No data loaded for this target
+
+
+WRT_8250 Target (test load not supported for this target type): preview_01CAKB17000000000CZA_DataPreviewTarget_0004_01_csv (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_0004_01_csv])
+WRT_8044 No data loaded for this target
+
+
+WRT_8250 Target (test load not supported for this target type): preview_01CAKB17000000000CZA_DataPreviewTarget_0008_01_csv (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_0008_01_csv])
+WRT_8044 No data loaded for this target
+
+
+WRT_8250 Target (test load not supported for this target type): preview_01CAKB17000000000CZA_DataPreviewTarget_0007_01_csv (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_0007_01_csv])
+WRT_8038 Inserted rows - Requested: 10         Applied: 10         Rejected: 0          Affected: 10        
+
+WRT_8250 Target (test load not supported for this target type): preview_01CAKB17000000000CZA_DataPreviewTarget_0005_01_csv (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_0005_01_csv])
+WRT_8038 Inserted rows - Requested: 10         Applied: 10         Rejected: 0          Affected: 10        
+
+WRT_8250 Target (test load not supported for this target type): preview_01CAKB17000000000CZA_DataPreviewTarget_000B_01_csv (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_000B_01_csv])
+WRT_8038 Inserted rows - Requested: 10         Applied: 10         Rejected: 0          Affected: 10        
+
+WRT_8250 Target (test load not supported for this target type): preview_01CAKB17000000000CZA_DataPreviewTarget_0006_01_csv (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_0006_01_csv])
+WRT_8038 Inserted rows - Requested: 10         Applied: 10         Rejected: 0          Affected: 10        
+
+WRT_8250 Target (test load not supported for this target type): preview_01CAKB17000000000CZA_DataPreviewTarget_000C_01_csv (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_000C_01_csv])
+WRT_8038 Inserted rows - Requested: 10         Applied: 10         Rejected: 0          Affected: 10        
+
+WRT_8250 Target (test load not supported for this target type): preview_01CAKB17000000000CZA_DataPreviewTarget_0009_01_csv (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_0009_01_csv])
+WRT_8038 Inserted rows - Requested: 10         Applied: 10         Rejected: 0          Affected: 10        
+
+WRT_8250 Target (test load not supported for this target type): preview_01CAKB17000000000CZA_DataPreviewTarget_000D_01_csv (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_000D_01_csv])
+WRT_8044 No data loaded for this target
+
+
+WRT_8250 Target (test load not supported for this target type): preview_01CAKB17000000000CZA_DataPreviewTarget_0001_01_csv (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_0001_01_csv])
+WRT_8044 No data loaded for this target
+
+
+WRT_8250 Target (test load not supported for this target type): preview_01CAKB17000000000CZA_DataPreviewTarget_000A_01_csv (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_000A_01_csv])
+WRT_8044 No data loaded for this target
+
+
+
+WRITER_1_*_1> WRT_8043 [2024-07-31 17:48:59.845] *****END LOAD SESSION*****
+MANAGER> PETL_24031 [2024-07-31 17:48:59.884] 
+***** RUN INFO FOR TGT LOAD ORDER GROUP [1], CONCURRENT SET [1] *****
+Thread [READER_1_1_1] created for [the read stage] of partition point [SRC_fchdfsDeclarationDetailTrans_2] has completed. The total run time was insufficient for any meaningful statistics.
+Thread [TRANSF_1_1_1] created for [the transformation stage] of partition point [SRC_fchdfsDeclarationDetailTrans_2] has completed. The total run time was insufficient for any meaningful statistics.
+Thread [READER_1_2_1] created for [the read stage] of partition point [SRC_fchdfsDeclarationDetailTrans_1] has completed. The total run time was insufficient for any meaningful statistics.
+Thread [TRANSF_1_2_1] created for [the transformation stage] of partition point [SRC_fchdfsDeclarationDetailTrans_1] has completed. The total run time was insufficient for any meaningful statistics.
+Thread [READER_1_3_1] created for [the read stage] of partition point [SRC_HiveDimNbRequirementRef] has completed.
+	Total Run Time = [86.807742] secs
+	Total Idle Time = [0.000000] secs
+	Busy Percentage = [100.000000]
+Thread [TRANSF_1_3_1] created for [the transformation stage] of partition point [SRC_HiveDimNbRequirementRef] has completed. The total run time was insufficient for any meaningful statistics.
+Thread [READER_1_4_1] created for [the read stage] of partition point [SRC_HiveRequirement] has completed.
+	Total Run Time = [12.163108] secs
+	Total Idle Time = [0.000000] secs
+	Busy Percentage = [100.000000]
+Thread [TRANSF_1_4_1] created for [the transformation stage] of partition point [SRC_HiveRequirement] has completed. The total run time was insufficient for any meaningful statistics.
+Thread [TRANSF_1_5_1] created for [the transformation stage] of partition point [UN_FnlSrcRec] has completed. The total run time was insufficient for any meaningful statistics.
+Thread [TRANSF_1_6_1] created for [the transformation stage] of partition point [JNR_JoinDimNbRequirementRef] has completed.
+	Total Run Time = [74.563317] secs
+	Total Idle Time = [74.549495] secs
+	Busy Percentage = [0.018537]
+	Transformation-specific statistics for this thread were not accurate enough to report.
+Thread [WRITER_1_*_1] created for [the write stage] of partition point [preview_01CAKB17000000000CZA_DataPreviewTarget_0002_01_csv, preview_01CAKB17000000000CZA_DataPreviewTarget_0003_01_csv, preview_01CAKB17000000000CZA_DataPreviewTarget_0004_01_csv, preview_01CAKB17000000000CZA_DataPreviewTarget_0008_01_csv, preview_01CAKB17000000000CZA_DataPreviewTarget_0007_01_csv, preview_01CAKB17000000000CZA_DataPreviewTarget_0005_01_csv, preview_01CAKB17000000000CZA_DataPreviewTarget_000B_01_csv, preview_01CAKB17000000000CZA_DataPreviewTarget_0006_01_csv, preview_01CAKB17000000000CZA_DataPreviewTarget_000C_01_csv, preview_01CAKB17000000000CZA_DataPreviewTarget_0009_01_csv, preview_01CAKB17000000000CZA_DataPreviewTarget_000D_01_csv, preview_01CAKB17000000000CZA_DataPreviewTarget_0001_01_csv, preview_01CAKB17000000000CZA_DataPreviewTarget_000A_01_csv] has completed.
+	Total Run Time = [86.831134] secs
+	Total Idle Time = [86.794339] secs
+	Busy Percentage = [0.042376]
+
+MANAGER> PETL_24005 [2024-07-31 17:48:59.887] Starting post-session tasks. : (Wed Jul 31 17:48:59 2024)
+POST-SESS> PETL_24091 [2024-07-31 17:48:59.888] Thread [POST-SESS] has the ID [16].
+MANAGER> PETL_24029 [2024-07-31 17:48:59.890] Post-session task completed successfully. : (Wed Jul 31 17:48:59 2024)
+MAPPING> SDKS_38025 [2024-07-31 17:48:59.891] Plug-in 451600 deinitialized and unloaded with status [-1].
+MAPPING> SDKS_38018 [2024-07-31 17:48:59.891] Reader SDK plug-ins deinitialized with status [-1].
+MAPPING> TM_6018 [2024-07-31 17:48:59.893] The session completed with [1] row transformation errors. 
+MANAGER> PETL_24002 [2024-07-31 17:49:00.617] Parallel Pipeline Engine finished.
+DIRECTOR> PETL_24013 [2024-07-31 17:49:00.618] Session run completed with failure.
+DIRECTOR> TM_6022 [2024-07-31 17:49:00.618] 
+
+SESSION LOAD SUMMARY
+================================================
+
+DIRECTOR> TM_6252 [2024-07-31 17:49:00.618] Source Load Summary.
+DIRECTOR> CMN_1740 [2024-07-31 17:49:00.618] Table: [SRC_fchdfsDeclarationDetailTrans_2] (Instance Name: [SRC_fchdfsDeclarationDetailTrans_2] Instance UI Name: [SRC_fchdfsDeclarationDetailTrans_2])
+	 Output Rows [10], Affected Rows [10], Applied Rows [10], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-07-31 17:49:00.618] Table: [SRC_fchdfsDeclarationDetailTrans_1] (Instance Name: [SRC_fchdfsDeclarationDetailTrans_1] Instance UI Name: [SRC_fchdfsDeclarationDetailTrans_1])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-07-31 17:49:00.618] Table: [SRC_HiveDimNbRequirementRef] (Instance Name: [SRC_HiveDimNbRequirementRef] Instance UI Name: [SRC_HiveDimNbRequirementRef])
+	 Output Rows [10], Affected Rows [10], Applied Rows [10], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-07-31 17:49:00.618] Table: [SRC_HiveRequirement] (Instance Name: [SRC_HiveRequirement] Instance UI Name: [SRC_HiveRequirement])
+	 Output Rows [10], Affected Rows [10], Applied Rows [10], Rejected Rows [0]
+DIRECTOR> TM_6704 [2024-07-31 17:49:00.618] Target Test Load Summary
+DIRECTOR> CMN_1740 [2024-07-31 17:49:00.618] Table: [preview_01CAKB17000000000CZA_DataPreviewTarget_0002_01_csv] (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_0002_01_csv] Instance UI Name: [DataPreviewTarget_0002_01])
+	 Output Rows [10], Affected Rows [10], Applied Rows [10], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-07-31 17:49:00.618] Table: [preview_01CAKB17000000000CZA_DataPreviewTarget_0003_01_csv] (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_0003_01_csv] Instance UI Name: [DataPreviewTarget_0003_01])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-07-31 17:49:00.618] Table: [preview_01CAKB17000000000CZA_DataPreviewTarget_0004_01_csv] (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_0004_01_csv] Instance UI Name: [DataPreviewTarget_0004_01])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-07-31 17:49:00.618] Table: [preview_01CAKB17000000000CZA_DataPreviewTarget_0008_01_csv] (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_0008_01_csv] Instance UI Name: [DataPreviewTarget_0008_01])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-07-31 17:49:00.618] Table: [preview_01CAKB17000000000CZA_DataPreviewTarget_0007_01_csv] (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_0007_01_csv] Instance UI Name: [DataPreviewTarget_0007_01])
+	 Output Rows [10], Affected Rows [10], Applied Rows [10], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-07-31 17:49:00.618] Table: [preview_01CAKB17000000000CZA_DataPreviewTarget_0005_01_csv] (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_0005_01_csv] Instance UI Name: [DataPreviewTarget_0005_01])
+	 Output Rows [10], Affected Rows [10], Applied Rows [10], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-07-31 17:49:00.618] Table: [preview_01CAKB17000000000CZA_DataPreviewTarget_000B_01_csv] (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_000B_01_csv] Instance UI Name: [DataPreviewTarget_000B_01])
+	 Output Rows [10], Affected Rows [10], Applied Rows [10], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-07-31 17:49:00.618] Table: [preview_01CAKB17000000000CZA_DataPreviewTarget_0006_01_csv] (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_0006_01_csv] Instance UI Name: [DataPreviewTarget_0006_01])
+	 Output Rows [10], Affected Rows [10], Applied Rows [10], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-07-31 17:49:00.618] Table: [preview_01CAKB17000000000CZA_DataPreviewTarget_000C_01_csv] (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_000C_01_csv] Instance UI Name: [DataPreviewTarget_000C_01])
+	 Output Rows [10], Affected Rows [10], Applied Rows [10], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-07-31 17:49:00.618] Table: [preview_01CAKB17000000000CZA_DataPreviewTarget_0009_01_csv] (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_0009_01_csv] Instance UI Name: [DataPreviewTarget_0009_01])
+	 Output Rows [10], Affected Rows [10], Applied Rows [10], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-07-31 17:49:00.618] Table: [preview_01CAKB17000000000CZA_DataPreviewTarget_000D_01_csv] (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_000D_01_csv] Instance UI Name: [DataPreviewTarget_000D_01])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-07-31 17:49:00.618] Table: [preview_01CAKB17000000000CZA_DataPreviewTarget_0001_01_csv] (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_0001_01_csv] Instance UI Name: [DataPreviewTarget_0001_01])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-07-31 17:49:00.618] Table: [preview_01CAKB17000000000CZA_DataPreviewTarget_000A_01_csv] (Instance Name: [preview_01CAKB17000000000CZA_DataPreviewTarget_000A_01_csv] Instance UI Name: [DataPreviewTarget_000A_01])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> TM_6023 [2024-07-31 17:49:00.619] 
+===================================================
+
+DIRECTOR> TM_6020 [2024-07-31 17:49:00.619] Session [s_mtt_01CAKB17000000000CZA] completed at [Wed Jul 31 17:49:00 2024].

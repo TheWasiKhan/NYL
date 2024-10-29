@@ -1,0 +1,118 @@
+WITH SRC_HiveSz_Cntr_Relship AS (select 
+c.conrelid_ref,
+c.iprsonid_ref src_iperson_ref_id,
+c.iorganid_ref src_iorg_ref_id,
+case when c.iprsonid_ref='1' Then c.iorganid_ref when c.iorganid_ref='1' 
+Then c.iprsonid_ref when (c.iprsonid_ref='1' and c.iorganid_ref='1') Then c.iprsonid_ref end as iper_iorg_lkp,
+nvl(ip.iprsonid_ref,-99) as iprsonid_ref,
+p.personid_ref,
+p.client_ref,
+p.client_ref as client_ref1,
+nvl(p.client_ref,'NF') as src_cl_id1
+from $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.cntr_relship c inner join
+$$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.i_person ip on c.iprsonid_ref = ip.iprsonid_ref inner join $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.person p
+on ip.personid_ref = p.personid_ref 
+where c.conrelid_ref>999 and c.edh_record_status_in='A' and ip.edh_record_status_in='A' and p.edh_record_status_in='A'),
+
+SRC_fchdfsSrcClIdRec0 AS (select * from $$EDM_REDSHIFT_TARGET_FULL_SCHEMA.fact_nb_case_remark_srcclidrec0),
+
+SRC_HivePzDim_Nb_Applicant AS (SELECT
+       dim_nb_applicant_sk,
+       src_cl_id as src_cl_id,
+       src_iperson_ref_id_nk as iprsonid_ref,
+	   src_iperson_ref_id_nk as iper_iorg_lkp,
+       src_iorg_ref_id_nk as src_iorg_ref_id
+ FROM
+       $$EDM_REDSHIFT_PDM_SCHEMA_TGT.dim_nb_applicant
+ WHERE   
+       src_sys_nm_nk= 'jpSrcSysNm' AND 
+       dim_nb_applicant_sk NOT IN($$DEFAULT_REFERENCE_SK) AND
+       edh_record_status_in= 'A'),
+
+SRC_fchdfsSrcRequirementPerson1 AS (SELECT * FROM $$EDM_REDSHIFT_TARGET_FULL_SCHEMA.fact_nb_case_remark_SrcRequirementPerson1)
+
+SELECT case1 as  case,
+case_note,
+case_num,
+casrmk_type_decode,
+casrmkid_ref,
+client_ref,
+client_ref1,
+cnt_id_nk,
+cnt_id_nk_NB,
+cnt_iss_cd_nk,
+cnt_iss_cd_nk_NB,
+cntrctid_ref,
+SRC_fchdfsSrcClIdRec0.conrelid_ref,
+dat_src_cd_nk,
+dim_contract_sk,
+dim_nb_applicant_sk,
+dim_nb_contract_sk,
+SRC_HivePzDim_Nb_Applicant.iper_iorg_lkp,
+SRC_HivePzDim_Nb_Applicant.iprsonid_ref,
+issue_code_decode,
+kaudcnid_code,
+kqcacnid_code,
+lastupd_user,
+owner_ent_name,
+personid_ref,
+quality_cntrl_action_sts_cd,
+reqmntid_ref,
+SRC_HivePzDim_Nb_Applicant.src_cl_id,
+src_cl_id1,
+SRC_HivePzDim_Nb_Applicant.src_iorg_ref_id,
+src_iperson_ref_id,
+src_rec_last_updt_ts,
+src_rec_sts_set_dt,
+status_code,
+status_ref,
+stenddat_enddat,
+stenddat_strtdt,
+user_id,
+userid_code,
+uwagrees_withqca_decode FROM SRC_HiveSz_Cntr_Relship LEFT JOIN SRC_fchdfsSrcClIdRec0 
+ ON SRC_HiveSz_Cntr_Relship.conrelid_ref= SRC_fchdfsSrcClIdRec0.conrelid_ref
+ LEFT JOIN SRC_HivePzDim_Nb_Applicant ON SRC_HiveSz_Cntr_Relship.iprsonid_ref = SRC_HivePzDim_Nb_Applicant.iprsonid_ref
+ 
+UNION ALL
+
+SELECT case1 as  case,
+case_note,
+case_num,
+casrmk_type_decode,
+casrmkid_ref,
+client_ref,
+client_ref1,
+cnt_id_nk,
+cnt_id_nk_NB,
+cnt_iss_cd_nk,
+cnt_iss_cd_nk_NB,
+cntrctid_ref,
+conrelid_ref,
+dat_src_cd_nk,
+dim_contract_sk,
+dim_nb_applicant_sk,
+dim_nb_contract_sk,
+iper_iorg_lkp,
+iprsonid_ref,
+issue_code_decode,
+kaudcnid_code,
+kqcacnid_code,
+lastupd_user,
+owner_ent_name,
+personid_ref,
+quality_cntrl_action_sts_cd,
+reqmntid_ref,
+src_cl_id,
+src_cl_id1,
+src_iorg_ref_id,
+src_iperson_ref_id,
+src_rec_last_updt_ts,
+src_rec_sts_set_dt,
+status_code,
+status_ref,
+stenddat_enddat,
+stenddat_strtdt,
+user_id,
+userid_code,
+uwagrees_withqca_decode FROM $$EDM_REDSHIFT_TARGET_FULL_SCHEMA.fact_nb_case_remark_SrcRequirementPerson1

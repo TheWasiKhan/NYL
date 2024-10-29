@@ -1,0 +1,139 @@
+WITH SRC_COMBINE as
+(SELECT D.* from
+(with 
+SRC_HiveFactNbCntInsuredPegaTrans as
+(select
+src_sys_nm_nk,
+dim_nb_contract_sk,
+dim_contract_sk,
+cnt_id_nk,
+case_num,
+dim_party_sk curr_dim_party_client_sk,
+dim_nb_applicant_sk curr_dim_nb_applicant_sk,
+src_cl_id curr_cl_id_nk,
+cast(req_insured_cl_id as varchar) req_insured_cl_id,
+src_rec_sts_cd,
+resp_insured_first_nm,
+resp_insured_last_nm,
+req_dt,
+req_atws_trans_cd 
+from $$EDM_REDSHIFT_PDM_SCHEMA.fact_nb_cnt_insured_pega_trans
+where  src_sys_nm_nk in ('NB21','ALIP') and trim(upper(req_atws_trans_cd))='FTDETREQ'
+),
+
+SRC_HiveMinFactNbCntInsuredPegaTrans as
+(with src as
+(select 
+	cnt_id_nk,
+	src_cl_id,
+	dim_party_sk,
+	dim_nb_applicant_sk,
+	req_insured_cl_id,
+	src_sys_nm_nk,
+	min(req_dt) over (partition by src_sys_nm_nk, cnt_id_nk) as min_req_dt,
+	req_atws_trans_cd
+from $$EDM_REDSHIFT_PDM_SCHEMA.fact_nb_cnt_insured_pega_trans
+where  src_sys_nm_nk in ('NB21','ALIP') AND trim(upper(req_atws_trans_cd))='FTDETREQ')
+select 	
+	cnt_id_nk,
+	src_cl_id,
+	dim_party_sk pega_dim_party_client_sk,
+	dim_nb_applicant_sk pega_dim_nb_applicant_sk,
+	cast(req_insured_cl_id as varchar) pega_cl_id_nk,
+	src_sys_nm_nk,
+	min_req_dt req_dt,
+	req_atws_trans_cd 
+from src 
+group by cnt_id_nk,
+	src_cl_id,
+	dim_party_sk,
+	dim_nb_applicant_sk,
+	req_insured_cl_id,
+	src_sys_nm_nk,
+	min_req_dt,
+	req_atws_trans_cd
+)
+select 
+A.src_sys_nm_nk,
+A.dim_nb_contract_sk,
+A.dim_contract_sk,
+A.cnt_id_nk,
+A.case_num,
+A.curr_dim_party_client_sk,
+A.curr_dim_nb_applicant_sk,
+A.curr_cl_id_nk,
+A.req_insured_cl_id,
+A.src_rec_sts_cd,
+A.resp_insured_first_nm,
+A.resp_insured_last_nm,
+A.req_dt,
+A.req_atws_trans_cd,
+B.src_cl_id,
+B.pega_dim_party_client_sk ,
+B.pega_dim_nb_applicant_sk ,
+B.pega_cl_id_nk ,
+RANK() OVER(partition by A.src_sys_nm_nk,A.dim_nb_contract_sk,A.dim_contract_sk,A.cnt_id_nk,A.case_num,A.curr_dim_party_client_sk,A.curr_dim_nb_applicant_sk,A.curr_cl_id_nk,B.pega_dim_party_client_sk,B.pega_dim_nb_applicant_sk,B.pega_cl_id_nk,A.src_rec_sts_cd,A.resp_insured_first_nm,A.resp_insured_last_nm 
+order by A.src_sys_nm_nk,A.dim_nb_contract_sk,A.dim_contract_sk,A.cnt_id_nk,A.case_num,A.curr_dim_party_client_sk,A.curr_dim_nb_applicant_sk,A.curr_cl_id_nk,B.pega_dim_party_client_sk,B.pega_dim_nb_applicant_sk,B.pega_cl_id_nk,A.src_rec_sts_cd,A.resp_insured_first_nm,A.resp_insured_last_nm ) as rnk  
+from 
+SRC_HiveFactNbCntInsuredPegaTrans A
+JOIN SRC_HiveMinFactNbCntInsuredPegaTrans B 
+on  A.cnt_id_nk=B.cnt_id_nk
+AND A.src_sys_nm_nk=B.src_sys_nm_nk
+AND A.req_atws_trans_cd=B.req_atws_trans_cd
+AND A.req_dt=B.req_dt)D
+WHERE D.RNK=1),
+SRC_HiveDimNbContract as
+(select 
+dim_nb_contract_sk,
+src_sys_nm_nk from $$EDM_REDSHIFT_PDM_SCHEMA.dim_nb_contract where dim_nb_contract_sk not in ($$DEFAULT_REFERENCE_SK)  and src_sys_nm_nk in ('NB21','ALIP')),
+
+---------------
+
+SRC_HiveDimParty as 
+(select 
+dim_party_sk AS curr_dim_party_client_sk
+from $$EDM_REDSHIFT_PDM_SCHEMA.dim_party_nb_stg where dim_party_sk not in ($$DEFAULT_REFERENCE_SK)
+order by dim_party_sk),
+SRC_HiveDimNbApplicant AS ( select 
+dim_nb_applicant_sk curr_dim_nb_applicant_sk,
+applicant_first_nm curr_applicant_first_nm,
+applicant_middle_nm curr_applicant_middle_nm,
+applicant_last_nm curr_applicant_last_nm,
+src_sys_nm_nk
+from $$EDM_REDSHIFT_PDM_SCHEMA.dim_nb_applicant where dim_nb_applicant_sk not in ($$DEFAULT_REFERENCE_SK) and src_sys_nm_nk in ('NB21','ALIP')
+order by dim_nb_applicant_sk,src_sys_nm_nk)
+
+SELECT 
+E.src_sys_nm_nk,
+E.dim_nb_contract_sk,
+E.dim_contract_sk,
+E.cnt_id_nk,
+E.case_num,
+E.curr_dim_party_client_sk,
+E.curr_dim_nb_applicant_sk,
+E.curr_cl_id_nk,
+E.src_rec_sts_cd,
+E.resp_insured_first_nm,
+E.resp_insured_last_nm,
+E.pega_dim_party_client_sk o_pega_dim_party_client_sk,
+--E.pega_dim_nb_applicant_sk o_pega_dim_nb_applicant_sk,
+E.pega_cl_id_nk o_pega_cl_id_nk, 
+G.curr_dim_party_client_sk AS o_curr_dim_party_client_sk, 
+H.curr_dim_nb_applicant_sk,
+H.curr_applicant_first_nm AS o_curr_applicant_first_nm,
+H.curr_applicant_first_nm O_pega_applicant_first_nm,
+H.curr_applicant_last_nm AS o_curr_applicant_last_nm,
+H.curr_applicant_middle_nm AS o_curr_applicant_middle_nm,
+H.curr_applicant_middle_nm pega_applicant_middle_nm,
+H.curr_applicant_last_nm pega_applicant_last_nm
+
+FROM SRC_COMBINE E
+LEFT JOIN SRC_HiveDimNbContract F
+ON E.src_sys_nm_nk=F.src_sys_nm_nk
+AND E.dim_nb_contract_sk=F.dim_nb_contract_sk
+-----
+LEFT JOIN SRC_HiveDimParty G ON G.curr_dim_party_client_sk = E.curr_dim_party_client_sk
+---LEFT JOIN SRC_HiveDimParty G ON G.curr_dim_party_client_sk = E.curr_dim_party_client_sk
+LEFT JOIN SRC_HiveDimNbApplicant H ON H.curr_dim_nb_applicant_sk = E.curr_dim_nb_applicant_sk  and H.src_sys_nm_nk = E.src_sys_nm_nk 
+--LEFT FOIN SRC_HiveDimNbApplicant H ON H.curr_dim_nb_applicant_sk = E.curr_dim_nb_applicant_sk  and H.src_sys_nm_nk = E.src_sys_nm_nk
+

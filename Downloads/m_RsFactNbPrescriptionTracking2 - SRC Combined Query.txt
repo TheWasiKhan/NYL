@@ -1,0 +1,229 @@
+WITH SRC_fchdfsIntermediate1 AS (
+SELECT status_ref_pr,
+edh_record_status_in_pr,
+status_ref_req,
+edh_record_status_in_req,
+status_ref_cr,
+edh_record_status_in_cr,
+cntrctid_ref,
+reqmntid_ref AS e_reqmntid_ref,
+kincrqid_code,
+prscstid_ref,
+prscstat_ordstat,
+prscstat_applstat,
+creation_date,
+suborder_reqstdte,
+suborder_respdte,
+suborder_resltcde,
+suborder_resltcom,
+retrvorder_reqstdte,
+retrvorder_respdte,
+retrvorder_resltcde,
+retrvorder_resltcom,
+numof_tries,
+tracking_id,
+prscstat_url,
+error_message,
+status_code,
+cntrctid_ref_c AS e_cntrctid_ref_c,
+cntrctid_number,
+reqown_ent_name AS e_reqown_ent_name,
+dim_nb_requirement_ref_sk,
+reqr_cd_nk,
+reqr_ref_id,
+dim_nb_contract_sk,
+dim_contract_sk,
+dat_src_cd_nk,
+contract_type_decode,
+prodctid_code_ct,
+plan_id_code_ct,
+prodctid_ref,
+plan_id_ref,
+dim_nb_product_sk,
+plan_version,
+lkp_product_cd,
+lkp_plan_cd,
+status_ref_ps,
+issue_code_decode,
+risk_score,
+risk_scorecmp,
+credit_dataord,
+credit_datahit,
+filterclaim_count
+ FROM ds_staging_conv.fact_nb_prescription_tracking_interim1),
+
+SRC_HiveAppEntry AS (SELECT
+       cntrctid_ref as cntrctid_ref_c,
+       app_type_decode
+ FROM $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.I_APP_ENTRY
+ WHERE edh_record_status_in= 'A'),
+ 
+SRC_HiveSrcRecsReqIpPer AS (WITH 
+ req as (
+ SELECT
+       reqmntid_ref,
+       reqown_inst_ref,
+       kincrqid_code,
+       owner_ent_name,
+       reqown_ent_name
+ FROM
+ (SELECT
+       req.reqmntid_ref as reqmntid_ref,
+       req.reqown_inst_ref as reqown_inst_ref,
+       req.kincrqid_code as kincrqid_code,
+       req.owner_ent_name as owner_ent_name,
+       req.reqown_ent_name as reqown_ent_name,
+       RANK() OVER(partition by reqmntid_ref,reqown_inst_ref order by reqmntid_ref desc) as rnk
+ FROM
+       $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.requirement req
+ WHERE   
+       UPPER(reqown_ent_name) IN('PERSON','I_PERSON') AND  
+       UPPER(OWNER_ENT_NAME)= 'PRSCRPTN_STATUS' AND  
+       edh_record_status_in= 'A') req
+ WHERE 
+       rnk= 1),
+ per as (
+ SELECT
+       personid_ref,
+       client_ref,
+       personal_gender_decode
+ FROM
+ (SELECT
+       per.personid_ref as personid_ref,
+       per.client_ref as client_ref,
+       per.personal_gender_decode as personal_gender_decode
+ FROM
+       $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.person per
+ WHERE 
+       edh_record_status_in= 'A') per),
+ ip as (
+ SELECT
+       iprsonid_ref,
+       personid_ref
+ FROM
+ (SELECT
+       ip.iprsonid_ref as iprsonid_ref,
+       ip.personid_ref as personid_ref,
+       RANK() OVER(partition by personid_ref order by iprsonid_ref desc) as rnk
+ FROM
+       $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.i_person ip
+ WHERE 
+       edh_record_status_in= 'A') ip
+ WHERE 
+       rnk= 1)
+ 
+ SELECT
+       req.reqmntid_ref,
+       req.reqown_inst_ref,
+       TRIM(req.kincrqid_code) as req_kincrqid_code,
+       ip.personid_ref as ip_personid_ref,
+       per.personid_ref as p_personid_ref,
+       TRIM(per.client_ref) as client_ref,
+       ip.iprsonid_ref,
+       '' as personal_gender_decode,
+       TRIM(req.reqown_ent_name) as reqown_ent_name
+ FROM req
+ INNER JOIN  per ON req.reqown_inst_ref= per.personid_ref AND 
+       UPPER(req.reqown_ent_name)= 'PERSON'
+ INNER JOIN ip ON
+       per.personid_ref= ip.personid_ref
+ UNION 
+
+ SELECT
+       req.reqmntid_ref,
+       req.reqown_inst_ref,
+       '' as req_kincrqid_code,
+       ip.personid_ref as ip_personid_ref,
+       per.personid_ref as p_personid_ref,
+       TRIM(per.client_ref) as client_ref,
+       ip.iprsonid_ref,
+       TRIM(per.personal_gender_decode) as personal_gender_decode,
+       TRIM(req.reqown_ent_name) as reqown_ent_name
+ FROM req
+ INNER JOIN  ip ON
+       req.reqown_inst_ref= ip.iprsonid_ref AND 
+       UPPER(req.reqown_ent_name)= 'I_PERSON'
+ INNER JOIN per ON ip.personid_ref= per.personid_ref),
+ 
+SRC_HiveDimNbApplicant AS (SELECT
+       dim_nb_applicant_sk,
+       iprsonid_ref
+ FROM
+ (SELECT
+       dim_nb_applicant_sk,
+       src_iperson_ref_id_nk as iprsonid_ref,
+       RANK() OVER(partition by src_iperson_ref_id_nk order by dim_nb_applicant_sk desc) as rnk
+ FROM $$EDM_REDSHIFT_PDM_SCHEMA.dim_nb_applicant
+ WHERE   
+       dim_nb_applicant_sk NOT IN($$DEFAULT_REFERENCE_SK) AND  
+       src_sys_nm_nk= 'jpSrcSysNm') a
+ WHERE a.rnk= 1)	   
+
+SELECT 
+A.status_ref_pr,
+A.edh_record_status_in_pr,
+A.status_ref_req,
+A.edh_record_status_in_req,
+A.status_ref_cr,
+A.edh_record_status_in_cr,
+A.cntrctid_ref,
+A.reqmntid_ref AS e_reqmntid_ref,
+A.kincrqid_code,
+A.prscstid_ref,
+A.prscstat_ordstat,
+A.prscstat_applstat,
+A.creation_date,
+A.suborder_reqstdte,
+A.suborder_respdte,
+A.suborder_resltcde,
+A.suborder_resltcom,
+A.retrvorder_reqstdte,
+A.retrvorder_respdte,
+A.retrvorder_resltcde,
+A.retrvorder_resltcom,
+A.numof_tries,
+A.tracking_id,
+A.prscstat_url,
+A.error_message,
+A.status_code,
+A.cntrctid_ref_c AS e_cntrctid_ref_c,
+A.cntrctid_number,
+A.reqown_ent_name AS e_reqown_ent_name,
+A.dim_nb_requirement_ref_sk,
+A.reqr_cd_nk,
+A.reqr_ref_id,
+A.dim_nb_contract_sk,
+A.dim_contract_sk,
+A.dat_src_cd_nk,
+A.contract_type_decode,
+A.prodctid_code_ct,
+A.plan_id_code_ct,
+A.prodctid_ref,
+A.plan_id_ref,
+A.dim_nb_product_sk,
+A.plan_version,
+A.lkp_product_cd,
+A.lkp_plan_cd,
+A.status_ref_ps,
+A.issue_code_decode,
+A.risk_score,
+A.risk_scorecmp,
+A.credit_dataord,
+A.credit_datahit,
+A.filterclaim_count,
+B.app_type_decode,
+C.reqown_inst_ref,
+C.req_kincrqid_code,
+C.ip_personid_ref,
+C.p_personid_ref,
+C.client_ref,
+C.personal_gender_decode,
+D.dim_nb_applicant_sk AS j_dim_nb_applicant_sk,
+D.iprsonid_ref AS j_iprsonid_ref
+
+FROM SRC_fchdfsIntermediate1 A
+LEFT JOIN SRC_HiveAppEntry B ON A.e_cntrctid_ref_c = B.cntrctid_ref_c
+LEFT JOIN SRC_HiveSrcRecsReqIpPer C ON C.reqmntid_ref = A.e_reqmntid_ref AND 
+ C.reqown_ent_name = A.e_reqown_ent_name
+LEFT JOIN SRC_HiveDimNbApplicant D on D.iprsonid_ref = C.iprsonid_ref
+ORDER BY A.e_reqmntid_ref;

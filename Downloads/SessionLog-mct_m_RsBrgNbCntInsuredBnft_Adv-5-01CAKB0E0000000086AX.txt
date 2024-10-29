@@ -1,0 +1,6 @@
+2024-07-16T11:50:53.287+00:00 <DisnextAsyncThread-370> INFO: ExecutionId [01CAKB0E0000000086AX].
+2024-07-16T11:50:53.287+00:00 <DisnextAsyncThread-370> INFO: RequestId [edc46f246f3a49f18e5df69512fe8138].
+2024-07-16T11:50:53.425+00:00 <DisnextAsyncThread-370> INFO: Sending request to Job compilation service.
+2024-07-16T11:50:57.104+00:00 <DisnextAsyncThread-370> INFO: Job compilation service responded with status: [false]
+2024-07-16T11:50:57.222+00:00 <DisnextAsyncThread-370> SEVERE: Disnext_internal_error_The job compilation service failed with message [The mapping compilation failed. Cause: [[LDTM_4708] The Integration Service failed to generate a Spark workflow for mapping [m_RsBrgNbCntInsuredBnft_Adv]. Review other log messages for more information.].]. Please refer to the compilation log for further details.
+2024-07-16T11:50:57.222+00:00 <DisnextAsyncThread-370> INFO: Spark Mapping Ended with state: Failed

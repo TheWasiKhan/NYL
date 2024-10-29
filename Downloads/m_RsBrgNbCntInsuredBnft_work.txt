@@ -1,0 +1,20 @@
+to_date(to_char(Systimestamp(), 'YYYY-MM-DD HH24:MI:SS'))
+to_date('9999-12-31 05:00:00', 'YYYY-MM-DD HH24:MI:SS')
+Add_TO_DATE(TO_DATE($$jpBatchTs,'YYYY-MM-DD HH24:MI:SS'),'ss',-1)
+
+SRC_HiveDimNbPlanBenefit --> no data
+JoinSrcCntBenvalue --> Fixed left join
+JNR_JoinCntrBenSlctOpt_Ecpo --> Fixed left join
+JNR_JoinCntrBenSlctOpt_Levdot --> Fixed left join
+JNR_JnCntrctidRef --> Fixed input fields
+JNR_JoinSrcCntBenvalue --> Fixed left join && Fixed input fields
+JNR_JoinCntBenValueRnkMin --> Fixed input fields
+JNR_JoinCntrBenRop --> Fixed left join
+JNR_JoinDimNbBeneComponent -- Fixed left join
+
+EXP_xfmSrcRecs: Exporesion fixed--->
+	o_dim_nb_bene_component_sk
+	o_dim_nb_plan_benefit_sk
+	
+chksum fixed: 
+UPPER (MD5(IIF(ISNULL(LTRIM(RTRIM(src_sys_nm_nk))),'',src_sys_nm_nk)||IIF(ISNULL(LTRIM(RTRIM(to_char(fact_nb_contract_part1_sk)))),'',to_char(fact_nb_contract_part1_sk))||IIF(ISNULL(LTRIM(RTRIM(to_char(src_cnt_bnft_link_ref_id)))),'',to_char(src_cnt_bnft_link_ref_id))||IIF(ISNULL(LTRIM(RTRIM(to_char(src_cnt_rel_ref_id)))),'',to_char(src_cnt_rel_ref_id))||IIF(ISNULL(LTRIM(RTRIM(to_char(src_cnt_bnft_ref_id)))),'',to_char(src_cnt_bnft_ref_id))||IIF(ISNULL(LTRIM(RTRIM(plan_bnft_cd_nk))),'',plan_bnft_cd_nk)))

@@ -1,0 +1,428 @@
+Agent Group Id: 01CAKB25000000000009
+Agent Group Name: EDM_CDI_SA_GRP
+Agent Name: edm.idmc.sa3.dev.nylcloud.com
+Agent Id: 01CAKB0800000000000X
+Task Name: mct_RsFactNbCntInsuredReqrSrcCntr1
+Task Type: MTT
+Task Id: 01CAKB0Z0000000009JV
+Run Id: 4
+Service Id: 2357746
+Started By: wkhan01
+Run Context Type: ICS_UI
+07/04/2024 06:10:33 **** Importing Connection: Conn_01CAKB0B00000000002M ...
+07/04/2024 06:10:33 **** Importing Source Definition: DUMMY_SRC_HiveSrcCntrLifeInsReq ...
+07/04/2024 06:10:33 **** Importing Source Definition: DUMMY_SRC_hiveSrcCntrGroupLink ...
+07/04/2024 06:10:33 **** Importing Source Definition: DUMMY_SRC_HiveSrcContract_1 ...
+07/04/2024 06:10:33 **** Importing Source Definition: DUMMY_SRC_HiveSrcCntrRelship ...
+07/04/2024 06:10:33 **** Importing Target Definition: fact_nb_cnt_insured_reqr_src_contract1 ...
+07/04/2024 06:10:33 **** Importing SessionConfig: default_session_config ...
+    <Warning> :  The Error Log DB Connection value should have Relational: as the prefix.
+    <Warning> :  Invalid value  for attribute Error Log DB Connection. Will use the default value 
+    Validating Source Definition  DUMMY_SRC_HiveSrcCntrRelship...
+    Validating Source Definition  DUMMY_SRC_HiveSrcContract_1...
+    Validating Source Definition  DUMMY_SRC_hiveSrcCntrGroupLink...
+    Validating Source Definition  DUMMY_SRC_HiveSrcCntrLifeInsReq...
+    Validating Target Definition  fact_nb_cnt_insured_reqr_src_contract1...
+07/04/2024 06:10:33 **** Importing Mapping: Mapping0 ...
+    <Warning> :  transformation: JNR_joinCntrLifeInsReq - Invalid value Null is Higest Value for attribute Null ordering in detail. Will use the default value Null Is Highest Value    [transformation< JNR_joinCntrLifeInsReq > ] 
+    <Warning> :  transformation: Joiner - Invalid value Null is Higest Value for attribute Null ordering in detail. Will use the default value Null Is Highest Value    [transformation< Joiner > ] 
+    <Warning> :  transformation: JNR_joinCntrGroupLink - Invalid value Null is Higest Value for attribute Null ordering in detail. Will use the default value Null Is Highest Value    [transformation< JNR_joinCntrGroupLink > ] 
+Validating transformations of mapping Mapping0...
+Validating mapping variable(s).
+    <Warning> :  Invalid table attribute: Exec SQL
+    <Warning> :  Invalid table attribute: Exec SQL
+    <Warning> :  Invalid table attribute: Exec SQL
+    <Warning> :  Invalid table attribute: Exec SQL
+07/04/2024 06:10:33 **** Importing Workflow: wf_mtt_01CAKB0Z0000000009JV ...
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z0000000009JV >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z0000000009JV >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z0000000009JV >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z0000000009JV >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z0000000009JV >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z0000000009JV >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z0000000009JV >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z0000000009JV >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value None for attribute Pushdown Optimization Context. Will use the default value None     [Session< s_mtt_01CAKB0Z0000000009JV > ] 
+    <Warning> :  The value entered is not a valid integer.
+    <Warning> :  Invalid value NO for attribute Fail task after wait time. Will use the default value 
+[Summary for Application Source Qualifier SRC_HiveSrcCntrLifeInsReq]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Application Source Qualifier SRC_hiveSrcCntrGroupLink]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Application Source Qualifier SRC_HiveSrcContract_1]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Application Source Qualifier SRC_HiveSrcCntrRelship]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+Successfully extracted session instance [s_mtt_01CAKB0Z0000000009JV].  Starting repository sequence id is [-1807984915]
+======================================================================
+PETL_24036 [2024-07-04 06:10:33.192] Beginning the prepare phase for the session.
+TM_6721 [2024-07-04 06:10:33.192] Started [Connect to Repository].
+TM_6722 [2024-07-04 06:10:33.670] Finished [Connect to Repository].  It took [0.47753] seconds.
+TM_6721 [2024-07-04 06:10:33.670] Started [Fetch Session from Repository].
+TM_6722 [2024-07-04 06:10:33.836] Finished [Fetch Session from Repository].  It took [0.165897] seconds.
+VAR_27085 [2024-07-04 06:10:33.837] Parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB0Z0000000009JV.param] is opened for [session [wf_mtt_01CAKB0Z0000000009JV.s_mtt_01CAKB0Z0000000009JV]].
+VAR_27062 [2024-07-04 06:10:33.837] Warning! Cannot find section for worklet [wf_mtt_01CAKB0Z0000000009JV] and folder [] in parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB0Z0000000009JV.param].
+TM_6721 [2024-07-04 06:10:33.854] Started [Partition Group Formation].
+TM_6722 [2024-07-04 06:10:33.854] Finished [Partition Group Formation].  It took [0.0006001] seconds.
+PETL_24037 [2024-07-04 06:10:33.854] Finished the prepare phase for the session.
+DIRECTOR> TM_6228 [2024-07-04 06:10:33.855] Writing session output to log file [/app/iics_agent_dir/apps/Data_Integration_Server/data/../logs/s_mtt_7pTZzxa7Ap8hfMLegOy2c1_4.log].
+DIRECTOR> VAR_27085 [2024-07-04 06:10:33.857] Parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB0Z0000000009JV.param] is opened for [session [wf_mtt_01CAKB0Z0000000009JV.s_mtt_01CAKB0Z0000000009JV]].
+DIRECTOR> VAR_27062 [2024-07-04 06:10:33.857] Warning! Cannot find section for worklet [wf_mtt_01CAKB0Z0000000009JV] and folder [] in parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB0Z0000000009JV.param].
+DIRECTOR> PETL_24093 [2024-07-04 06:10:33.858] User defined Parameter File Location [EDM_IDMC_S3::nyl-idmc-dev-workspace-20230504201653688600000001/edm/edm_processed_nb/ParamFiles/EDM_NBUW.param].
+DIRECTOR> TM_6014 [2024-07-04 06:10:33.858] Initializing session [s_mtt_01CAKB0Z0000000009JV] at [Thu Jul 04 06:10:33 2024].
+DIRECTOR> TM_6683 [2024-07-04 06:10:33.858] Repository Name: [XMLRepository]
+DIRECTOR> TM_6684 [2024-07-04 06:10:33.858] Server Name: [rDTM]
+DIRECTOR> TM_6686 [2024-07-04 06:10:33.858] Folder: []
+DIRECTOR> TM_6685 [2024-07-04 06:10:33.858] Workflow: [wf_mtt_01CAKB0Z0000000009JV] Run Instance Name: [] Run Id: [0]
+DIRECTOR> TM_6992 [2024-07-04 06:10:33.858] Operating System Type [Linux]
+DIRECTOR> TM_6101 [2024-07-04 06:10:33.858] Mapping name: Mapping0.
+DIRECTOR> TM_6964 [2024-07-04 06:10:33.859] Date format for the Session is [MM/DD/YYYY HH24:MI:SS.US]
+DIRECTOR> TM_6703 [2024-07-04 06:10:33.859] Session [s_mtt_01CAKB0Z0000000009JV] is run by 64-bit Integration Service  [], version [10.2.0 HotFix2], build [0320].
+MANAGER> PETL_24091 [2024-07-04 06:10:33.899] Thread [MANAGER] has the ID [1].
+MANAGER> PETL_24058 [2024-07-04 06:10:33.899] Running Partition Group [1].
+MANAGER> PETL_24000 [2024-07-04 06:10:33.899] Parallel Pipeline Engine initializing.
+MONITOR> PETL_24091 [2024-07-04 06:10:33.900] Thread [MONITOR] has the ID [2].
+MANAGER> PETL_24001 [2024-07-04 06:10:33.900] Parallel Pipeline Engine running.
+MANAGER> PETL_24003 [2024-07-04 06:10:33.900] Initializing session run.
+MAPPING> PETL_24091 [2024-07-04 06:10:33.901] Thread [MAPPING] has the ID [3].
+MAPPING> CMN_1569 [2024-07-04 06:10:33.904] Server Mode: [UNICODE]
+MAPPING> CMN_1570 [2024-07-04 06:10:33.904] Server Code page: [ISO 8859-1 Western European]
+MAPPING> TM_6151 [2024-07-04 06:10:33.904] The session sort order is [Binary].
+MAPPING> TM_6185 [2024-07-04 06:10:33.904] Warning. Code page validation is disabled in this session.
+MAPPING> CMN_65110 [2024-07-04 06:10:33.904] Current Timezone:[UTC -5:0]
+MAPPING> CMN_65111 [2024-07-04 06:10:33.904] Current Process ID:[6243]
+MAPPING> TM_6155 [2024-07-04 06:10:33.904] Using HIGH precision processing.
+MAPPING> TM_6180 [2024-07-04 06:10:33.904] Deadlock retry logic will not be implemented.
+MAPPING> TM_6187 [2024-07-04 06:10:33.904] Session target-based commit interval is [10000].
+MAPPING> PMJVM_42020 [2024-07-04 06:10:33.910] [INFO] Loaded library : /app/iics_agent_dir/apps/jdk/zulu8.70.0.52-sa-fx-jdk8.0.372/jre/lib/amd64/server/libjvm.so.
+MAPPING> PMJVM_42009 [2024-07-04 06:10:33.996] [INFO] Created Java VM successfully.
+MAPPING> SDKS_38029 [2024-07-04 06:10:34.072] Loaded plug-in 451600: [plugin description].
+MAPPING> SDKS_38024 [2024-07-04 06:10:34.109] Plug-in 451600 initialization complete.
+MAPPING> SDKS_38016 [2024-07-04 06:10:34.109] Reader SDK plug-in initialization complete.
+MAPPING> SDKS_38029 [2024-07-04 06:10:34.111] Loaded plug-in 451600: [plugin description].
+MAPPING> SDKS_38024 [2024-07-04 06:10:34.669] Plug-in 451600 initialization complete.
+MAPPING> SDKS_38017 [2024-07-04 06:10:34.669] Writer SDK plug-in initialization complete.
+MAPPING> CONNECTOR_10000 [2024-07-04 06:10:36.614] [INFO] The target object at runtime is overridden with the parameter name = fact_nb_cnt_insured_reqr_src_contract1 table name = fact_nb_cnt_insured_reqr_src_contract1.
+MAPPING> AMAZONREDSHIFT_10000 [2024-07-04 06:10:39.311] [INFO] Executing PRE-SQL: 
+
+/* partner: Informatica -v 2.0 */
+DELETE FROM ds_staging_conv.fact_nb_cnt_insured_reqr_src_contract1
+MAPPING> SDKS_38509 [2024-07-04 06:10:39.786] SDK target and group initialization complete.
+MAPPING> TM_6307 [2024-07-04 06:10:39.786] DTM error log disabled. 
+MAPPING> TE_7022 [2024-07-04 06:10:39.786] TShmWriter: Initialized
+MAPPING> DBG_21693 [2024-07-04 06:10:39.800] SRT_joinContract_Srt1: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-07-04 06:10:39.972] For Transformation [SRT_joinContract_Srt1], memory used is [1073741824] bytes and row size is 196 bytes.
+MAPPING> DBG_21694 [2024-07-04 06:10:39.989] JNR_joinCntrLifeInsReq Partition [0]: Index cache size = [59652323], Data cache size = [119304646]
+MAPPING> TT_11098 [2024-07-04 06:10:39.989] The Joiner transformation [JNR_joinCntrLifeInsReq] is configured with the join algorithm: Nested-Loop.
+MAPPING> DBG_21693 [2024-07-04 06:10:39.997] SRT_joinContract_Srt0: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-07-04 06:10:40.122] For Transformation [SRT_joinContract_Srt0], memory used is [1073741824] bytes and row size is 52 bytes.
+MAPPING> DBG_21694 [2024-07-04 06:10:40.139] Joiner Partition [0]: Index cache size = [59652323], Data cache size = [119304646]
+MAPPING> TT_11098 [2024-07-04 06:10:40.139] The Joiner transformation [Joiner] is configured with the join algorithm: Sorted-Merge.
+MAPPING> DBG_21077 [2024-07-04 06:10:40.139] Create joiner cache on master relation : (Thu Jul 04 06:10:40 2024)
+MAPPING> CMN_1690 [2024-07-04 06:10:40.168] Created new data file [/data/EDM_Agency/Cache//PMJNR-1807984795_17_0.dat] and index file [/data/EDM_Agency/Cache//PMJNR-1807984795_17_0.idx] for Joiner [Joiner].
+MAPPING> DBG_21603 [2024-07-04 06:10:40.168] Open master relation cache for detail joiner : (Thu Jul 04 06:10:40 2024)
+MAPPING> DBG_21693 [2024-07-04 06:10:40.168] SRT_joinCntrGroupLink_Srt0: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-07-04 06:10:40.297] For Transformation [SRT_joinCntrGroupLink_Srt0], memory used is [1073741824] bytes and row size is 240 bytes.
+MAPPING> DBG_21694 [2024-07-04 06:10:40.314] JNR_joinCntrGroupLink Partition [0]: Index cache size = [59652323], Data cache size = [119304646]
+MAPPING> TT_11098 [2024-07-04 06:10:40.314] The Joiner transformation [JNR_joinCntrGroupLink] is configured with the join algorithm: Nested-Loop.
+MAPPING> TM_6007 [2024-07-04 06:10:40.314] DTM initialized successfully for session [s_mtt_01CAKB0Z0000000009JV]
+DIRECTOR> PETL_24033 [2024-07-04 06:10:40.315] All DTM Connection Info: [<NONE>].
+MANAGER> PETL_24004 [2024-07-04 06:10:40.315] Starting pre-session tasks. : (Thu Jul 04 06:10:40 2024)
+PRE-SESS> PETL_24091 [2024-07-04 06:10:40.316] Thread [PRE-SESS] has the ID [4].
+MANAGER> PETL_24027 [2024-07-04 06:10:40.318] Pre-session task completed successfully. : (Thu Jul 04 06:10:40 2024)
+DIRECTOR> PETL_24006 [2024-07-04 06:10:40.318] Starting data movement.
+MAPPING> TM_6966 [2024-07-04 06:10:40.319] Reducing estimate of the amount of buffer pool memory required for high performance.
+MAPPING> TM_6660 [2024-07-04 06:10:40.333] Total Buffer Pool size is 1073741824 bytes and Block size is 15728640 bytes.
+MAPPING> CONNECTOR_10000 [2024-07-04 06:10:40.427] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+MAPPING> CONNECTOR_10000 [2024-07-04 06:10:40.493] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+MAPPING> CONNECTOR_10000 [2024-07-04 06:10:40.542] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+MAPPING> CONNECTOR_10000 [2024-07-04 06:10:40.586] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+READER_1_1_1> PETL_24091 [2024-07-04 06:10:40.645] Thread [READER_1_1_1] has the ID [5].
+READER_1_1_1> CONNECTOR_10000 [2024-07-04 06:10:40.746] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Read data
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:41.086] [INFO] The S3 bucket name for staging the data during the read operation is nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:41.086] [INFO] The value of Enable Compression is set to true.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:41.086] [INFO] The value of the S3 Client Encryption is set to false.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:41.088] [INFO] Unload Options ADDQUOTES : 
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:41.088] [INFO] Unload Options PARALLEL : ON
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:41.088] [INFO] Unload Options ESCAPE : 
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:41.089] [INFO] Temporary Credentials valid for [21,600] seconds will be used.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:41.157] [INFO] Encryption Type : None
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:41.157] [INFO] S3 Client Encryption : false
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:41.157] [INFO] S3 Server Side Encryption : false
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:41.157] [INFO] The Encryption type honored is : NONE
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:41.888] [INFO] The local staging directory location is set to /data/EDM_Agency/Cache/.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:41.889] [INFO] The value of Download S3 Files In Multiple Parts is set to true.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:41.889] [INFO] The Multipart Download Threshold size of an object is set as 5,242,880 bytes.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:41.897] [INFO] Staging dir location: /data/EDM_Agency/Cache//InfaRedshiftStaging0007040610418926300
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:41.899] [INFO] Total time taken for staging: 0.0 sec.
+TRANSF_1_1_1> PETL_24091 [2024-07-04 06:10:41.928] Thread [TRANSF_1_1_1] has the ID [6].
+READER_1_2_1> PETL_24091 [2024-07-04 06:10:41.929] Thread [READER_1_2_1] has the ID [7].
+READER_1_2_1> CONNECTOR_10000 [2024-07-04 06:10:41.962] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Read data
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:42.175] [INFO] The S3 bucket name for staging the data during the read operation is nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:42.175] [INFO] The value of Enable Compression is set to true.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:42.175] [INFO] The value of the S3 Client Encryption is set to false.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:42.175] [INFO] Unload Options ADDQUOTES : 
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:42.175] [INFO] Unload Options PARALLEL : ON
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:42.175] [INFO] Unload Options ESCAPE : 
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:42.175] [INFO] Temporary Credentials valid for [21,600] seconds will be used.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:42.219] [INFO] Encryption Type : None
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:42.219] [INFO] S3 Client Encryption : false
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:42.219] [INFO] S3 Server Side Encryption : false
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:42.219] [INFO] The Encryption type honored is : NONE
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:43.061] [INFO] The local staging directory location is set to /data/EDM_Agency/Cache/.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:43.062] [INFO] The value of Download S3 Files In Multiple Parts is set to true.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:43.062] [INFO] The Multipart Download Threshold size of an object is set as 5,242,880 bytes.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:43.067] [INFO] Staging dir location: /data/EDM_Agency/Cache//InfaRedshiftStaging0007040610430625340
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:43.067] [INFO] Total time taken for staging: 0.0 sec.
+TRANSF_1_2_1> PETL_24091 [2024-07-04 06:10:43.089] Thread [TRANSF_1_2_1] has the ID [8].
+READER_1_3_1> PETL_24091 [2024-07-04 06:10:43.090] Thread [READER_1_3_1] has the ID [9].
+READER_1_3_1> CONNECTOR_10000 [2024-07-04 06:10:43.114] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Read data
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:43.326] [INFO] The S3 bucket name for staging the data during the read operation is nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp.
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:43.326] [INFO] The value of Enable Compression is set to true.
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:43.326] [INFO] The value of the S3 Client Encryption is set to false.
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:43.326] [INFO] Unload Options ADDQUOTES : 
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:43.326] [INFO] Unload Options PARALLEL : ON
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:43.326] [INFO] Unload Options ESCAPE : 
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:43.326] [INFO] Temporary Credentials valid for [21,600] seconds will be used.
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:43.395] [INFO] Encryption Type : None
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:43.395] [INFO] S3 Client Encryption : false
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:43.395] [INFO] S3 Server Side Encryption : false
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:43.395] [INFO] The Encryption type honored is : NONE
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:44.075] [INFO] The local staging directory location is set to /data/EDM_Agency/Cache/.
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:44.077] [INFO] The value of Download S3 Files In Multiple Parts is set to true.
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:44.077] [INFO] The Multipart Download Threshold size of an object is set as 5,242,880 bytes.
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:44.083] [INFO] Staging dir location: /data/EDM_Agency/Cache//InfaRedshiftStaging000704061044077960
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:44.083] [INFO] Total time taken for staging: 0.0 sec.
+TRANSF_1_3_1> PETL_24091 [2024-07-04 06:10:44.492] Thread [TRANSF_1_3_1] has the ID [10].
+READER_1_4_1> PETL_24091 [2024-07-04 06:10:44.494] Thread [READER_1_4_1] has the ID [11].
+READER_1_4_1> CONNECTOR_10000 [2024-07-04 06:10:44.533] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Read data
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:44.743] [INFO] The S3 bucket name for staging the data during the read operation is nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp.
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:44.743] [INFO] The value of Enable Compression is set to true.
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:44.743] [INFO] The value of the S3 Client Encryption is set to false.
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:44.743] [INFO] Unload Options ADDQUOTES : 
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:44.743] [INFO] Unload Options PARALLEL : ON
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:44.743] [INFO] Unload Options ESCAPE : 
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:44.743] [INFO] Temporary Credentials valid for [21,600] seconds will be used.
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:44.811] [INFO] Encryption Type : None
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:44.811] [INFO] S3 Client Encryption : false
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:44.811] [INFO] S3 Server Side Encryption : false
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:44.811] [INFO] The Encryption type honored is : NONE
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.496] [INFO] The local staging directory location is set to /data/EDM_Agency/Cache/.
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.497] [INFO] The value of Download S3 Files In Multiple Parts is set to true.
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.498] [INFO] The Multipart Download Threshold size of an object is set as 5,242,880 bytes.
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.503] [INFO] Staging dir location: /data/EDM_Agency/Cache//InfaRedshiftStaging0007040610454981750
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.503] [INFO] Total time taken for staging: 0.0 sec.
+TRANSF_1_4_1> PETL_24091 [2024-07-04 06:10:45.522] Thread [TRANSF_1_4_1] has the ID [12].
+WRITER_1_*_1> PETL_24091 [2024-07-04 06:10:45.523] Thread [WRITER_1_*_1] has the ID [13].
+WRITER_1_*_1> CONNECTOR_10000 [2024-07-04 06:10:45.532] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Write data
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.776] [INFO] Truncate table required : false
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.776] [INFO] Write operation selected [TreatSourceRowAs]  : INSERT
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.776] [INFO] Writer Bucket name : nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.776] [INFO] Use Null value for Char types : ''
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.776] [INFO] Max errors per batch : 1
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.776] [INFO] Compression Enabled : true
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.776] [INFO] Server side encryption enabled : false
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.776] [INFO] Client side encryption enabled : false
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.776] [INFO] Vacuum option provided : None
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.776] [INFO] Analyze target table  : false
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.776] [INFO] Prefix to retain S3 files on staging dir  : 
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.776] [INFO] Minimum upload part size  : 5242880
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.776] [INFO] TransferManager Thead pool size  : 10
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.776] [INFO] Overriden Table Name  : fact_nb_cnt_insured_reqr_src_contract1
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.776] [INFO] Target Schema Name Attribute : ds_staging_conv
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.777] [INFO] Copy Options TIMEFORMAT : 'MM/DD/YYYY HH24:MI:SS'
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.777] [INFO] Temporary Credentials valid for [900] seconds will be used.
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.832] [INFO] S3 Consistency wait period : 0
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.985] [INFO] Batch size 2000000
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:45.987] [INFO] Staging dir location: /data/EDM_Agency/Cache/
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:47.522] [INFO] Staging dir location: /data/EDM_Agency/Cache//InfaRedshiftStaging110704061047516990
+WRITER_1_*_1> WRT_8270 [2024-07-04 06:10:47.539] Target connection group #1 consists of target(s) [fact_nb_cnt_insured_reqr_src_contract1: Partition 1]
+WRITER_1_*_1> WRT_8003 [2024-07-04 06:10:47.539] Writer initialization complete.
+WRITER_1_*_1> WRT_8005 [2024-07-04 06:10:47.540] Writer run started.
+WRITER_1_*_1> WRT_8158 [2024-07-04 06:10:47.540] 
+
+*****START LOAD SESSION*****
+
+Load Start Time: Thu Jul 04 06:10:46 2024
+
+Target tables:
+
+     fact_nb_cnt_insured_reqr_src_contract1: Partition 1
+
+
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:47.545] [INFO] 
+/* partner: Informatica -v 2.0 */
+unload ('with cntr_life_ins_req as
+(select 
+	reqmntid_ref,
+	conrelid_ref,
+                clireqid_ref, 
+	rank() over (partition by reqmntid_ref order by clireqid_ref desc) rnk
+from ext_pvt_lake_oracle_orap12_nyldprod60cl.cntr_life_ins_req where edh_record_status_in=\'A\')
+
+select reqmntid_ref,
+	conrelid_ref,
+                clireqid_ref from cntr_life_ins_req --where rnk=1
+ORDER BY conrelid_ref') 
+ TO 's3://nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/6f443290-5377-4616-a285-bb1c287891350017200878440774059638754465774624330/INFARS_CUSTOM_SCHEMA_' 
+credentials 'aws_access_key_id=********;aws_secret_access_key=********;token=********' 
+PARALLEL ON
+ADDQUOTES 
+NULL ''
+ESCAPE 
+DELIMITER '\036'
+GZIP 
+
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:47.545] [INFO] 
+/* partner: Informatica -v 2.0 */
+unload ('select 
+cntrctid_ref,
+conrelid_ref,
+iprsonid_ref,
+case when status_ref=10000000 then 2 else 1 end as status_ref_ACTIVE 
+from ext_pvt_lake_oracle_orap12_nyldprod60cl.CNTR_RELSHIP  where edh_record_status_in=\'A\' 
+order by conrelid_ref') 
+ TO 's3://nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/6f443290-5377-4616-a285-bb1c287891350017200878454987077504067174895624334/INFARS_CUSTOM_SCHEMA_' 
+credentials 'aws_access_key_id=********;aws_secret_access_key=********;token=********' 
+PARALLEL ON
+ADDQUOTES 
+NULL ''
+ESCAPE 
+DELIMITER '\036'
+GZIP 
+
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:47.549] [INFO] 
+/* partner: Informatica -v 2.0 */
+unload ('with cntr_group_link as
+(select 
+	cntrctid_ref as c_cntrctid_ref,
+	conglkid_ref,
+	congrpid_ref,
+	trim(contract_type_decode) contract_type_decode,
+	rank() over (partition by cntrctid_ref order by conglkid_ref desc) rnk
+from ext_pvt_lake_oracle_orap12_nyldprod60cl.cntr_group_link where edh_record_status_in=\'A\')
+
+select c_cntrctid_ref,
+	conglkid_ref,
+	congrpid_ref, contract_type_decode from cntr_group_link  where rnk=1
+ORDER BY c_cntrctid_ref') 
+ TO 's3://nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/6f443290-5377-4616-a285-bb1c287891350017200878418897203036793031149624321/INFARS_CUSTOM_SCHEMA_' 
+credentials 'aws_access_key_id=********;aws_secret_access_key=********;token=********' 
+PARALLEL ON
+ADDQUOTES 
+NULL ''
+ESCAPE 
+DELIMITER '\036'
+GZIP 
+
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:47.557] [INFO] 
+/* partner: Informatica -v 2.0 */
+unload ('select 
+1 as source,
+C.cntrctid_ref as c_cntrctid_ref,
+cast(C.contract_propdat as date) as contract_propdat,
+contract_uwdate,
+C.prodctid_ref,
+C.plan_id_ref as plan_id_ref,
+trim(C.issue_code_decode) issue_code_decode,
+trim(C.cntrctid_number) as cntrctid_number,
+status_ref as c_status_ref
+from ext_pvt_lake_oracle_orap12_nyldprod60cl.CONTRACT C where UPPER(C.CNTRCTID_NUMBER) <> \'DEFAULT\' and edh_record_status_in=\'A\'') 
+ TO 's3://nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/6f443290-5377-4616-a285-bb1c287891350017200878430628224288904009562624326/INFARS_CUSTOM_SCHEMA_' 
+credentials 'aws_access_key_id=********;aws_secret_access_key=********;token=********' 
+PARALLEL ON
+ADDQUOTES 
+NULL ''
+ESCAPE 
+DELIMITER '\036'
+GZIP 
+
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:51.723] [WARNING] UNLOAD Warning ..
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:51.723] [INFO] UNLOAD command successfully completed.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:51.723] [INFO]  Total time elapsed  4.0
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:52.071] [INFO] The total time taken to download the 8 file from Amazon S3 is 0 seconds.
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:53.877] [WARNING] UNLOAD Warning ..
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:53.877] [INFO] UNLOAD command successfully completed.
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:53.877] [INFO]  Total time elapsed  6.0
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:53.989] [WARNING] UNLOAD Warning ..
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:53.989] [INFO] UNLOAD command successfully completed.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:53.989] [INFO]  Total time elapsed  6.0
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:54.417] [INFO] The total time taken to download the 8 file from Amazon S3 is 0 seconds.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:54.459] [INFO] The total time taken to download the 8 file from Amazon S3 is 0 seconds.
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:54.517] [WARNING] UNLOAD Warning ..
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:54.517] [INFO] UNLOAD command successfully completed.
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:54.517] [INFO]  Total time elapsed  6.0
+TRANSF_1_2_1> SORT_40420 [2024-07-04 06:10:55.104] Start of input for Transformation [SRT_joinContract_Srt1]. : (Thu Jul 04 06:10:55 2024)
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:55.327] [INFO] The total time taken to download the 8 file from Amazon S3 is 0 seconds.
+TRANSF_1_3_1> DBG_21077 [2024-07-04 06:10:55.728] Create joiner cache on master relation : (Thu Jul 04 06:10:55 2024)
+TRANSF_1_3_1> TE_7212 [2024-07-04 06:10:55.737] Increasing [Index Cache] size for transformation [JNR_joinCntrLifeInsReq] from [59652323] to [59654000].
+TRANSF_1_3_1> TE_7212 [2024-07-04 06:10:55.737] Increasing [Data Cache] size for transformation [JNR_joinCntrLifeInsReq] from [119304646] to [119305024].
+TRANSF_1_3_1> CMN_1690 [2024-07-04 06:10:55.761] Created new data file [/data/EDM_Agency/Cache//PMJNR-1807984795_14_0.dat] and index file [/data/EDM_Agency/Cache//PMJNR-1807984795_14_0.idx] for Joiner [JNR_joinCntrLifeInsReq].
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-07-04 06:10:57.767] [INFO] The total time taken to read the files and push the data to the output buffer is 15.866 seconds.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-07-04 06:11:04.312] [INFO] The total time taken to read the files and push the data to the output buffer is 21.244 seconds.
+TRANSF_1_2_1> SORT_40421 [2024-07-04 06:11:04.312] End of input for Transformation [SRT_joinContract_Srt1]. : (Thu Jul 04 06:11:04 2024)
+READER_1_3_1> AMAZONREDSHIFT_10000 [2024-07-04 06:11:12.719] [INFO] The total time taken to read the files and push the data to the output buffer is 28.635 seconds.
+TRANSF_1_3_1> DBG_21214 [2024-07-04 06:11:12.903] Finished joiner cache on master relation : (Thu Jul 04 06:11:12 2024)
+TRANSF_1_3_1> DBG_21216 [2024-07-04 06:11:12.903] Finished transformations for Source Qualifier [SRC_HiveSrcCntrLifeInsReq]. Total errors [0] 
+TRANSF_1_4_1> DBG_21603 [2024-07-04 06:11:12.903] Open master relation cache for detail joiner : (Thu Jul 04 06:11:12 2024)
+TRANSF_1_4_1> SORT_40420 [2024-07-04 06:11:12.904] Start of input for Transformation [SRT_joinContract_Srt0]. : (Thu Jul 04 06:11:12 2024)
+READER_1_4_1> AMAZONREDSHIFT_10000 [2024-07-04 06:11:14.006] [INFO] The total time taken to read the files and push the data to the output buffer is 28.502 seconds.
+TRANSF_1_4_1> SORT_40421 [2024-07-04 06:11:14.657] End of input for Transformation [SRT_joinContract_Srt0]. : (Thu Jul 04 06:11:14 2024)
+TRANSF_1_2_1> SORT_40420 [2024-07-04 06:11:14.839] Start of input for Transformation [SRT_joinCntrGroupLink_Srt0]. : (Thu Jul 04 06:11:14 2024)
+TRANSF_1_4_1> SORT_40422 [2024-07-04 06:11:16.896] End of output from Sorter Transformation [SRT_joinContract_Srt0]. Processed 1290296 rows (67095392 input bytes; 0 temp I/O bytes). : (Thu Jul 04 06:11:16 2024)
+TRANSF_1_4_1> SORT_40423 [2024-07-04 06:11:16.909] End of sort for Sorter Transformation [SRT_joinContract_Srt0]. : (Thu Jul 04 06:11:16 2024)
+TRANSF_1_4_1> DBG_21215 [2024-07-04 06:11:16.909] Finished processing detail relation : (Thu Jul 04 06:11:16 2024)
+TRANSF_1_4_1> CMN_1795 [2024-07-04 06:11:16.909] The index cache size that would hold [1290362] input rows from the master for [JNR_joinCntrLifeInsReq], in memory, is [6046000] bytes
+TRANSF_1_4_1> CMN_1794 [2024-07-04 06:11:16.909] The data cache size that would hold [1290362] input rows from the master for [JNR_joinCntrLifeInsReq], in memory, is [62876016] bytes
+TRANSF_1_4_1> DBG_21216 [2024-07-04 06:11:16.927] Finished transformations for Source Qualifier [SRC_HiveSrcCntrRelship]. Total errors [0] 
+TRANSF_1_2_1> SORT_40422 [2024-07-04 06:11:16.950] End of output from Sorter Transformation [SRT_joinContract_Srt1]. Processed 241856 rows (16708688 input bytes; 0 temp I/O bytes). : (Thu Jul 04 06:11:16 2024)
+TRANSF_1_2_1> SORT_40423 [2024-07-04 06:11:16.961] End of sort for Sorter Transformation [SRT_joinContract_Srt1]. : (Thu Jul 04 06:11:16 2024)
+TRANSF_1_2_1> SORT_40421 [2024-07-04 06:11:16.961] End of input for Transformation [SRT_joinCntrGroupLink_Srt0]. : (Thu Jul 04 06:11:16 2024)
+TRANSF_1_2_1> DBG_21077 [2024-07-04 06:11:17.104] Create joiner cache on master relation : (Thu Jul 04 06:11:17 2024)
+TRANSF_1_2_1> TE_7212 [2024-07-04 06:11:17.119] Increasing [Index Cache] size for transformation [JNR_joinCntrGroupLink] from [59652323] to [59654000].
+TRANSF_1_2_1> TE_7212 [2024-07-04 06:11:17.119] Increasing [Data Cache] size for transformation [JNR_joinCntrGroupLink] from [119304646] to [119304992].
+TRANSF_1_2_1> CMN_1690 [2024-07-04 06:11:17.144] Created new data file [/data/EDM_Agency/Cache//PMJNR-1807984795_19_0.dat] and index file [/data/EDM_Agency/Cache//PMJNR-1807984795_19_0.idx] for Joiner [JNR_joinCntrGroupLink].
+TRANSF_1_2_1> SORT_40422 [2024-07-04 06:11:20.217] End of output from Sorter Transformation [SRT_joinCntrGroupLink_Srt0]. Processed 1286074 rows (118169004 input bytes; 0 temp I/O bytes). : (Thu Jul 04 06:11:20 2024)
+TRANSF_1_2_1> SORT_40423 [2024-07-04 06:11:20.239] End of sort for Sorter Transformation [SRT_joinCntrGroupLink_Srt0]. : (Thu Jul 04 06:11:20 2024)
+TRANSF_1_2_1> DBG_21214 [2024-07-04 06:11:20.239] Finished joiner cache on master relation : (Thu Jul 04 06:11:20 2024)
+TRANSF_1_2_1> DBG_21215 [2024-07-04 06:11:20.239] Finished processing detail relation : (Thu Jul 04 06:11:20 2024)
+TRANSF_1_1_1> DBG_21603 [2024-07-04 06:11:20.240] Open master relation cache for detail joiner : (Thu Jul 04 06:11:20 2024)
+TRANSF_1_2_1> DBG_21216 [2024-07-04 06:11:20.243] Finished transformations for Source Qualifier [SRC_HiveSrcContract_1]. Total errors [0] 
+WRITER_1_*_1> WRT_8167 [2024-07-04 06:11:20.465] Start loading table [fact_nb_cnt_insured_reqr_src_contract1: Partition 1] at: Thu Jul 04 06:11:19 2024
+TRANSF_1_1_1> DBG_21215 [2024-07-04 06:11:26.778] Finished processing detail relation : (Thu Jul 04 06:11:26 2024)
+TRANSF_1_1_1> CMN_1795 [2024-07-04 06:11:26.778] The index cache size that would hold [1286074] input rows from the master for [JNR_joinCntrGroupLink], in memory, is [5352000] bytes
+TRANSF_1_1_1> CMN_1794 [2024-07-04 06:11:26.778] The data cache size that would hold [1286074] input rows from the master for [JNR_joinCntrGroupLink], in memory, is [365245016] bytes
+TRANSF_1_1_1> DBG_21216 [2024-07-04 06:11:28.777] Finished transformations for Source Qualifier [SRC_hiveSrcCntrGroupLink]. Total errors [0] 
+WRITER_1_*_1> WRT_8168 [2024-07-04 06:11:41.816] End loading table [fact_nb_cnt_insured_reqr_src_contract1: Partition 1] at: Thu Jul 04 06:11:41 2024
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:11:41.818] [INFO] The total time taken to stage 8 files in 0 batch is 20.926 seconds.
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:11:43.065] [INFO] The total time taken to upload 8 files in 0 batch to Amazon S3 is 0.018 seconds.
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:11:44.510] [INFO] The upload status for the file [INSERT_ds_staging_conv.fact_nb_cnt_insured_reqr_src_contract1_.batch_0.csv.0] on Amazon S3 is [SUCCESS: Upload for file INSERT_ds_staging_conv.fact_nb_cnt_insured_reqr_src_contract1_.batch_0.csv.0.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:11:44.510] [INFO] The upload status for the file [INSERT_ds_staging_conv.fact_nb_cnt_insured_reqr_src_contract1_.batch_0.csv.1] on Amazon S3 is [SUCCESS: Upload for file INSERT_ds_staging_conv.fact_nb_cnt_insured_reqr_src_contract1_.batch_0.csv.1.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:11:44.510] [INFO] The upload status for the file [INSERT_ds_staging_conv.fact_nb_cnt_insured_reqr_src_contract1_.batch_0.csv.2] on Amazon S3 is [SUCCESS: Upload for file INSERT_ds_staging_conv.fact_nb_cnt_insured_reqr_src_contract1_.batch_0.csv.2.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:11:44.510] [INFO] The upload status for the file [INSERT_ds_staging_conv.fact_nb_cnt_insured_reqr_src_contract1_.batch_0.csv.3] on Amazon S3 is [SUCCESS: Upload for file INSERT_ds_staging_conv.fact_nb_cnt_insured_reqr_src_contract1_.batch_0.csv.3.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:11:44.510] [INFO] The upload status for the file [INSERT_ds_staging_conv.fact_nb_cnt_insured_reqr_src_contract1_.batch_0.csv.4] on Amazon S3 is [SUCCESS: Upload for file INSERT_ds_staging_conv.fact_nb_cnt_insured_reqr_src_contract1_.batch_0.csv.4.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:11:44.511] [INFO] The upload status for the file [INSERT_ds_staging_conv.fact_nb_cnt_insured_reqr_src_contract1_.batch_0.csv.5] on Amazon S3 is [SUCCESS: Upload for file INSERT_ds_staging_conv.fact_nb_cnt_insured_reqr_src_contract1_.batch_0.csv.5.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:11:44.511] [INFO] The upload status for the file [INSERT_ds_staging_conv.fact_nb_cnt_insured_reqr_src_contract1_.batch_0.csv.6] on Amazon S3 is [SUCCESS: Upload for file INSERT_ds_staging_conv.fact_nb_cnt_insured_reqr_src_contract1_.batch_0.csv.6.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:11:44.511] [INFO] The upload status for the file [INSERT_ds_staging_conv.fact_nb_cnt_insured_reqr_src_contract1_.batch_0.csv.7] on Amazon S3 is [SUCCESS: Upload for file INSERT_ds_staging_conv.fact_nb_cnt_insured_reqr_src_contract1_.batch_0.csv.7.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:11:44.518] [INFO] 
+/* partner: Informatica -v 2.0 */
+copy "ds_staging_conv"."fact_nb_cnt_insured_reqr_src_contract1" ("source" , "reqr_ref_id_nk" , "c_cntrctid_ref" , "contract_propdat" , "contract_uwdate" , "prodctid_ref" , "plan_id_ref" , "issue_code_decode" , "cntrctid_number" , "conrelid_ref" , "iprsonid_ref" , "status_ref_active" , "c_status_ref" , "conglkid_ref" , "congrpid_ref" , "contract_type_decode" , "clireqid_ref") from 's3://nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/6f443290-5377-4616-a285-bb1c287891351117200878475223883432786545836624340/INSERT_ds_staging_conv.fact_nb_cnt_insured_reqr_src_contract1_.batch_0.csv.' 
+credentials 'aws_access_key_id=********;aws_secret_access_key=********;token=********' 
+
+MAXERROR 1
+NULL ''
+CSV 
+DELIMITER '\036'
+TIMEFORMAT 'MM/DD/YYYY HH24:MI:SS'
+QUOTE '\037'
+ROUNDEC 
+GZIP 
+IGNOREHEADER 1
+ ;
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:12:07.764] [WARNING] COPY WARNING: [Load into table 'fact_nb_cnt_insured_reqr_src_contract1' completed, 1286074 record(s) loaded successfully.]
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:12:07.764] [INFO] The total time taken to upload 8 files to Amazon Redshift from Amazon S3 is 23 seconds.
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-07-04 06:12:07.765] [INFO] The agent successfully uploaded 0 batch to Amazon Redshift.

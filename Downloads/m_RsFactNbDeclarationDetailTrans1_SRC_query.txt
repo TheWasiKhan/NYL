@@ -1,0 +1,173 @@
+
+
+WITH 
+ req_declaration as (
+ SELECT
+       reqmntid_ref,
+       TRIM(kirdsgid_code) as kirdsgid_code,
+       SUBSTRING(signed_date,1,10) as signed_date,
+       countersign_code,
+       TRIM(title_onbehalf) as title_onbehalf,
+       TRIM(signee_signed_decode) as signee_signed_decode,
+       TRIM(signed_citytown) as signed_citytown,
+       TRIM(kcountyid_code) as kcountyid_code,
+       TRIM(ksttrgid_code) as ksttrgid_code,
+       TRIM(kcntryid_code) as kcntryid_code,
+       TRIM(status_code) as status_code,
+       '' as edh_record_status_in_reqd,
+       reqdecid_ref,
+       kirdsgid_ref,
+       status_ref as status_ref_reqd,
+       RANK() OVER(partition by reqmntid_ref,kirdsgid_ref order by reqdecid_ref desc) as rnk
+ FROM
+       $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.req_declaration
+ WHERE   
+       reqmntid_ref > 999 AND  
+       TRIM(UPPER(kirdsgid_code)) like 'PART1%' AND  
+       edh_record_status_in= 'A')
+ 
+ SELECT
+       *
+ FROM
+       req_declaration
+ WHERE 
+       rnk= 1 
+ORDER BY reqdecid_ref
+===
+SELECT
+       TRIM(prefixid_code) as prefixid_code,
+       TRIM(pname_fname) as pname_fname,
+       TRIM(pname_mname) as pname_mname,
+       TRIM(pname_sname) as pname_sname,
+       TRIM(suffixid_code) as suffixid_code,
+       TRIM(address_add1) as address_add1,
+       TRIM(address_add2) as address_add2,
+       TRIM(address_add3) as address_add3,
+       TRIM(address_add4) as address_add4,
+       TRIM(address_citytown) as address_citytown,
+       TRIM(kcountyid_code) as d_kcountyid_code,
+       TRIM(address_zip) as address_zip,
+       TRIM(ksttrgid_code) as d_ksttrgid_code,
+       TRIM(kcntryid_code) as d_kcntryid_code,
+       TRIM(examnr_company) as examnr_company,
+       TRIM(examnr_id) as examnr_id,
+       TRIM(examnr_details) as examnr_details,
+       TRIM(examnr_appdstat_decode) as examnr_appdstat_decode,
+       reqdecid_ref,
+       '' as edh_record_status_in_dec,
+       status_ref as status_ref_dec
+ FROM
+       $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.declaration
+ WHERE   
+       declarid_ref > 999 AND  
+       edh_record_status_in= 'A'
+ ORDER BY reqdecid_ref
+ 
+ 
+================+++++++++++++++++++
+WITH 
+ kwn_increq_declsgn as (
+	 SELECT
+		   kirdsgid_ref,
+		   TRIM(kirdsgid_code) as kirdsgid_code,
+		   TRIM(kdecsgid_code) as kdecsgid_code
+	 FROM
+		   $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.kwn_increq_declsgn  KID
+	 WHERE   
+		   kirdsgid_ref > 999 AND  
+		   edh_record_status_in= 'A'),
+	 dim_nb_declaration_signee as (
+	 SELECT
+		   dim_nb_declaration_signee_sk,
+		   decl_signee_cd_nk
+	 FROM
+		   $$EDM_REDSHIFT_PDM_SCHEMA.dim_nb_declaration_signee
+	 WHERE   
+		   edh_updated_batch_key is null AND 
+		   edh_record_status_in IN('A','D') AND 
+		   dim_nb_declaration_signee_sk NOT IN($$DEFAULT_REFERENCE_SK) AND  
+		   src_sys_nm_nk= 'jpSrcSysNm')
+ 
+ SELECT
+       kirdsgid_ref,
+       kirdsgid_code,
+       dim_nb_declaration_signee_sk,
+       kdecsgid_code as decl_signee_cd_nk
+ FROM
+       kwn_increq_declsgn
+ LEFT JOIN 
+    dim_nb_declaration_signee
+  ON
+       dim_nb_declaration_signee.decl_signee_cd_nk= kwn_increq_declsgn.kdecsgid_code 
+--
+WHERE decl_signee_cd_nk = 'examined'
+--
+ORDER BY kirdsgid_ref
+
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+SELECT
+RD.reqmntid_ref,
+---TRIM(RD.kirdsgid_code) as kirdsgid_code,
+SUBSTRING(RD.signed_date,1,10) as signed_date,
+RD.countersign_code,
+TRIM(RD.title_onbehalf) as title_onbehalf,
+TRIM(RD.signee_signed_decode) as signee_signed_decode,
+TRIM(RD.signed_citytown) as signed_citytown,
+TRIM(RD.kcountyid_code) as kcountyid_code,
+TRIM(RD.ksttrgid_code) as ksttrgid_code,
+TRIM(RD.kcntryid_code) as kcntryid_code,
+TRIM(RD.status_code) as status_code,
+'' as edh_record_status_in_reqd,
+--RD.reqdecid_ref,
+RD.kirdsgid_ref,
+RD.status_ref as status_ref_reqd,
+
+TRIM(D.prefixid_code) as prefixid_code,
+TRIM(D.pname_fname) as pname_fname,
+TRIM(D.pname_mname) as pname_mname,
+TRIM(D.pname_sname) as pname_sname,
+TRIM(D.suffixid_code) as suffixid_code,
+TRIM(D.address_add1) as address_add1,
+TRIM(D.address_add2) as address_add2,
+TRIM(D.address_add3) as address_add3,
+TRIM(D.address_add4) as address_add4,
+TRIM(D.address_citytown) as address_citytown,
+TRIM(D.kcountyid_code) as d_kcountyid_code,
+TRIM(D.address_zip) as address_zip,
+TRIM(D.ksttrgid_code) as d_ksttrgid_code,
+TRIM(D.kcntryid_code) as d_kcntryid_code,
+TRIM(D.examnr_company) as examnr_company,
+TRIM(D.examnr_id) as examnr_id,
+TRIM(D.examnr_details) as examnr_details,
+TRIM(D.examnr_appdstat_decode) as examnr_appdstat_decode,
+D.reqdecid_ref,
+'' as edh_record_status_in_dec,
+D.status_ref as status_ref_dec,
+
+-- KID.kirdsgid_ref,
+TRIM(KID.kirdsgid_code) as kirdsgid_code,
+TRIM(KID.kdecsgid_code) as decl_signee_cd_nk,
+
+DNDS.dim_nb_declaration_signee_sk
+
+FROM
+$$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.req_declaration RD
+LEFT JOIN $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.declaration D ON RD.reqdecid_ref = D.reqdecid_ref
+LEFT JOIN $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.kwn_increq_declsgn KID ON RD.kirdsgid_ref = KID.kirdsgid_ref
+LEFT JOIN $$EDM_REDSHIFT_PDM_SCHEMA.dim_nb_declaration_signee DNDS ON DNDS.decl_signee_cd_nk= KID.kdecsgid_code 
+
+WHERE   
+D.declarid_ref > 999 AND 
+D.edh_record_status_in= 'A'
+AND
+KID.kirdsgid_ref > 999 AND 
+KID.edh_record_status_in= 'A'
+AND
+DNDS.edh_updated_batch_key is null AND 
+DNDS.edh_record_status_in IN('A','D') AND 
+DNDS.dim_nb_declaration_signee_sk NOT IN($$DEFAULT_REFERENCE_SK) AND  
+DNDS.src_sys_nm_nk= 'jpSrcSysNm'
+ORDER BY D.reqdecid_ref

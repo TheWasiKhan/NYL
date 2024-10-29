@@ -1,0 +1,172 @@
+Agent Group Id: 01CAKB25000000000009
+Agent Group Name: EDM_CDI_SA_GRP
+Agent Name: edm.idmc.sa1.dev.nylcloud.com
+Agent Id: 01CAKB0800000000000V
+Task Name: mct_RsFactNbSurgery_SrcRecs1
+Task Type: MTT
+Task Id: 01CAKB0Z000000000CAI
+Run Id: 5
+Service Id: 2488700
+Started By: wkhan01
+Run Context Type: ICS_UI
+09/06/2024 08:39:47 **** Importing Connection: Conn_01CAKB0B00000000000R ...
+09/06/2024 08:39:47 **** Importing Connection: Conn_01CAKB0B00000000002M ...
+09/06/2024 08:39:47 **** Importing Source Definition: DUMMY_SRC_hive_Src1Reqmnt ...
+09/06/2024 08:39:47 **** Importing Source Definition: DUMMY_SRC_hive_Src1ReqUwReply_Combine ...
+09/06/2024 08:39:47 **** Importing Source Definition: DUMMY_SRC_hive_Src2ReqUwReply_Combine ...
+09/06/2024 08:39:47 **** Importing Target Definition: fact_nb_surgery_source1 ...
+09/06/2024 08:39:47 **** Importing SessionConfig: default_session_config ...
+    <Warning> :  The Error Log DB Connection value should have Relational: as the prefix.
+    <Warning> :  Invalid value  for attribute Error Log DB Connection. Will use the default value 
+    Validating Source Definition  DUMMY_SRC_hive_Src1Reqmnt...
+    Validating Source Definition  DUMMY_SRC_hive_Src2ReqUwReply_Combine...
+    Validating Source Definition  DUMMY_SRC_hive_Src1ReqUwReply_Combine...
+    Validating Target Definition  fact_nb_surgery_source1...
+09/06/2024 08:39:47 **** Importing Mapping: Mapping0 ...
+    <Warning> :  transformation: JNR_join_SrcRecs3 - Invalid value Null is Higest Value for attribute Null ordering in detail. Will use the default value Null Is Highest Value    [transformation< JNR_join_SrcRecs3 > ] 
+    <Warning> :  transformation: JNR_join_Src2Recs3 - Invalid value Null is Higest Value for attribute Null ordering in detail. Will use the default value Null Is Highest Value    [transformation< JNR_join_Src2Recs3 > ] 
+Validating transformations of mapping Mapping0...
+Validating mapping variable(s).
+    <Warning> :  Invalid table attribute: Exec SQL
+    <Warning> :  Invalid table attribute: Exec SQL
+    <Warning> :  Invalid table attribute: Exec SQL
+09/06/2024 08:39:47 **** Importing Workflow: wf_mtt_01CAKB0Z000000000CAI ...
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000CAI >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000CAI >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000CAI >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000CAI >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000CAI >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000CAI >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value None for attribute Pushdown Optimization Context. Will use the default value None     [Session< s_mtt_01CAKB0Z000000000CAI > ] 
+    <Warning> :  The value entered is not a valid integer.
+    <Warning> :  Invalid value NO for attribute Fail task after wait time. Will use the default value 
+[Summary for Application Source Qualifier SRC_hive_Src1Reqmnt]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Application Source Qualifier SRC_hive_Src1ReqUwReply_Combine]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Application Source Qualifier SRC_hive_Src2ReqUwReply_Combine]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Custom Transformation Union]
+     Is a new repartition point.
+     Number of groups changed from 1 to 2.
+
+Successfully extracted session instance [s_mtt_01CAKB0Z000000000CAI].  Starting repository sequence id is [-1366295033]
+======================================================================
+PETL_24036 [2024-09-06 08:39:46.601] Beginning the prepare phase for the session.
+TM_6721 [2024-09-06 08:39:46.601] Started [Connect to Repository].
+TM_6722 [2024-09-06 08:39:47.106] Finished [Connect to Repository].  It took [0.504814] seconds.
+TM_6721 [2024-09-06 08:39:47.106] Started [Fetch Session from Repository].
+TM_6722 [2024-09-06 08:39:47.380] Finished [Fetch Session from Repository].  It took [0.273498] seconds.
+VAR_27085 [2024-09-06 08:39:47.381] Parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB0Z000000000CAI.param] is opened for [session [wf_mtt_01CAKB0Z000000000CAI.s_mtt_01CAKB0Z000000000CAI]].
+VAR_27062 [2024-09-06 08:39:47.381] Warning! Cannot find section for worklet [wf_mtt_01CAKB0Z000000000CAI] and folder [] in parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB0Z000000000CAI.param].
+TM_6721 [2024-09-06 08:39:47.396] Started [Partition Group Formation].
+TM_6722 [2024-09-06 08:39:47.396] Finished [Partition Group Formation].  It took [0.000672102] seconds.
+PETL_24037 [2024-09-06 08:39:47.396] Finished the prepare phase for the session.
+DIRECTOR> TM_6228 [2024-09-06 08:39:47.397] Writing session output to log file [/app/iics_agent_dir/apps/Data_Integration_Server/data/../logs/s_mtt_bfofeMrUquJeZmp7aXfkKj_5.log].
+DIRECTOR> VAR_27085 [2024-09-06 08:39:47.399] Parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB0Z000000000CAI.param] is opened for [session [wf_mtt_01CAKB0Z000000000CAI.s_mtt_01CAKB0Z000000000CAI]].
+DIRECTOR> VAR_27062 [2024-09-06 08:39:47.399] Warning! Cannot find section for worklet [wf_mtt_01CAKB0Z000000000CAI] and folder [] in parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB0Z000000000CAI.param].
+DIRECTOR> PETL_24093 [2024-09-06 08:39:47.400] User defined Parameter File Location [EDM_IDMC_S3::nyl-idmc-dev-workspace-20230504201653688600000001/edm/edm_processed_nb/ParamFiles/EDM_NBUW.param].
+DIRECTOR> TM_6014 [2024-09-06 08:39:47.400] Initializing session [s_mtt_01CAKB0Z000000000CAI] at [Fri Sep 06 08:39:47 2024].
+DIRECTOR> TM_6683 [2024-09-06 08:39:47.400] Repository Name: [XMLRepository]
+DIRECTOR> TM_6684 [2024-09-06 08:39:47.400] Server Name: [rDTM]
+DIRECTOR> TM_6686 [2024-09-06 08:39:47.400] Folder: []
+DIRECTOR> TM_6685 [2024-09-06 08:39:47.400] Workflow: [wf_mtt_01CAKB0Z000000000CAI] Run Instance Name: [] Run Id: [0]
+DIRECTOR> TM_6992 [2024-09-06 08:39:47.400] Operating System Type [Linux]
+DIRECTOR> TM_6101 [2024-09-06 08:39:47.400] Mapping name: Mapping0.
+DIRECTOR> TM_6964 [2024-09-06 08:39:47.401] Date format for the Session is [MM/DD/YYYY HH24:MI:SS.US]
+DIRECTOR> TM_6703 [2024-09-06 08:39:47.402] Session [s_mtt_01CAKB0Z000000000CAI] is run by 64-bit Integration Service  [], version [10.2.0 HotFix2], build [0320].
+MANAGER> PETL_24091 [2024-09-06 08:39:47.438] Thread [MANAGER] has the ID [1].
+MANAGER> PETL_24058 [2024-09-06 08:39:47.438] Running Partition Group [1].
+MANAGER> PETL_24000 [2024-09-06 08:39:47.438] Parallel Pipeline Engine initializing.
+MONITOR> PETL_24091 [2024-09-06 08:39:47.439] Thread [MONITOR] has the ID [2].
+MANAGER> PETL_24001 [2024-09-06 08:39:47.439] Parallel Pipeline Engine running.
+MANAGER> PETL_24003 [2024-09-06 08:39:47.440] Initializing session run.
+MAPPING> PETL_24091 [2024-09-06 08:39:47.440] Thread [MAPPING] has the ID [3].
+MAPPING> CMN_1569 [2024-09-06 08:39:47.443] Server Mode: [UNICODE]
+MAPPING> CMN_1570 [2024-09-06 08:39:47.443] Server Code page: [ISO 8859-1 Western European]
+MAPPING> TM_6151 [2024-09-06 08:39:47.443] The session sort order is [Binary].
+MAPPING> TM_6185 [2024-09-06 08:39:47.444] Warning. Code page validation is disabled in this session.
+MAPPING> CMN_65110 [2024-09-06 08:39:47.444] Current Timezone:[UTC -5:0]
+MAPPING> CMN_65111 [2024-09-06 08:39:47.444] Current Process ID:[40020]
+MAPPING> TM_6155 [2024-09-06 08:39:47.444] Using HIGH precision processing.
+MAPPING> TM_6180 [2024-09-06 08:39:47.444] Deadlock retry logic will not be implemented.
+MAPPING> TM_6187 [2024-09-06 08:39:47.444] Session target-based commit interval is [10000].
+MAPPING> PMJVM_42020 [2024-09-06 08:39:47.448] [INFO] Loaded library : /app/iics_agent_dir/apps/jdk/zulu8.70.0.52-sa-fx-jdk8.0.372/jre/lib/amd64/server/libjvm.so.
+MAPPING> PMJVM_42009 [2024-09-06 08:39:47.536] [INFO] Created Java VM successfully.
+MAPPING> SDKS_38029 [2024-09-06 08:39:47.616] Loaded plug-in 451600: [plugin description].
+MAPPING> SDKS_38024 [2024-09-06 08:39:47.653] Plug-in 451600 initialization complete.
+MAPPING> SDKS_38016 [2024-09-06 08:39:47.655] Reader SDK plug-in initialization complete.
+MAPPING> SDKS_38029 [2024-09-06 08:39:47.657] Loaded plug-in 451600: [plugin description].
+MAPPING> SDKS_38024 [2024-09-06 08:39:48.218] Plug-in 451600 initialization complete.
+MAPPING> SDKS_38017 [2024-09-06 08:39:48.218] Writer SDK plug-in initialization complete.
+MAPPING> CONNECTOR_10000 [2024-09-06 08:39:49.861] [INFO] TPL's are loaded from /app/iics_agent_dir/apps/Data_Integration_Server/70.0.5.1/connectors/../connectors/thirdparty/informatica.amazonredshift/upgraded
+MAPPING> CONNECTOR_10000 [2024-09-06 08:39:50.376] [INFO] The target object at runtime is overridden with the parameter name = fact_nb_surgery_source1 table name = fact_nb_surgery_source1.
+MAPPING> AMAZONREDSHIFT_10000 [2024-09-06 08:39:53.143] [INFO] Executing PRE-SQL: 
+
+/* partner: Informatica -v 2.0 */
+DELETE FROM ds_staging_conv.fact_nb_surgery_source1
+MAPPING> SDKS_38509 [2024-09-06 08:39:53.657] SDK target and group initialization complete.
+MAPPING> TM_6307 [2024-09-06 08:39:53.658] DTM error log disabled. 
+MAPPING> TE_7022 [2024-09-06 08:39:53.661] TShmWriter: Initialized
+MAPPING> DBG_21693 [2024-09-06 08:39:53.669] SRT_join_SrcRecs3_Srt1: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-09-06 08:39:53.777] For Transformation [SRT_join_SrcRecs3_Srt1], memory used is [1073741824] bytes and row size is 132 bytes.
+MAPPING> DBG_21693 [2024-09-06 08:39:53.795] SRT_join_Src2Recs3_Srt1: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-09-06 08:39:53.853] For Transformation [SRT_join_Src2Recs3_Srt1], memory used is [1073741824] bytes and row size is 92 bytes.
+MAPPING> DBG_21694 [2024-09-06 08:39:53.874] JNR_join_SrcRecs3 Partition [0]: Index cache size = [89478485], Data cache size = [178956970]
+MAPPING> TT_11098 [2024-09-06 08:39:53.875] The Joiner transformation [JNR_join_SrcRecs3] is configured with the join algorithm: Sorted-Merge.
+MAPPING> DBG_21077 [2024-09-06 08:39:53.875] Create joiner cache on master relation : (Fri Sep 06 08:39:53 2024)
+MAPPING> CMN_1690 [2024-09-06 08:39:53.908] Created new data file [/data/EDM_NB/Cache//PMJNR-1366294728_13_0.dat] and index file [/data/EDM_NB/Cache//PMJNR-1366294728_13_0.idx] for Joiner [JNR_join_SrcRecs3].
+MAPPING> DBG_21603 [2024-09-06 08:39:53.908] Open master relation cache for detail joiner : (Fri Sep 06 08:39:53 2024)
+MAPPING> DBG_21694 [2024-09-06 08:39:53.911] JNR_join_Src2Recs3 Partition [0]: Index cache size = [89478485], Data cache size = [178956970]
+MAPPING> TT_11098 [2024-09-06 08:39:53.912] The Joiner transformation [JNR_join_Src2Recs3] is configured with the join algorithm: Sorted-Merge.
+MAPPING> DBG_21077 [2024-09-06 08:39:53.912] Create joiner cache on master relation : (Fri Sep 06 08:39:53 2024)
+MAPPING> CMN_1690 [2024-09-06 08:39:53.949] Created new data file [/data/EDM_NB/Cache//PMJNR-1366294728_14_0.dat] and index file [/data/EDM_NB/Cache//PMJNR-1366294728_14_0.idx] for Joiner [JNR_join_Src2Recs3].
+MAPPING> DBG_21603 [2024-09-06 08:39:53.949] Open master relation cache for detail joiner : (Fri Sep 06 08:39:53 2024)
+MAPPING> TM_6007 [2024-09-06 08:39:53.957] DTM initialized successfully for session [s_mtt_01CAKB0Z000000000CAI]
+DIRECTOR> PETL_24033 [2024-09-06 08:39:53.958] All DTM Connection Info: [<NONE>].
+MANAGER> PETL_24004 [2024-09-06 08:39:53.958] Starting pre-session tasks. : (Fri Sep 06 08:39:53 2024)
+PRE-SESS> PETL_24091 [2024-09-06 08:39:53.959] Thread [PRE-SESS] has the ID [4].
+MANAGER> PETL_24027 [2024-09-06 08:39:53.961] Pre-session task completed successfully. : (Fri Sep 06 08:39:53 2024)
+DIRECTOR> PETL_24006 [2024-09-06 08:39:53.961] Starting data movement.
+MAPPING> TM_6966 [2024-09-06 08:39:53.961] Reducing estimate of the amount of buffer pool memory required for high performance.
+MAPPING> TM_6660 [2024-09-06 08:39:53.962] Total Buffer Pool size is 1073741824 bytes and Block size is 15728640 bytes.
+MAPPING> CONNECTOR_10000 [2024-09-06 08:39:54.093] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+MAPPING> CONNECTOR_10000 [2024-09-06 08:39:54.185] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+MAPPING> CONNECTOR_10000 [2024-09-06 08:39:54.252] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+MAPPING> CMN_1761 [2024-09-06 08:39:54.273] Timestamp Event: [Fri Sep 06 08:39:54 2024]
+MAPPING> TE_7002 [2024-09-06 08:39:54.274] Transformation stopped due to a fatal error in the mapping.  The expression [''] contains the following errors [<<PM Parse Error>> <<Invalid constant sub-expression>> <<Expression Error>> [TO_DATE]: invalid string for converting to Date
+... t:TO_DATE(u:u:'',u:u:'MM/DD/YYYY HH24:MI:SS.US')
+... >>>>''<<<<].
+MANAGER> PETL_24005 [2024-09-06 08:39:54.275] Starting post-session tasks. : (Fri Sep 06 08:39:54 2024)
+POST-SESS> PETL_24091 [2024-09-06 08:39:54.275] Thread [POST-SESS] has the ID [5].
+MANAGER> PETL_24029 [2024-09-06 08:39:54.276] Post-session task completed successfully. : (Fri Sep 06 08:39:54 2024)
+MAPPING> SDKS_38510 [2024-09-06 08:39:54.277] SDK target and group deinitialized with status [-1].
+MAPPING> SDKS_38025 [2024-09-06 08:39:54.277] Plug-in 451600 deinitialized and unloaded with status [-1].
+MAPPING> SDKS_38019 [2024-09-06 08:39:54.277] Writer SDK plug-ins deinitialized with status [-1].
+MAPPING> SDKS_38025 [2024-09-06 08:39:54.277] Plug-in 451600 deinitialized and unloaded with status [-1].
+MAPPING> SDKS_38018 [2024-09-06 08:39:54.278] Reader SDK plug-ins deinitialized with status [-1].
+MAPPING> TM_6018 [2024-09-06 08:39:54.278] The session completed with [0] row transformation errors. 
+MANAGER> PETL_24002 [2024-09-06 08:39:54.493] Parallel Pipeline Engine finished.
+DIRECTOR> PETL_24013 [2024-09-06 08:39:54.493] Session run completed with failure.
+DIRECTOR> TM_6022 [2024-09-06 08:39:54.493] 
+
+SESSION LOAD SUMMARY
+================================================
+
+DIRECTOR> TM_6252 [2024-09-06 08:39:54.493] Source Load Summary.
+DIRECTOR> CMN_1740 [2024-09-06 08:39:54.493] Table: [SRC_hive_Src1Reqmnt] (Instance Name: [SRC_hive_Src1Reqmnt] Instance UI Name: [SRC_hive_Src1Reqmnt])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-09-06 08:39:54.493] Table: [SRC_hive_Src1ReqUwReply_Combine] (Instance Name: [SRC_hive_Src1ReqUwReply_Combine] Instance UI Name: [SRC_hive_Src1ReqUwReply_Combine])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-09-06 08:39:54.493] Table: [SRC_hive_Src2ReqUwReply_Combine] (Instance Name: [SRC_hive_Src2ReqUwReply_Combine] Instance UI Name: [SRC_hive_Src2ReqUwReply_Combine])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> TM_6253 [2024-09-06 08:39:54.493] Target Load Summary.
+DIRECTOR> CMN_1740 [2024-09-06 08:39:54.493] Table: [fact_nb_surgery_source1] (Instance Name: [fact_nb_surgery_source1] Instance UI Name: [TGT_fchdfsStep1Trans2])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> TM_6023 [2024-09-06 08:39:54.493] 
+===================================================
+
+DIRECTOR> TM_6020 [2024-09-06 08:39:54.493] Session [s_mtt_01CAKB0Z000000000CAI] completed at [Fri Sep 06 08:39:54 2024].

@@ -1,0 +1,262 @@
+WITH SRC_HiveSrcRecs AS (
+WITH PRSCRPTN_REQMNT AS 
+(SELECT
+	CREATION_DATE,
+	SUBORDER_REQSTDTE,
+	SUBORDER_RESPDTE,
+	SUBORDER_RESLTCDE,
+	SUBORDER_RESLTCOM,
+	RETRVORDER_REQSTDTE,
+	RETRVORDER_RESPDTE,
+	RETRVORDER_RESLTCDE,
+	RETRVORDER_RESLTCOM,
+	NUMOF_TRIES,
+	TRACKING_ID,
+	STATUS_CODE,
+	CLIREQID_REF,
+	PRSCRQID_REF,
+	STATUS_REF as STATUS_REF_PR,
+	null as EDH_RECORD_STATUS_IN_PR 
+FROM $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.PRSCRPTN_REQMNT where edh_record_status_in='A'),
+
+REQUIREMENT AS 
+(SELECT 
+	CNTRCTID_REF,
+	REQMNTID_REF,
+	KINCRQID_CODE,
+	OWNER_INST_REF,
+	STATUS_REF as STATUS_REF_REQ,
+	null as EDH_RECORD_STATUS_IN_REQ ,
+    reqown_ent_name
+FROM $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.REQUIREMENT 
+where edh_record_status_in='A' and trim(UPPER(BUS_STATUS_CODE))= 'RECEIVED'
+AND REQMNTID_REF > 999),
+
+CNTR_LIFE_INS_REQ AS 
+(SELECT 
+	REQMNTID_REF CL_REQMNTID_REF,
+	CLIREQID_REF,
+	STATUS_REF as STATUS_REF_CR,
+	null as EDH_RECORD_STATUS_IN_CR 
+FROM $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.CNTR_LIFE_INS_REQ where edh_record_status_in='A'),
+
+PRSCRPTN_STATUS AS 
+(SELECT 
+	PRSCSTAT_URL,
+	PRSCSTID_REF,
+	PRSCSTAT_ORDSTAT,
+	PRSCSTAT_APPLSTAT ,
+	STATUS_REF STATUS_REF_PS,
+	risk_score,
+	risk_scorecmp,
+	credit_dataord,
+	credit_datahit
+
+FROM $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.PRSCRPTN_STATUS where edh_record_status_in='A'),
+
+PRSCRPTN_PDFRESP AS 
+(SELECT 
+	PDFIFRC_REF,
+	PRSCRQID_REF,
+	prspdfid_ref 
+FROM $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.PRSCRPTN_PDFRESP where edh_record_status_in='A' and  UPPER(STATUS_CODE) = 'ACTIVE'),
+
+KWN_ERROR AS 
+(SELECT 
+	KWNERRID_REF,
+	ERROR_MESSAGE 
+FROM $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.KWN_ERROR where edh_record_status_in='A'),
+contract as(
+select CNTRCTID_REF,
+CNTRCTID_NUMBER,
+issue_code_decode 
+FROM $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.CONTRACT
+where edh_record_status_in='A'),
+SOURCE AS 
+(SELECT 
+	PR.STATUS_REF_PR,
+	PR.EDH_RECORD_STATUS_IN_PR,
+	R.STATUS_REF_REQ,
+	R.EDH_RECORD_STATUS_IN_REQ,
+	CL.STATUS_REF_CR,
+	CL.EDH_RECORD_STATUS_IN_CR,
+	R.CNTRCTID_REF,
+	R.REQMNTID_REF,
+	trim(R.KINCRQID_CODE) KINCRQID_CODE, 
+	PS.PRSCSTID_REF, 
+	trim(PS.PRSCSTAT_ORDSTAT) PRSCSTAT_ORDSTAT,
+	trim(PS.PRSCSTAT_APPLSTAT) PRSCSTAT_APPLSTAT, 
+	PR.CREATION_DATE CREATION_DATE, 
+	PR.SUBORDER_REQSTDTE SUBORDER_REQSTDTE, 
+	PR.SUBORDER_RESPDTE SUBORDER_RESPDTE,
+	PR.SUBORDER_RESLTCDE, 
+	trim(PR.SUBORDER_RESLTCOM) SUBORDER_RESLTCOM, 
+	PR.RETRVORDER_REQSTDTE RETRVORDER_REQSTDTE, 
+	PR.RETRVORDER_RESPDTE RETRVORDER_RESPDTE,
+	PR.RETRVORDER_RESLTCDE,
+	trim(PR.RETRVORDER_RESLTCOM) RETRVORDER_RESLTCOM, 
+	PR.NUMOF_TRIES, 
+	trim(PR.TRACKING_ID) TRACKING_ID, 
+	trim(PR.STATUS_CODE) STATUS_CODE, 
+	trim(PS.PRSCSTAT_URL) PRSCSTAT_URL, 
+	trim(KE.ERROR_MESSAGE) ERROR_MESSAGE, 
+	PDF.prspdfid_ref,
+	C.CNTRCTID_REF CNTRCTID_REF_C,
+	C.CNTRCTID_NUMBER,
+	c.issue_code_decode,
+	 trim(R.reqown_ent_name) reqown_ent_name,
+	 PS.STATUS_REF_PS,
+	 PS.risk_score,
+	PS.risk_scorecmp,
+	PS.credit_dataord,
+	PS.credit_datahit,
+	RANK() OVER (PARTITION BY R.REQMNTID_REF,C.CNTRCTID_NUMBER,PS.PRSCSTID_REF ORDER BY PDF.prspdfid_ref desc) AS RNK
+FROM REQUIREMENT R
+INNER JOIN CNTR_LIFE_INS_REQ CL ON R.REQMNTID_REF = CL.CL_REQMNTID_REF
+INNER JOIN PRSCRPTN_REQMNT PR ON CL.CLIREQID_REF = PR.CLIREQID_REF
+INNER JOIN PRSCRPTN_STATUS PS ON R.OWNER_INST_REF = PS.PRSCSTID_REF
+INNER JOIN CONTRACT C ON R.CNTRCTID_REF =  C.CNTRCTID_REF
+LEFT OUTER JOIN PRSCRPTN_PDFRESP PDF ON PDF.PRSCRQID_REF = PR.PRSCRQID_REF
+LEFT OUTER JOIN KWN_ERROR KE ON KE.KWNERRID_REF = PDF.PDFIFRC_REF)
+
+select 
+	status_ref_pr,
+	edh_record_status_in_pr,
+	status_ref_req,
+	edh_record_status_in_req,
+	status_ref_cr,
+	edh_record_status_in_cr,
+	cntrctid_ref, 
+	reqmntid_ref,
+	kincrqid_code,
+	prscstid_ref,
+	prscstat_ordstat,
+	prscstat_applstat,
+	creation_date,
+	suborder_reqstdte,
+	suborder_respdte,
+	suborder_resltcde,
+	suborder_resltcom,
+	retrvorder_reqstdte,
+	retrvorder_respdte,
+	retrvorder_resltcde,
+	retrvorder_resltcom,
+	numof_tries,
+	tracking_id,
+	status_code,
+	prscstat_url,
+	error_message,
+	cntrctid_ref_c ,
+	cntrctid_number,
+	reqown_ent_name,
+	status_ref_ps,
+	issue_code_decode ,
+	risk_score,
+risk_scorecmp,
+credit_dataord,
+credit_datahit
+
+from source),
+
+SRC_HiveDimReqRef AS (SELECT 
+dim_nb_requirement_ref_sk,
+trim(reqr_cd) as reqr_cd_nk,
+reqr_ref_id_nk as reqr_ref_id,
+reqr_ref_id_nk reqmntid_ref 
+FROM $$EDM_REDSHIFT_PDM_SCHEMA.DIM_NB_REQUIREMENT_REF
+WHERE src_sys_nm_nk='$$jpSrcSysNm' AND dim_nb_requirement_ref_sk NOT IN ($$DEFAULT_REFERENCE_SK)  and edh_updated_batch_key is null and edh_record_status_in in ('A','D')),
+
+SRC_HiveDimNbContract AS (select 
+	 cntrctid_ref_c,
+	dim_nb_contract_sk  from(
+select 
+	src_cnt_ref_id cntrctid_ref_c,
+	dim_nb_contract_sk ,
+	rank() over(partition by src_cnt_ref_id order by dim_nb_contract_sk desc) as rnk 
+from $$EDM_REDSHIFT_PDM_SCHEMA.dim_nb_contract 
+where dim_nb_contract_sk not in ($$DEFAULT_REFERENCE_SK) and src_sys_nm_nk='$$jpSrcSysNm' and edh_updated_batch_key is null and edh_record_status_in in ('A','D') )a where a.rnk=1),
+
+SRC_HiveDimContract AS (select cntrctid_number,
+dim_contract_sk,
+dat_src_cd_nk ,
+issue_code_decode 
+from (select trim(cnt_id_nk) as cntrctid_number
+,trim(dat_src_cd_nk) dat_src_cd_nk
+,dim_contract_sk ,
+trim(cnt_iss_cd_nk) issue_code_decode
+, rank() over(partition by  cnt_id_nk,cnt_iss_cd_nk order by trim(upper(dat_src_cd_nk)) asc,dim_contract_sk desc ) as rnk
+from $$EDM_REDSHIFT_PDM_SCHEMA.dim_contract_nb_stg where edh_updated_batch_key is null and edh_record_status_in in ('A','D') and  trim(upper(cnt_iss_cd_nk))='PNR' and trim(upper(dat_src_cd_nk)) in ('CMR','CYB')  and  dim_contract_sk not in ($$DEFAULT_REFERENCE_SK)) dc where rnk=1),
+
+SRC_HiveCntrGrpLink AS (select 
+contract_type_decode ,
+cntrctid_ref cntrctid_ref_c 
+from $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.cntr_group_link where edh_record_status_in='A' and conglkid_ref > 999),
+
+SRC_HiveLkp11_CONTRACT AS (SELECT
+C.cntrctid_ref as cntrctid_ref_c,
+TRIM(C.prodctid_code) as prodctid_code_CT,
+TRIM(C.plan_id_code) as plan_id_code_CT,
+plan_id_ref as plan_id_ref,
+prodctid_ref
+ FROM $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.CONTRACT C
+ WHERE edh_record_status_in= 'A')
+
+SELECT 
+A.status_ref_pr,
+A.edh_record_status_in_pr,
+A.status_ref_req,
+A.edh_record_status_in_req,
+A.status_ref_cr, 
+A.edh_record_status_in_cr,
+A.cntrctid_ref,
+--A.reqmntid_ref,
+A.kincrqid_code,
+A.prscstid_ref,
+A.prscstat_ordstat,
+A.prscstat_applstat,
+A.creation_date,
+A.suborder_reqstdte,
+A.suborder_respdte,
+A.suborder_resltcde,
+A.suborder_resltcom,
+A.retrvorder_reqstdte,
+A.retrvorder_respdte,
+A.retrvorder_resltcde,
+A.retrvorder_resltcom,
+A.numof_tries,
+A.tracking_id,
+A.status_code,
+A.prscstat_url,
+A.error_message,
+--A.cntrctid_ref_c,
+--A.cntrctid_number,
+A.reqown_ent_name,
+A.status_ref_ps,
+--A.issue_code_decode,
+A.risk_score,
+A.risk_scorecmp,
+A.credit_dataord,
+A.credit_datahit,
+B.dim_nb_requirement_ref_sk AS o_dim_nb_requirement_ref_sk,
+B.reqr_cd_nk AS o_reqr_cd_nk,
+B.reqr_ref_id AS o_reqr_ref_id,
+B.reqmntid_ref AS o_reqmntid_ref,
+C.cntrctid_ref_c AS o_cntrctid_ref_c,
+C.dim_nb_contract_sk AS o_dim_nb_contract_sk,
+D.cntrctid_number AS o_cntrctid_number,
+D.dim_contract_sk AS o_dim_contract_sk,
+D.dat_src_cd_nk AS o_dat_src_cd_nk,
+D.issue_code_decode AS o_issue_code_decode,
+E.contract_type_decode,
+F.plan_id_code_ct,
+F.plan_id_ref,
+F.prodctid_code_ct,
+F.prodctid_ref
+
+FROM SRC_HiveSrcRecs A LEFT JOIN SRC_HiveDimReqRef B ON A.reqmntid_ref = B.reqmntid_ref
+INNER JOIN SRC_HiveDimNbContract C ON C.cntrctid_ref_c = A.cntrctid_ref_c
+LEFT JOIN SRC_HiveDimContract D ON D.issue_code_decode = A.issue_code_decode 
+AND D.cntrctid_number = A.cntrctid_number
+LEFT JOIN SRC_HiveCntrGrpLink E ON E.cntrctid_ref_c = C.cntrctid_ref_c
+LEFT JOIN SRC_HiveLkp11_CONTRACT F ON F.cntrctid_ref_c = C.cntrctid_ref_c
+ORDER BY C.cntrctid_ref_c;

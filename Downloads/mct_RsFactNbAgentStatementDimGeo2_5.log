@@ -1,0 +1,770 @@
+Agent Group Id: 01CAKB25000000000009
+Agent Group Name: EDM_CDI_SA_GRP
+Agent Name: edm.idmc.sa1.dev.nylcloud.com
+Agent Id: 01CAKB0800000000000V
+Task Name: mct_RsFactNbAgentStatementDimGeo2
+Task Type: MTT
+Task Id: 01CAKB0Z000000000A41
+Run Id: 5
+Service Id: 2401795
+Started By: wkhan01
+Run Context Type: ICS_UI
+06/27/2024 21:13:53 **** Importing Connection: Conn_01CAKB0B00000000000R ...
+06/27/2024 21:13:53 **** Importing Connection: Conn_01CAKB0B00000000002M ...
+06/27/2024 21:13:53 **** Importing Source Definition: DUMMY_SRC_HiveCountryRef ...
+06/27/2024 21:13:53 **** Importing Source Definition: DUMMY_SRC_HiveSrcRecs ...
+06/27/2024 21:13:53 **** Importing Source Definition: DUMMY_LKP_LkpDimGeo1 ...
+06/27/2024 21:13:53 **** Importing Source Definition: DUMMY_LKP_LkpLessGreaterThan_old ...
+06/27/2024 21:13:53 **** Importing Source Definition: DUMMY_LKP_LkpDimGeo ...
+06/27/2024 21:13:53 **** Importing Target Definition: fact_nb_agent_statement_geotrans2 ...
+06/27/2024 21:13:53 **** Importing SessionConfig: default_session_config ...
+    <Warning> :  The Error Log DB Connection value should have Relational: as the prefix.
+    <Warning> :  Invalid value  for attribute Error Log DB Connection. Will use the default value 
+    Validating Source Definition  DUMMY_LKP_LkpDimGeo1...
+    Validating Source Definition  DUMMY_LKP_LkpDimGeo...
+    Validating Source Definition  DUMMY_LKP_LkpLessGreaterThan_old...
+    Validating Source Definition  DUMMY_SRC_HiveSrcRecs...
+    Validating Source Definition  DUMMY_SRC_HiveCountryRef...
+    Validating Target Definition  fact_nb_agent_statement_geotrans2...
+06/27/2024 21:13:53 **** Importing Mapping: Mapping0 ...
+    <Warning> :  transformation: LKP_LkpLessGreaterThan_old - The subsecond Presicion should be greater than or equal 0 and less than or equal to 9.    [transformation< LKP_LkpLessGreaterThan_old > ] 
+    <Warning> :  transformation: LKP_LkpLessGreaterThan_old - Invalid value  for attribute Subsecond Precision. Will use the default value 6    [transformation< LKP_LkpLessGreaterThan_old > ] 
+    <Warning> :  transformation: LKP_LkpLessGreaterThan_old - Invalid value  for attribute Null ordering. Will use the default value Null Is Highest Value    [transformation< LKP_LkpLessGreaterThan_old > ] 
+    <Warning> :  transformation: JNR_LkpGreaterLessThan - Invalid value Null is Higest Value for attribute Null ordering in detail. Will use the default value Null Is Highest Value    [transformation< JNR_LkpGreaterLessThan > ] 
+    <Warning> :  transformation: JNR_LkpGreaterThan - Invalid value Null is Higest Value for attribute Null ordering in detail. Will use the default value Null Is Highest Value    [transformation< JNR_LkpGreaterThan > ] 
+    <Warning> :  transformation: LKP_LkpDimGeo1 - The subsecond Presicion should be greater than or equal 0 and less than or equal to 9.    [transformation< LKP_LkpDimGeo1 > ] 
+    <Warning> :  transformation: LKP_LkpDimGeo1 - Invalid value  for attribute Subsecond Precision. Will use the default value 6    [transformation< LKP_LkpDimGeo1 > ] 
+    <Warning> :  transformation: LKP_LkpDimGeo1 - Invalid value  for attribute Null ordering. Will use the default value Null Is Highest Value    [transformation< LKP_LkpDimGeo1 > ] 
+    <Warning> :  transformation: LKP_LkpDimGeo - The subsecond Presicion should be greater than or equal 0 and less than or equal to 9.    [transformation< LKP_LkpDimGeo > ] 
+    <Warning> :  transformation: LKP_LkpDimGeo - Invalid value  for attribute Subsecond Precision. Will use the default value 6    [transformation< LKP_LkpDimGeo > ] 
+    <Warning> :  transformation: LKP_LkpDimGeo - Invalid value  for attribute Null ordering. Will use the default value Null Is Highest Value    [transformation< LKP_LkpDimGeo > ] 
+Validating transformations of mapping Mapping0...
+Validating mapping variable(s).
+    <Warning> :  Invalid table attribute: Exec SQL
+    <Warning> :  Invalid table attribute: Exec SQL
+    <Warning> :  Invalid table attribute: Exec SQL
+    <Warning> :  Invalid table attribute: Exec SQL
+    <Warning> :  Invalid table attribute: Exec SQL
+06/27/2024 21:13:53 **** Importing Workflow: wf_mtt_01CAKB0Z000000000A41 ...
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup source is static for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup cache directory name for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup Index Cache Size for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Tracing Level for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup Data Cache Size for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Cache File Name Prefix for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Insert Else Update for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Case Sensitive String Comparison for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Re-cache from lookup source for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Dynamic Lookup Cache for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Null ordering for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Subsecond Precision for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Update Dynamic Cache Condition for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Optional for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Output Old Value On Update for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Pre-build lookup cache for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup caching enabled for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup cache persistent for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Sorted Input for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup Source Filter for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup Sql Override for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup source is static for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup cache directory name for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup Index Cache Size for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Tracing Level for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup Data Cache Size for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Cache File Name Prefix for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Insert Else Update for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Case Sensitive String Comparison for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Re-cache from lookup source for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Dynamic Lookup Cache for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Null ordering for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Subsecond Precision for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Update Dynamic Cache Condition for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Optional for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Output Old Value On Update for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Pre-build lookup cache for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup caching enabled for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup cache persistent for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Sorted Input for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup Source Filter for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup Sql Override for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup source is static for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup cache directory name for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup Index Cache Size for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Tracing Level for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup Data Cache Size for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Cache File Name Prefix for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Insert Else Update for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Case Sensitive String Comparison for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Re-cache from lookup source for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Dynamic Lookup Cache for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Null ordering for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Subsecond Precision for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Update Dynamic Cache Condition for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Optional for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Output Old Value On Update for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Pre-build lookup cache for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup caching enabled for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup cache persistent for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Sorted Input for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup Source Filter for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup Sql Override for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000A41 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value None for attribute Pushdown Optimization Context. Will use the default value None     [Session< s_mtt_01CAKB0Z000000000A41 > ] 
+    <Warning> :  The value entered is not a valid integer.
+    <Warning> :  Invalid value NO for attribute Fail task after wait time. Will use the default value 
+[Summary for Application Source Qualifier SRC_HiveCountryRef]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Application Source Qualifier SRC_HiveSrcRecs]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Application Source Qualifier ISourceNode21]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Application Source Qualifier ISourceNode22]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Application Source Qualifier ISourceNode23]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Custom Transformation UN_FnlGeo]
+     Is a new repartition point.
+     Number of groups changed from 1 to 2.
+
+[Summary for Custom Transformation UN_Fnl]
+     Is a new repartition point.
+     Number of groups changed from 1 to 3.
+
+Successfully extracted session instance [s_mtt_01CAKB0Z000000000A41].  Starting repository sequence id is [-742839212]
+======================================================================
+PETL_24036 [2024-06-27 21:13:52.956] Beginning the prepare phase for the session.
+TM_6721 [2024-06-27 21:13:52.957] Started [Connect to Repository].
+TM_6722 [2024-06-27 21:13:53.440] Finished [Connect to Repository].  It took [0.483726] seconds.
+TM_6721 [2024-06-27 21:13:53.440] Started [Fetch Session from Repository].
+TM_6722 [2024-06-27 21:13:53.665] Finished [Fetch Session from Repository].  It took [0.2242] seconds.
+VAR_27085 [2024-06-27 21:13:53.666] Parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB0Z000000000A41.param] is opened for [session [wf_mtt_01CAKB0Z000000000A41.s_mtt_01CAKB0Z000000000A41]].
+VAR_27062 [2024-06-27 21:13:53.666] Warning! Cannot find section for worklet [wf_mtt_01CAKB0Z000000000A41] and folder [] in parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB0Z000000000A41.param].
+TT_11094 [2024-06-27 21:13:53.668] The Lookup transformation [LKP_LkpDimGeo1] requires that a string or binary lookup port and an input port in any lookup condition have the same length. Since lookup port [cntry_cd] had a length of [30] and input port [o_kcntryid_code] had a length of [10], the larger length for both ports is used.
+TT_11094 [2024-06-27 21:13:53.668] The Lookup transformation [LKP_LkpDimGeo1] requires that a string or binary lookup port and an input port in any lookup condition have the same length. Since lookup port [st_nm] had a length of [75] and input port [o_ksttrgid_name] had a length of [30], the larger length for both ports is used.
+TT_11094 [2024-06-27 21:13:53.668] The Lookup transformation [LKP_LkpDimGeo] requires that a string or binary lookup port and an input port in any lookup condition have the same length. Since lookup port [cntry_cd] had a length of [30] and input port [o_kcntryid_code] had a length of [10], the larger length for both ports is used.
+TT_11094 [2024-06-27 21:13:53.668] The Lookup transformation [LKP_LkpDimGeo] requires that a string or binary lookup port and an input port in any lookup condition have the same length. Since lookup port [st_nm] had a length of [75] and input port [o_ksttrgid_name] had a length of [30], the larger length for both ports is used.
+TT_11094 [2024-06-27 21:13:53.668] The Lookup transformation [LKP_LkpDimGeo] requires that a string or binary lookup port and an input port in any lookup condition have the same length. Since lookup port [cnty_nm] had a length of [75] and input port [o_kcountyid_name] had a length of [30], the larger length for both ports is used.
+TM_6721 [2024-06-27 21:13:53.682] Started [Partition Group Formation].
+TM_6722 [2024-06-27 21:13:53.683] Finished [Partition Group Formation].  It took [0.000679016] seconds.
+PETL_24037 [2024-06-27 21:13:53.683] Finished the prepare phase for the session.
+DIRECTOR> TM_6228 [2024-06-27 21:13:53.684] Writing session output to log file [/app/iics_agent_dir/apps/Data_Integration_Server/data/../logs/s_mtt_1dXkyxH1ROfkfYhpmIQGui_5.log].
+DIRECTOR> VAR_27085 [2024-06-27 21:13:53.685] Parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB0Z000000000A41.param] is opened for [session [wf_mtt_01CAKB0Z000000000A41.s_mtt_01CAKB0Z000000000A41]].
+DIRECTOR> VAR_27062 [2024-06-27 21:13:53.686] Warning! Cannot find section for worklet [wf_mtt_01CAKB0Z000000000A41] and folder [] in parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB0Z000000000A41.param].
+DIRECTOR> PETL_24093 [2024-06-27 21:13:53.686] User defined Parameter File Location [EDM_IDMC_S3::nyl-idmc-dev-workspace-20230504201653688600000001/edm/edm_processed_nb/ParamFiles/EDM_NBUW.param].
+DIRECTOR> TM_6014 [2024-06-27 21:13:53.687] Initializing session [s_mtt_01CAKB0Z000000000A41] at [Thu Jun 27 21:13:53 2024].
+DIRECTOR> TM_6683 [2024-06-27 21:13:53.687] Repository Name: [XMLRepository]
+DIRECTOR> TM_6684 [2024-06-27 21:13:53.687] Server Name: [rDTM]
+DIRECTOR> TM_6686 [2024-06-27 21:13:53.687] Folder: []
+DIRECTOR> TM_6685 [2024-06-27 21:13:53.687] Workflow: [wf_mtt_01CAKB0Z000000000A41] Run Instance Name: [] Run Id: [0]
+DIRECTOR> TM_6992 [2024-06-27 21:13:53.687] Operating System Type [Linux]
+DIRECTOR> TM_6101 [2024-06-27 21:13:53.687] Mapping name: Mapping0.
+DIRECTOR> TM_6964 [2024-06-27 21:13:53.688] Date format for the Session is [MM/DD/YYYY HH24:MI:SS.US]
+DIRECTOR> TM_6703 [2024-06-27 21:13:53.688] Session [s_mtt_01CAKB0Z000000000A41] is run by 64-bit Integration Service  [], version [10.2.0 HotFix2], build [0320].
+MANAGER> PETL_24091 [2024-06-27 21:13:53.726] Thread [MANAGER] has the ID [1].
+MANAGER> PETL_24058 [2024-06-27 21:13:53.726] Running Partition Group [1].
+MANAGER> PETL_24000 [2024-06-27 21:13:53.726] Parallel Pipeline Engine initializing.
+MONITOR> PETL_24091 [2024-06-27 21:13:53.727] Thread [MONITOR] has the ID [2].
+MANAGER> PETL_24001 [2024-06-27 21:13:53.727] Parallel Pipeline Engine running.
+MANAGER> PETL_24003 [2024-06-27 21:13:53.728] Initializing session run.
+MAPPING> PETL_24091 [2024-06-27 21:13:53.728] Thread [MAPPING] has the ID [3].
+MAPPING> CMN_1569 [2024-06-27 21:13:53.731] Server Mode: [UNICODE]
+MAPPING> CMN_1570 [2024-06-27 21:13:53.731] Server Code page: [ISO 8859-1 Western European]
+MAPPING> TM_6151 [2024-06-27 21:13:53.731] The session sort order is [Binary].
+MAPPING> TM_6185 [2024-06-27 21:13:53.731] Warning. Code page validation is disabled in this session.
+MAPPING> CMN_65110 [2024-06-27 21:13:53.732] Current Timezone:[UTC -5:0]
+MAPPING> CMN_65111 [2024-06-27 21:13:53.732] Current Process ID:[49818]
+MAPPING> TM_6155 [2024-06-27 21:13:53.732] Using HIGH precision processing.
+MAPPING> TM_6180 [2024-06-27 21:13:53.732] Deadlock retry logic will not be implemented.
+MAPPING> TM_6187 [2024-06-27 21:13:53.732] Session target-based commit interval is [10000].
+MAPPING> PMJVM_42020 [2024-06-27 21:13:53.738] [INFO] Loaded library : /app/iics_agent_dir/apps/jdk/zulu8.70.0.52-sa-fx-jdk8.0.372/jre/lib/amd64/server/libjvm.so.
+MAPPING> PMJVM_42009 [2024-06-27 21:13:53.823] [INFO] Created Java VM successfully.
+MAPPING> SDKS_38029 [2024-06-27 21:13:53.898] Loaded plug-in 451600: [plugin description].
+MAPPING> SDKS_38024 [2024-06-27 21:13:53.933] Plug-in 451600 initialization complete.
+MAPPING> SDKS_38016 [2024-06-27 21:13:53.933] Reader SDK plug-in initialization complete.
+MAPPING> SDKS_38029 [2024-06-27 21:13:53.935] Loaded plug-in 451600: [plugin description].
+MAPPING> SDKS_38024 [2024-06-27 21:13:54.494] Plug-in 451600 initialization complete.
+MAPPING> SDKS_38017 [2024-06-27 21:13:54.494] Writer SDK plug-in initialization complete.
+MAPPING> CONNECTOR_10000 [2024-06-27 21:13:56.574] [INFO] The target object at runtime is overridden with the parameter name = fact_nb_agent_statement_geotrans2 table name = fact_nb_agent_statement_geotrans2.
+MAPPING> SDKS_38509 [2024-06-27 21:13:56.834] SDK target and group initialization complete.
+MAPPING> TM_6307 [2024-06-27 21:13:56.834] DTM error log disabled. 
+MAPPING> TE_7022 [2024-06-27 21:13:56.836] TShmWriter: Initialized
+MAPPING> DBG_21693 [2024-06-27 21:13:56.843] SRT_LkpGreaterLessThan_Srt1: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-06-27 21:13:57.010] For Transformation [SRT_LkpGreaterLessThan_Srt1], memory used is [1073741824] bytes and row size is 56 bytes.
+MAPPING> DBG_21693 [2024-06-27 21:13:57.033] SRT_LkpGreaterThan_Srt1: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-06-27 21:13:57.160] For Transformation [SRT_LkpGreaterThan_Srt1], memory used is [1073741824] bytes and row size is 68 bytes.
+MAPPING> DBG_21693 [2024-06-27 21:13:57.181] SRT_LkpGreaterThan_Srt0: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-06-27 21:13:57.305] For Transformation [SRT_LkpGreaterThan_Srt0], memory used is [1073741824] bytes and row size is 696 bytes.
+MAPPING> DBG_21693 [2024-06-27 21:13:57.324] SRT_LkpGreaterLessThan_Srt0: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-06-27 21:13:57.447] For Transformation [SRT_LkpGreaterLessThan_Srt0], memory used is [1073741824] bytes and row size is 688 bytes.
+MAPPING> DBG_21694 [2024-06-27 21:13:57.466] JNR_LkpGreaterLessThan Partition [0]: Index cache size = [35791394], Data cache size = [71582788]
+MAPPING> TT_11098 [2024-06-27 21:13:57.466] The Joiner transformation [JNR_LkpGreaterLessThan] is configured with the join algorithm: Sorted-Merge.
+MAPPING> DBG_21077 [2024-06-27 21:13:57.466] Create joiner cache on master relation : (Thu Jun 27 21:13:57 2024)
+MAPPING> CMN_1690 [2024-06-27 21:13:57.513] Created new data file [/data/EDM_Agency/Cache//PMJNR-742839009_25_0.dat] and index file [/data/EDM_Agency/Cache//PMJNR-742839009_25_0.idx] for Joiner [JNR_LkpGreaterLessThan].
+MAPPING> DBG_21691 [2024-06-27 21:13:57.513] Create joiner cache on detail relation : (Thu Jun 27 21:13:57 2024)
+MAPPING> CMN_1690 [2024-06-27 21:13:57.557] Created new data file [/data/EDM_Agency/Cache//PMJNRD-742839009_25_0.dat] and index file [/data/EDM_Agency/Cache//PMJNRD-742839009_25_0.idx] for Joiner [JNR_LkpGreaterLessThan].
+MAPPING> DBG_21694 [2024-06-27 21:13:57.558] JNR_LkpGreaterThan Partition [0]: Index cache size = [35791394], Data cache size = [71582788]
+MAPPING> TT_11098 [2024-06-27 21:13:57.558] The Joiner transformation [JNR_LkpGreaterThan] is configured with the join algorithm: Sorted-Merge.
+MAPPING> DBG_21077 [2024-06-27 21:13:57.558] Create joiner cache on master relation : (Thu Jun 27 21:13:57 2024)
+MAPPING> CMN_1690 [2024-06-27 21:13:57.605] Created new data file [/data/EDM_Agency/Cache//PMJNR-742839009_26_0.dat] and index file [/data/EDM_Agency/Cache//PMJNR-742839009_26_0.idx] for Joiner [JNR_LkpGreaterThan].
+MAPPING> DBG_21603 [2024-06-27 21:13:57.605] Open master relation cache for detail joiner : (Thu Jun 27 21:13:57 2024)
+MAPPING> TM_6007 [2024-06-27 21:13:57.612] DTM initialized successfully for session [s_mtt_01CAKB0Z000000000A41]
+DIRECTOR> PETL_24033 [2024-06-27 21:13:57.612] All DTM Connection Info: [<NONE>].
+MANAGER> PETL_24004 [2024-06-27 21:13:57.612] Starting pre-session tasks. : (Thu Jun 27 21:13:57 2024)
+PRE-SESS> PETL_24091 [2024-06-27 21:13:57.613] Thread [PRE-SESS] has the ID [4].
+MANAGER> PETL_24027 [2024-06-27 21:13:57.615] Pre-session task completed successfully. : (Thu Jun 27 21:13:57 2024)
+DIRECTOR> PETL_24006 [2024-06-27 21:13:57.615] Starting data movement.
+DIRECTOR> TT_11183 [2024-06-27 21:13:57.615] Enabled using [1 (auto)] additional concurrent pipelines to build lookup caches. (Session likely will build or refresh [3] lookup caches; [0] on-demand only).
+MAPPING> TM_6966 [2024-06-27 21:13:57.616] Reducing estimate of the amount of buffer pool memory required for high performance.
+MAPPING> TM_6660 [2024-06-27 21:13:57.630] Total Buffer Pool size is 1073741824 bytes and Block size is 15728640 bytes.
+MAPPING> CONNECTOR_10000 [2024-06-27 21:13:57.700] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+MAPPING> CONNECTOR_10000 [2024-06-27 21:13:57.769] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+LKPDP_1> PETL_24091 [2024-06-27 21:13:57.786] Thread [LKPDP_1] has the ID [5].
+LKPDP_1> DBG_21693 [2024-06-27 21:13:57.789] LKP_LkpLessGreaterThan_old{{SRT}}: Cache size for partition [1] = [124151398]
+LKPDP_1> SORT_40419 [2024-06-27 21:13:57.922] For Transformation [LKP_LkpLessGreaterThan_old{{SRT}}], memory used is [124151398] bytes and row size is 192 bytes.
+LKPDP_1> TE_7212 [2024-06-27 21:13:57.957] Increasing [Index Cache] size for transformation [LKP_LkpLessGreaterThan_old] from [35791394] to [35792400].
+LKPDP_1> TE_7212 [2024-06-27 21:13:57.957] Increasing [Data Cache] size for transformation [LKP_LkpLessGreaterThan_old] from [71582788] to [71589888].
+LKPDP_2> PETL_24091 [2024-06-27 21:13:57.988] Thread [LKPDP_2] has the ID [6].
+LKPDP_2> DBG_21693 [2024-06-27 21:13:57.990] LKP_LkpDimGeo1{{SRT}}: Cache size for partition [1] = [124151398]
+LKPDP_2> SORT_40419 [2024-06-27 21:13:58.122] For Transformation [LKP_LkpDimGeo1{{SRT}}], memory used is [124151398] bytes and row size is 540 bytes.
+LKPDP_2> TE_7212 [2024-06-27 21:13:58.157] Increasing [Index Cache] size for transformation [LKP_LkpDimGeo1] from [35791394] to [35807232].
+LKPDP_2> TE_7212 [2024-06-27 21:13:58.158] Increasing [Data Cache] size for transformation [LKP_LkpDimGeo1] from [71582788] to [71589888].
+LKPDP_3> PETL_24091 [2024-06-27 21:13:58.195] Thread [LKPDP_3] has the ID [7].
+LKPDP_3> DBG_21693 [2024-06-27 21:13:58.197] LKP_LkpDimGeo{{SRT}}: Cache size for partition [1] = [124151398]
+LKPDP_3> SORT_40419 [2024-06-27 21:13:58.327] For Transformation [LKP_LkpDimGeo{{SRT}}], memory used is [124151398] bytes and row size is 588 bytes.
+LKPDP_3> TE_7212 [2024-06-27 21:13:58.359] Increasing [Index Cache] size for transformation [LKP_LkpDimGeo] from [35791394] to [35796480].
+LKPDP_3> TE_7212 [2024-06-27 21:13:58.359] Increasing [Data Cache] size for transformation [LKP_LkpDimGeo] from [71582788] to [71589888].
+DIRECTOR> TT_11184 [2024-06-27 21:13:58.386] Starting additional concurrent pipeline to build the lookup cache needed by Lookup transformation [LKP_LkpLessGreaterThan_old].
+READER_1_1_1> PETL_24091 [2024-06-27 21:13:58.387] Thread [READER_1_1_1] has the ID [8].
+LKPDP_1> TM_6660 [2024-06-27 21:13:58.387] Total Buffer Pool size is 609824 bytes and Block size is 65536 bytes.
+LKPDP_1> CONNECTOR_10000 [2024-06-27 21:13:58.427] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+LKPDP_1:READER_1_1> PETL_24091 [2024-06-27 21:13:58.448] Thread [LKPDP_1:READER_1_1] has the ID [9].
+LKPDP_1:READER_1_1> CONNECTOR_10000 [2024-06-27 21:13:58.864] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Read data
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:01.380] [INFO] The S3 bucket name for staging the data during the read operation is nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp.
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:01.380] [INFO] The value of Enable Compression is set to true.
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:01.380] [INFO] The value of the S3 Client Encryption is set to false.
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:01.382] [INFO] Unload Options ADDQUOTES : 
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:01.382] [INFO] Unload Options PARALLEL : ON
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:01.382] [INFO] Unload Options ESCAPE : 
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:01.383] [INFO] Temporary Credentials valid for [21,600] seconds will be used.
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:01.461] [INFO] Encryption Type : None
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:01.461] [INFO] S3 Client Encryption : false
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:01.461] [INFO] S3 Server Side Encryption : false
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:01.461] [INFO] The Encryption type honored is : NONE
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:03.821] [INFO] The local staging directory location is set to /data/EDM_Agency/Cache/.
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:03.823] [INFO] The value of Download S3 Files In Multiple Parts is set to true.
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:03.823] [INFO] The Multipart Download Threshold size of an object is set as 5,242,880 bytes.
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:03.835] [INFO] Staging dir location: /data/EDM_Agency/Cache//InfaRedshiftStaging0006272114038273730
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:03.837] [INFO] Total time taken for staging: 0.0 sec.
+READER_1_1_1> CONNECTOR_10000 [2024-06-27 21:14:03.842] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Read data
+LKPDP_1:TRANSF_1_1> PETL_24091 [2024-06-27 21:14:03.842] Thread [LKPDP_1:TRANSF_1_1] has the ID [10].
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:03.847] [INFO] 
+/* partner: Informatica -v 2.0 */
+unload ('With kwn_state_region AS
+(select 
+	ksttrgid_ref,
+	ksttrgid_code,
+	ksttrgid_name,
+	kcntryid_ref
+from ext_pvt_lake_oracle_orap12_nyldprod60cl.kwn_state_region
+where upper(status_code)=\'ACTIVE\' and edh_record_status_in=\'A\'),
+
+kwn_country AS
+(select 
+	kcntryid_code,
+	kcntryid_ref
+from ext_pvt_lake_oracle_orap12_nyldprod60cl.kwn_country
+where upper(status_code)=\'ACTIVE\'  and edh_record_status_in=\'A\' )
+
+select distinct
+	kwn_state_region.ksttrgid_ref ksttrgid_ref,
+	trim(upper(kwn_state_region.ksttrgid_code)) ksttrgid_code,
+	trim(upper(kwn_state_region.ksttrgid_name)) ksttrgid_name,
+	kwn_country.kcntryid_ref kcntryid_ref,
+	trim(upper(kwn_country.kcntryid_code)) kcntryid_code
+from kwn_state_region
+left outer join kwn_country on kwn_state_region.kcntryid_ref=kwn_country.kcntryid_ref') 
+ TO 's3://nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/6f443290-5377-4616-a285-bb1c2878913500171953724382375833900138604834981819/INFARS_CUSTOM_SCHEMA_' 
+credentials 'aws_access_key_id=********;aws_secret_access_key=********;token=********' 
+ADDQUOTES 
+ESCAPE 
+PARALLEL ON
+NULL ''
+GZIP 
+DELIMITER '\036'
+
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:04.150] [INFO] The S3 bucket name for staging the data during the read operation is nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:04.150] [INFO] The value of Enable Compression is set to true.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:04.150] [INFO] The value of the S3 Client Encryption is set to false.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:04.151] [INFO] Unload Options ADDQUOTES : 
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:04.151] [INFO] Unload Options PARALLEL : ON
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:04.151] [INFO] Unload Options ESCAPE : 
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:04.151] [INFO] Temporary Credentials valid for [21,600] seconds will be used.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:04.214] [INFO] Encryption Type : None
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:04.214] [INFO] S3 Client Encryption : false
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:04.214] [INFO] S3 Server Side Encryption : false
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:04.214] [INFO] The Encryption type honored is : NONE
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:06.405] [INFO] The local staging directory location is set to /data/EDM_Agency/Cache.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:06.407] [INFO] The value of Download S3 Files In Multiple Parts is set to true.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:06.407] [INFO] The Multipart Download Threshold size of an object is set as 5,242,880 bytes.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:06.416] [INFO] Staging dir location: /data/EDM_Agency/Cache/InfaRedshiftStaging0006272114064076760
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:06.416] [INFO] Total time taken for staging: 0.0 sec.
+TRANSF_1_1_1> PETL_24091 [2024-06-27 21:14:06.435] Thread [TRANSF_1_1_1] has the ID [11].
+READER_1_2_1> PETL_24091 [2024-06-27 21:14:06.435] Thread [READER_1_2_1] has the ID [12].
+READER_1_2_1> CONNECTOR_10000 [2024-06-27 21:14:06.463] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Read data
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:06.694] [INFO] The S3 bucket name for staging the data during the read operation is nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:06.694] [INFO] The value of Enable Compression is set to true.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:06.694] [INFO] The value of the S3 Client Encryption is set to false.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:06.695] [INFO] Unload Options ADDQUOTES : 
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:06.695] [INFO] Unload Options PARALLEL : ON
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:06.695] [INFO] Unload Options ESCAPE : 
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:06.695] [INFO] Temporary Credentials valid for [21,600] seconds will be used.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:06.758] [INFO] Encryption Type : None
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:06.758] [INFO] S3 Client Encryption : false
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:06.758] [INFO] S3 Server Side Encryption : false
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:06.758] [INFO] The Encryption type honored is : NONE
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:07.878] [WARNING] UNLOAD Warning ..
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:07.878] [INFO] UNLOAD command successfully completed.
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:07.878] [INFO]  Total time elapsed  4.0
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:08.174] [INFO] The total time taken to download the 8 file from Amazon S3 is 0 seconds.
+LKPDP_1:TRANSF_1_1> SORT_40420 [2024-06-27 21:14:08.207] Start of input for Transformation [LKP_LkpLessGreaterThan_old{{SRT}}]. : (Thu Jun 27 21:14:08 2024)
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:08.246] [INFO] The total time taken to read the files and push the data to the output buffer is 4.409 seconds.
+LKPDP_1:TRANSF_1_1> SORT_40421 [2024-06-27 21:14:08.246] End of input for Transformation [LKP_LkpLessGreaterThan_old{{SRT}}]. : (Thu Jun 27 21:14:08 2024)
+LKPDP_1:TRANSF_1_1> DBG_21079 [2024-06-27 21:14:08.289] Creating Lookup Cache : (Thu Jun 27 21:14:08 2024)
+LKPDP_1:TRANSF_1_1> SORT_40422 [2024-06-27 21:14:08.290] End of output from Sorter Transformation [LKP_LkpLessGreaterThan_old{{SRT}}]. Processed 100 rows (19200 input bytes; 0 temp I/O bytes). : (Thu Jun 27 21:14:08 2024)
+LKPDP_1:TRANSF_1_1> SORT_40423 [2024-06-27 21:14:08.300] End of sort for Sorter Transformation [LKP_LkpLessGreaterThan_old{{SRT}}]. : (Thu Jun 27 21:14:08 2024)
+LKPDP_1:TRANSF_1_1> DBG_21682 [2024-06-27 21:14:08.300] Lookup table row count : 100
+LKPDP_1:TRANSF_1_1> DBG_21297 [2024-06-27 21:14:08.300] Lookup cache row count : 100
+
+LKPDP_1:TRANSF_1_1> DBG_21294 [2024-06-27 21:14:08.300] Lookup cache creation completed : (Thu Jun 27 21:14:08 2024)
+LKPDP_1:TRANSF_1_1> CMN_1671 [2024-06-27 21:14:08.300] Created new cache files PMLKUP-742839009_24_0L64.[dat/idx] in directory /data/EDM_Agency/Cache/ for Lookup [LKP_LkpLessGreaterThan_old].
+LKPDP_1:TRANSF_1_1> DBG_21641 [2024-06-27 21:14:08.300] LKP_LkpLessGreaterThan_old: Index cache size = [35792400], Data cache size = [71589888]
+LKPDP_1:TRANSF_1_1> DBG_21216 [2024-06-27 21:14:08.300] Finished transformations for Source Qualifier [ISourceNode21]. Total errors [0] 
+DIRECTOR> TT_11184 [2024-06-27 21:14:08.722] Starting additional concurrent pipeline to build the lookup cache needed by Lookup transformation [LKP_LkpDimGeo1].
+LKPDP_2> TM_6660 [2024-06-27 21:14:08.723] Total Buffer Pool size is 609824 bytes and Block size is 65536 bytes.
+LKPDP_2> CONNECTOR_10000 [2024-06-27 21:14:08.760] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+LKPDP_2:READER_1_1> PETL_24091 [2024-06-27 21:14:08.775] Thread [LKPDP_2:READER_1_1] has the ID [13].
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:08.946] [INFO] The local staging directory location is set to /data/EDM_Agency/Cache.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:08.947] [INFO] The value of Download S3 Files In Multiple Parts is set to true.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:08.947] [INFO] The Multipart Download Threshold size of an object is set as 5,242,880 bytes.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:08.956] [INFO] Staging dir location: /data/EDM_Agency/Cache/InfaRedshiftStaging0006272114089496220
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:08.957] [INFO] Total time taken for staging: 0.0 sec.
+LKPDP_2:READER_1_1> CONNECTOR_10000 [2024-06-27 21:14:08.959] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Read data
+TRANSF_1_2_1> PETL_24091 [2024-06-27 21:14:08.959] Thread [TRANSF_1_2_1] has the ID [14].
+TRANSF_1_5_1> PETL_24091 [2024-06-27 21:14:08.960] Thread [TRANSF_1_5_1] has the ID [15].
+TRANSF_1_6_1> PETL_24091 [2024-06-27 21:14:08.961] Thread [TRANSF_1_6_1] has the ID [16].
+WRITER_1_*_1> PETL_24091 [2024-06-27 21:14:08.963] Thread [WRITER_1_*_1] has the ID [17].
+WRITER_1_*_1> CONNECTOR_10000 [2024-06-27 21:14:08.972] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Write data
+LKPDP_2:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.209] [INFO] The S3 bucket name for staging the data during the read operation is nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp.
+LKPDP_2:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.209] [INFO] The value of Enable Compression is set to true.
+LKPDP_2:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.209] [INFO] The value of the S3 Client Encryption is set to false.
+LKPDP_2:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.210] [INFO] Temporary Credentials valid for [900] seconds will be used.
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.260] [INFO] Truncate table required : false
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.260] [INFO] Write operation selected [TreatSourceRowAs]  : UPSERT
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.261] [INFO] Writer Bucket name : nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.261] [INFO] Use Null value for Char types : ''
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.261] [INFO] Max errors per batch : 1
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.261] [INFO] Compression Enabled : true
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.261] [INFO] Server side encryption enabled : false
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.261] [INFO] Client side encryption enabled : false
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.261] [INFO] Vacuum option provided : None
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.261] [INFO] Analyze target table  : false
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.261] [INFO] Prefix to retain S3 files on staging dir  : 
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.261] [INFO] Minimum upload part size  : 5242880
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.261] [INFO] TransferManager Thead pool size  : 10
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.261] [INFO] Overriden Table Name  : fact_nb_agent_statement_geotrans2
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.261] [INFO] Target Schema Name Attribute : ds_staging_conv
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.262] [INFO] Copy Options TIMEFORMAT : 'MM/DD/YYYY HH24:MI:SS'
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.262] [INFO] Temporary Credentials valid for [21,600] seconds will be used.
+LKPDP_2:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.273] [INFO] Encryption Type : None
+LKPDP_2:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.273] [INFO] S3 Client Encryption : false
+LKPDP_2:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.273] [INFO] S3 Server Side Encryption : false
+LKPDP_2:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.273] [INFO] The Encryption type honored is : NONE
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.322] [INFO] S3 Consistency wait period : 0
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.718] [INFO] Batch size 2000000
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:09.719] [INFO] Staging dir location: /data/EDM_Agency/Cache
+LKPDP_2:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:11.304] [INFO] The local staging directory location is set to /data/EDM_Agency/Cache/.
+LKPDP_2:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:11.304] [INFO] The value of Download S3 Files In Multiple Parts is set to false.
+LKPDP_2:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:11.304] [INFO] The Multipart Download Threshold size of an object is set as 5,242,880 bytes.
+LKPDP_2:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:11.314] [INFO] Staging dir location: /data/EDM_Agency/Cache//InfaRedshiftStaging0006272114113041890
+LKPDP_2:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:11.314] [INFO] Total time taken for staging: 0.0 sec.
+LKPDP_2:TRANSF_1_1> PETL_24091 [2024-06-27 21:14:11.315] Thread [LKPDP_2:TRANSF_1_1] has the ID [18].
+LKPDP_2:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:11.317] [INFO] 
+/* partner: Informatica -v 2.0 */
+unload ('select 
+	dim_geo_sk,
+	trim(upper(cntry_cd)) cntry_cd,
+	trim(upper(st_nm)) st_nm,
+	trim(cnty_nm) cnty_nm,
+	trim(city_nm) city_nm,
+	trim(cnty_cd) cnty_cd,
+	trim(st_cd) st_cd
+from pdm.dim_geo where upper(trim(cnty_cd))=\'N/A\' and upper(trim(city_nm))=\'N/A\' and upper(trim(hierarchy_lvl))=\'3\'') 
+ TO 's3://nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/6f443290-5377-4616-a285-bb1c287891350017195372513046603656987458384981844/INFARS_CUSTOM_SCHEMA_' 
+credentials 'aws_access_key_id=********;aws_secret_access_key=********;token=********' 
+ESCAPE 
+NULL ''
+GZIP 
+DELIMITER '\036'
+
+LKPDP_2:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:11.735] [WARNING] UNLOAD Warning ..
+LKPDP_2:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:11.735] [INFO] UNLOAD command successfully completed.
+LKPDP_2:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:11.735] [INFO]  Total time elapsed  0.0
+LKPDP_2:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:11.989] [INFO] The total time taken to download the 8 file from Amazon S3 is 0 seconds.
+LKPDP_2:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:12.018] [INFO] The total time taken to read the files and push the data to the output buffer is 0.704 seconds.
+LKPDP_2:TRANSF_1_1> SORT_40421 [2024-06-27 21:14:12.019] End of input for Transformation [LKP_LkpDimGeo1{{SRT}}]. : (Thu Jun 27 21:14:12 2024)
+LKPDP_2:TRANSF_1_1> DBG_21079 [2024-06-27 21:14:12.039] Creating Lookup Cache : (Thu Jun 27 21:14:12 2024)
+LKPDP_2:TRANSF_1_1> SORT_40422 [2024-06-27 21:14:12.039] End of output from Sorter Transformation [LKP_LkpDimGeo1{{SRT}}]. Processed 0 rows (0 input bytes; 0 temp I/O bytes). : (Thu Jun 27 21:14:12 2024)
+LKPDP_2:TRANSF_1_1> SORT_40423 [2024-06-27 21:14:12.050] End of sort for Sorter Transformation [LKP_LkpDimGeo1{{SRT}}]. : (Thu Jun 27 21:14:12 2024)
+LKPDP_2:TRANSF_1_1> DBG_21682 [2024-06-27 21:14:12.050] Lookup table row count : 0
+LKPDP_2:TRANSF_1_1> DBG_21297 [2024-06-27 21:14:12.050] Lookup cache row count : 0
+
+LKPDP_2:TRANSF_1_1> DBG_21294 [2024-06-27 21:14:12.050] Lookup cache creation completed : (Thu Jun 27 21:14:12 2024)
+LKPDP_2:TRANSF_1_1> CMN_1671 [2024-06-27 21:14:12.050] Created new cache files PMLKUP-742839009_29_0L64.[dat/idx] in directory /data/EDM_Agency/Cache/ for Lookup [LKP_LkpDimGeo1].
+LKPDP_2:TRANSF_1_1> DBG_21641 [2024-06-27 21:14:12.050] LKP_LkpDimGeo1: Index cache size = [35807232], Data cache size = [71589888]
+LKPDP_2:TRANSF_1_1> DBG_21216 [2024-06-27 21:14:12.050] Finished transformations for Source Qualifier [ISourceNode22]. Total errors [0] 
+DIRECTOR> TT_11184 [2024-06-27 21:14:12.506] Starting additional concurrent pipeline to build the lookup cache needed by Lookup transformation [LKP_LkpDimGeo].
+LKPDP_3> TM_6660 [2024-06-27 21:14:12.507] Total Buffer Pool size is 609824 bytes and Block size is 65536 bytes.
+LKPDP_3> CONNECTOR_10000 [2024-06-27 21:14:12.544] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+LKPDP_3:READER_1_1> PETL_24091 [2024-06-27 21:14:12.558] Thread [LKPDP_3:READER_1_1] has the ID [19].
+LKPDP_3:READER_1_1> CONNECTOR_10000 [2024-06-27 21:14:12.581] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Read data
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:12.779] [INFO] The S3 bucket name for staging the data during the read operation is nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp.
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:12.779] [INFO] The value of Enable Compression is set to true.
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:12.779] [INFO] The value of the S3 Client Encryption is set to false.
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:12.779] [INFO] Unload Options ADDQUOTES : 
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:12.779] [INFO] Unload Options PARALLEL : ON
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:12.779] [INFO] Unload Options ESCAPE : 
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:12.779] [INFO] Temporary Credentials valid for [21,600] seconds will be used.
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:12.832] [INFO] Encryption Type : None
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:12.832] [INFO] S3 Client Encryption : false
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:12.832] [INFO] S3 Server Side Encryption : false
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:12.832] [INFO] The Encryption type honored is : NONE
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:12.847] [INFO] Staging dir location: /data/EDM_Agency/Cache/InfaRedshiftStaging1106272114128386320
+WRITER_1_*_1> WRT_8270 [2024-06-27 21:14:12.860] Target connection group #1 consists of target(s) [fact_nb_agent_statement_geotrans2: Partition 1]
+WRITER_1_*_1> WRT_8003 [2024-06-27 21:14:12.860] Writer initialization complete.
+WRITER_1_*_1> WRT_8005 [2024-06-27 21:14:12.862] Writer run started.
+WRITER_1_*_1> WRT_8158 [2024-06-27 21:14:12.862] 
+
+*****START LOAD SESSION*****
+
+Load Start Time: Thu Jun 27 21:14:12 2024
+
+Target tables:
+
+     fact_nb_agent_statement_geotrans2: Partition 1
+
+
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:12.867] [INFO] 
+/* partner: Informatica -v 2.0 */
+unload ('With kwn_state_county AS
+(select 
+	kcountyid_ref,
+	kcountyid_code,
+		case
+	when upper(trim(cast(kcountyid_name as varchar(3)))) = \'ST.\' then translate(upper(trim(kcountyid_name)),\'ST.\',\'ST\')
+	when upper(trim(kcountyid_name)) = \'DESOTO\' Then \'DE SOTO\'
+	when upper(trim(kcountyid_name)) = \'DADE\' Then \'MIAMI-DADE\'
+	else upper(trim(kcountyid_name)) end as kcountyid_name,
+	ksttrgid_ref 
+from ext_pvt_lake_oracle_orap12_nyldprod60cl.kwn_state_county where edh_record_status_in=\'A\'),
+
+kwn_state_region AS
+(select 
+	ksttrgid_ref,
+	ksttrgid_code,
+	ksttrgid_name,
+	kcntryid_ref
+from ext_pvt_lake_oracle_orap12_nyldprod60cl.kwn_state_region where edh_record_status_in=\'A\'),
+
+kwn_country AS
+(select 
+	kcntryid_code,
+	kcntryid_ref
+from ext_pvt_lake_oracle_orap12_nyldprod60cl.kwn_country where edh_record_status_in=\'A\')
+
+select 
+	kwn_state_county.kcountyid_ref kcountyid_ref,
+	trim(upper(kwn_state_county.kcountyid_code)) kcountyid_code,
+	trim(upper(kwn_state_county.kcountyid_name)) kcountyid_name,
+	kwn_state_county.ksttrgid_ref ksttrgid_ref,
+	trim(upper(kwn_state_region.ksttrgid_code)) ksttrgid_code,
+	trim(upper(kwn_state_region.ksttrgid_name)) ksttrgid_name,
+	trim(upper(kwn_country.kcntryid_code)) kcntryid_code
+from kwn_state_county
+left outer join kwn_state_region on kwn_state_county.ksttrgid_ref=kwn_state_region.ksttrgid_ref
+left outer join kwn_country on kwn_state_region.kcntryid_ref=kwn_country.kcntryid_ref
+order by kcntryid_code,ksttrgid_code,kcountyid_code,kcountyid_ref,ksttrgid_ref') 
+ TO 's3://nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/6f443290-5377-4616-a285-bb1c28789135001719537248947250393111819087744981830/INFARS_CUSTOM_SCHEMA_' 
+credentials 'aws_access_key_id=********;aws_secret_access_key=********;token=********' 
+ADDQUOTES 
+ESCAPE 
+PARALLEL ON
+NULL ''
+GZIP 
+DELIMITER '\036'
+
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:12.867] [INFO] 
+/* partner: Informatica -v 2.0 */
+unload ('select 
+	iagstmid_ref,
+	kaplnempcid_ref kjcountyid_ref,
+	trim(upper(kaplnempcid_code)) kjcountyid_code,
+	kaplnempsid_ref kjsttrgid_ref,
+	trim(upper(kaplnempsid_code)) kjsttrgid_code
+from ext_pvt_lake_oracle_orap12_nyldprod60cl.i_agent_statement 
+where iagstmid_ref>999 and edh_record_status_in=\'A\'') 
+ TO 's3://nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/6f443290-5377-4616-a285-bb1c28789135001719537246407137955586824658584981818/INFARS_CUSTOM_SCHEMA_' 
+credentials 'aws_access_key_id=********;aws_secret_access_key=********;token=********' 
+ADDQUOTES 
+ESCAPE 
+PARALLEL ON
+NULL ''
+GZIP 
+DELIMITER '\036'
+
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:15.120] [INFO] The local staging directory location is set to /data/EDM_Agency/Cache/.
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:15.121] [INFO] The value of Download S3 Files In Multiple Parts is set to true.
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:15.122] [INFO] The Multipart Download Threshold size of an object is set as 5,242,880 bytes.
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:15.130] [INFO] Staging dir location: /data/EDM_Agency/Cache//InfaRedshiftStaging0006272114151234150
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:15.131] [INFO] Total time taken for staging: 0.0 sec.
+LKPDP_3:TRANSF_1_1> PETL_24091 [2024-06-27 21:14:15.132] Thread [LKPDP_3:TRANSF_1_1] has the ID [20].
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:15.134] [INFO] 
+/* partner: Informatica -v 2.0 */
+unload ('select 
+	dim_geo_sk,
+	trim(upper(cntry_cd)) cntry_cd,
+	trim(upper(st_nm)) st_nm,
+	trim(upper(cnty_nm)) cnty_nm,
+	trim(city_nm) city_nm,
+	trim(cnty_cd) cnty_cd,
+	trim(st_cd) st_cd
+from pdm.dim_geo where upper(trim(city_nm))=\'N/A\' and upper(trim(hierarchy_lvl))=\'4\'') 
+ TO 's3://nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/6f443290-5377-4616-a285-bb1c2878913500171953725512241437700341702214981867/INFARS_CUSTOM_SCHEMA_' 
+credentials 'aws_access_key_id=********;aws_secret_access_key=********;token=********' 
+ADDQUOTES 
+ESCAPE 
+PARALLEL ON
+NULL ''
+GZIP 
+DELIMITER '\036'
+
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:15.521] [WARNING] UNLOAD Warning ..
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:15.522] [INFO] UNLOAD command successfully completed.
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:15.522] [INFO]  Total time elapsed  0.0
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:15.764] [INFO] The total time taken to download the 8 file from Amazon S3 is 0 seconds.
+LKPDP_3:READER_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:15.793] [INFO] The total time taken to read the files and push the data to the output buffer is 0.661 seconds.
+LKPDP_3:TRANSF_1_1> SORT_40421 [2024-06-27 21:14:15.793] End of input for Transformation [LKP_LkpDimGeo{{SRT}}]. : (Thu Jun 27 21:14:15 2024)
+LKPDP_3:TRANSF_1_1> DBG_21079 [2024-06-27 21:14:15.809] Creating Lookup Cache : (Thu Jun 27 21:14:15 2024)
+LKPDP_3:TRANSF_1_1> SORT_40422 [2024-06-27 21:14:15.809] End of output from Sorter Transformation [LKP_LkpDimGeo{{SRT}}]. Processed 0 rows (0 input bytes; 0 temp I/O bytes). : (Thu Jun 27 21:14:15 2024)
+LKPDP_3:TRANSF_1_1> SORT_40423 [2024-06-27 21:14:15.816] End of sort for Sorter Transformation [LKP_LkpDimGeo{{SRT}}]. : (Thu Jun 27 21:14:15 2024)
+LKPDP_3:TRANSF_1_1> DBG_21682 [2024-06-27 21:14:15.817] Lookup table row count : 0
+LKPDP_3:TRANSF_1_1> DBG_21297 [2024-06-27 21:14:15.817] Lookup cache row count : 0
+
+LKPDP_3:TRANSF_1_1> DBG_21294 [2024-06-27 21:14:15.817] Lookup cache creation completed : (Thu Jun 27 21:14:15 2024)
+LKPDP_3:TRANSF_1_1> CMN_1671 [2024-06-27 21:14:15.817] Created new cache files PMLKUP-742839009_31_0L64.[dat/idx] in directory /data/EDM_Agency/Cache/ for Lookup [LKP_LkpDimGeo].
+LKPDP_3:TRANSF_1_1> DBG_21641 [2024-06-27 21:14:15.817] LKP_LkpDimGeo: Index cache size = [35796480], Data cache size = [71589888]
+LKPDP_3:TRANSF_1_1> DBG_21216 [2024-06-27 21:14:15.817] Finished transformations for Source Qualifier [ISourceNode23]. Total errors [0] 
+DIRECTOR> TT_11185 [2024-06-27 21:14:16.272] No more lookup cache to build by additional concurrent pipeline in the current concurrent source set.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:16.994] [WARNING] UNLOAD Warning ..
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:16.994] [INFO] UNLOAD command successfully completed.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:16.994] [INFO]  Total time elapsed  4.0
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:17.379] [INFO] The total time taken to download the 8 file from Amazon S3 is 0 seconds.
+TRANSF_1_1_1> SORT_40420 [2024-06-27 21:14:18.264] Start of input for Transformation [SRT_LkpGreaterThan_Srt1]. : (Thu Jun 27 21:14:18 2024)
+TRANSF_1_1_1> CMN_65034 [2024-06-27 21:14:18.265] The Pipeline Lookup cache corresponding to [ISourceNode22] does not contain data.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:18.661] [WARNING] UNLOAD Warning ..
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:18.662] [INFO] UNLOAD command successfully completed.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:18.662] [INFO]  Total time elapsed  5.0
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:18.897] [INFO] The total time taken to download the 8 file from Amazon S3 is 0 seconds.
+TRANSF_1_2_1> SORT_40420 [2024-06-27 21:14:18.912] Start of input for Transformation [SRT_LkpGreaterThan_Srt0]. : (Thu Jun 27 21:14:18 2024)
+TRANSF_1_2_1> SORT_40420 [2024-06-27 21:14:18.912] Start of input for Transformation [SRT_LkpGreaterLessThan_Srt0]. : (Thu Jun 27 21:14:18 2024)
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:18.943] [INFO] The total time taken to read the files and push the data to the output buffer is 9.985 seconds.
+TRANSF_1_2_1> SORT_40421 [2024-06-27 21:14:18.943] End of input for Transformation [SRT_LkpGreaterThan_Srt0]. : (Thu Jun 27 21:14:18 2024)
+WRITER_1_*_1> WRT_8167 [2024-06-27 21:14:19.428] Start loading table [fact_nb_agent_statement_geotrans2: Partition 1] at: Thu Jun 27 21:14:18 2024
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:21.354] [INFO] The total time taken to read the files and push the data to the output buffer is 14.938 seconds.
+TRANSF_1_1_1> SORT_40421 [2024-06-27 21:14:21.453] End of input for Transformation [SRT_LkpGreaterLessThan_Srt1]. : (Thu Jun 27 21:14:21 2024)
+TRANSF_1_1_1> SORT_40422 [2024-06-27 21:14:21.490] End of output from Sorter Transformation [SRT_LkpGreaterLessThan_Srt1]. Processed 0 rows (0 input bytes; 0 temp I/O bytes). : (Thu Jun 27 21:14:21 2024)
+TRANSF_1_1_1> SORT_40423 [2024-06-27 21:14:21.499] End of sort for Sorter Transformation [SRT_LkpGreaterLessThan_Srt1]. : (Thu Jun 27 21:14:21 2024)
+TRANSF_1_1_1> SORT_40421 [2024-06-27 21:14:21.499] End of input for Transformation [SRT_LkpGreaterThan_Srt1]. : (Thu Jun 27 21:14:21 2024)
+TRANSF_1_6_1> CMN_65034 [2024-06-27 21:14:21.513] The Pipeline Lookup cache corresponding to [ISourceNode23] does not contain data.
+TRANSF_1_1_1> SORT_40422 [2024-06-27 21:14:21.541] End of output from Sorter Transformation [SRT_LkpGreaterThan_Srt1]. Processed 1868 rows (59776 input bytes; 0 temp I/O bytes). : (Thu Jun 27 21:14:21 2024)
+TRANSF_1_1_1> SORT_40423 [2024-06-27 21:14:21.551] End of sort for Sorter Transformation [SRT_LkpGreaterThan_Srt1]. : (Thu Jun 27 21:14:21 2024)
+TRANSF_1_1_1> DBG_21216 [2024-06-27 21:14:21.551] Finished transformations for Source Qualifier [SRC_HiveSrcRecs]. Total errors [0] 
+TRANSF_1_2_1> SORT_40422 [2024-06-27 21:14:21.551] End of output from Sorter Transformation [SRT_LkpGreaterThan_Srt0]. Processed 76 rows (4760 input bytes; 0 temp I/O bytes). : (Thu Jun 27 21:14:21 2024)
+TRANSF_1_2_1> SORT_40423 [2024-06-27 21:14:21.565] End of sort for Sorter Transformation [SRT_LkpGreaterThan_Srt0]. : (Thu Jun 27 21:14:21 2024)
+TRANSF_1_2_1> DBG_21215 [2024-06-27 21:14:21.565] Finished processing detail relation : (Thu Jun 27 21:14:21 2024)
+TRANSF_1_2_1> SORT_40421 [2024-06-27 21:14:21.568] End of input for Transformation [SRT_LkpGreaterLessThan_Srt0]. : (Thu Jun 27 21:14:21 2024)
+TRANSF_1_2_1> SORT_40422 [2024-06-27 21:14:21.646] End of output from Sorter Transformation [SRT_LkpGreaterLessThan_Srt0]. Processed 76 rows (4368 input bytes; 0 temp I/O bytes). : (Thu Jun 27 21:14:21 2024)
+TRANSF_1_2_1> SORT_40423 [2024-06-27 21:14:21.655] End of sort for Sorter Transformation [SRT_LkpGreaterLessThan_Srt0]. : (Thu Jun 27 21:14:21 2024)
+TRANSF_1_2_1> DBG_21215 [2024-06-27 21:14:21.655] Finished processing detail relation : (Thu Jun 27 21:14:21 2024)
+TRANSF_1_6_1> DBG_21216 [2024-06-27 21:14:21.655] Finished transformations for Source Qualifier [UN_FnlGeo]. Total errors [0] 
+TRANSF_1_5_1> DBG_21216 [2024-06-27 21:14:21.655] Finished transformations for Source Qualifier [UN_Fnl]. Total errors [0] 
+TRANSF_1_2_1> DBG_21216 [2024-06-27 21:14:21.662] Finished transformations for Source Qualifier [SRC_HiveCountryRef]. Total errors [0] 
+WRITER_1_*_1> WRT_8168 [2024-06-27 21:14:21.859] End loading table [fact_nb_agent_statement_geotrans2: Partition 1] at: Thu Jun 27 21:14:21 2024
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:21.860] [INFO] The total time taken to stage 8 files in 0 batch is 2.119 seconds.
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:21.982] [INFO] The total time taken to upload 8 files in 0 batch to Amazon S3 is 0.013 seconds.
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:22.516] [INFO] The upload status for the file [UPSERT_ds_staging_conv.fact_nb_agent_statement_geotrans2_.batch_0.csv.0] on Amazon S3 is [SUCCESS: Upload for file UPSERT_ds_staging_conv.fact_nb_agent_statement_geotrans2_.batch_0.csv.0.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:22.516] [INFO] The upload status for the file [UPSERT_ds_staging_conv.fact_nb_agent_statement_geotrans2_.batch_0.csv.1] on Amazon S3 is [SUCCESS: Upload for file UPSERT_ds_staging_conv.fact_nb_agent_statement_geotrans2_.batch_0.csv.1.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:22.516] [INFO] The upload status for the file [UPSERT_ds_staging_conv.fact_nb_agent_statement_geotrans2_.batch_0.csv.2] on Amazon S3 is [SUCCESS: Upload for file UPSERT_ds_staging_conv.fact_nb_agent_statement_geotrans2_.batch_0.csv.2.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:22.516] [INFO] The upload status for the file [UPSERT_ds_staging_conv.fact_nb_agent_statement_geotrans2_.batch_0.csv.3] on Amazon S3 is [SUCCESS: Upload for file UPSERT_ds_staging_conv.fact_nb_agent_statement_geotrans2_.batch_0.csv.3.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:22.516] [INFO] The upload status for the file [UPSERT_ds_staging_conv.fact_nb_agent_statement_geotrans2_.batch_0.csv.4] on Amazon S3 is [SUCCESS: Upload for file UPSERT_ds_staging_conv.fact_nb_agent_statement_geotrans2_.batch_0.csv.4.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:22.516] [INFO] The upload status for the file [UPSERT_ds_staging_conv.fact_nb_agent_statement_geotrans2_.batch_0.csv.5] on Amazon S3 is [SUCCESS: Upload for file UPSERT_ds_staging_conv.fact_nb_agent_statement_geotrans2_.batch_0.csv.5.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:22.516] [INFO] The upload status for the file [UPSERT_ds_staging_conv.fact_nb_agent_statement_geotrans2_.batch_0.csv.6] on Amazon S3 is [SUCCESS: Upload for file UPSERT_ds_staging_conv.fact_nb_agent_statement_geotrans2_.batch_0.csv.6.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:22.516] [INFO] The upload status for the file [UPSERT_ds_staging_conv.fact_nb_agent_statement_geotrans2_.batch_0.csv.7] on Amazon S3 is [SUCCESS: Upload for file UPSERT_ds_staging_conv.fact_nb_agent_statement_geotrans2_.batch_0.csv.7.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:22.519] [INFO] The agent is running the following custom query to create a temporary staging table: [
+/* partner: Informatica -v 2.0 */
+CREATE TEMP TABLE "fact_nb_agent_statement_geotrans2_1719537259695624756604187698" ( 
+	"iagstmid_ref" int8 , 
+	"applicant_empl_geo_key" int8 , 
+	"applicant_empl_cnty_nm" varchar ( 50 )  , 
+	"applicant_empl_st_cd" varchar ( 3 )  , 
+	PRIMARY KEY ( "applicant_empl_geo_key" )  ) 
+].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:22.594] [INFO] 
+/* partner: Informatica -v 2.0 */
+copy "fact_nb_agent_statement_geotrans2_1719537259695624756604187698" ("iagstmid_ref" , "applicant_empl_geo_key" , "applicant_empl_cnty_nm" , "applicant_empl_st_cd") from 's3://nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/6f443290-5377-4616-a285-bb1c287891351117195372528485624396818649734981847/UPSERT_ds_staging_conv.fact_nb_agent_statement_geotrans2_.batch_0.csv.' 
+credentials 'aws_access_key_id=********;aws_secret_access_key=********;token=********' 
+
+COMPUPDATE OFF
+STATUPDATE OFF
+GZIP 
+IGNOREHEADER 1
+TIMEFORMAT 'MM/DD/YYYY HH24:MI:SS'
+NULL ''
+CSV 
+DELIMITER '\036'
+QUOTE '\037'
+ROUNDEC 
+MAXERROR 1
+ ;
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:28.489] [WARNING] COPY WARNING: [Load into table 'fact_nb_agent_statement_geotrans2_1719537259695624756604187698' completed, 265743 record(s) loaded successfully.]
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:28.489] [INFO] The total time taken to upload 8 files to Amazon Redshift from Amazon S3 is 5 seconds.
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:28.489] [INFO] The agent successfully uploaded 0 batch to Amazon Redshift.
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:28.490] [INFO] useDeleteForUpsert : null
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:28.490] [INFO] Update and Insert approach is being used for Upsert as either value of flag useDeleteForUpsert is not set or all fields of target table is not connected.
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:28.491] [INFO] The connector is running the following SQL query:  
+/* partner: Informatica -v 2.0 */
+update "ds_staging_conv"."fact_nb_agent_statement_geotrans2" set 
+"iagstmid_ref" = s."iagstmid_ref" , 
+"applicant_empl_cnty_nm" = s."applicant_empl_cnty_nm" , 
+"applicant_empl_st_cd" = s."applicant_empl_st_cd" FROM "fact_nb_agent_statement_geotrans2_1719537259695624756604187698" s
+
+WHERE
+ "ds_staging_conv"."fact_nb_agent_statement_geotrans2"."applicant_empl_geo_key" = s."applicant_empl_geo_key"
+
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:38.165] [INFO] Update Rows 265743 "ds_staging_conv"."fact_nb_agent_statement_geotrans2"
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:14:38.165] [INFO] The connector is running the following SQL query:  
+/* partner: Informatica -v 2.0 */
+INSERT INTO "ds_staging_conv"."fact_nb_agent_statement_geotrans2"("iagstmid_ref" , "applicant_empl_geo_key" , "applicant_empl_cnty_nm" , "applicant_empl_st_cd")
+SELECT s."iagstmid_ref" , s."applicant_empl_geo_key" , s."applicant_empl_cnty_nm" , s."applicant_empl_st_cd" FROM "fact_nb_agent_statement_geotrans2_1719537259695624756604187698" s LEFT JOIN "ds_staging_conv"."fact_nb_agent_statement_geotrans2" t 
+ON 
+ s."applicant_empl_geo_key" = t."applicant_empl_geo_key"
+ WHERE  t."applicant_empl_geo_key" IS NULL 
+
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-06-27 21:15:03.140] [INFO] Insert rows 0 "ds_staging_conv"."fact_nb_agent_statement_geotrans2"
+WRITER_1_*_1> WRT_8035 [2024-06-27 21:15:19.269] Load complete time: Thu Jun 27 21:15:18 2024
+
+LOAD SUMMARY
+============
+
+WRT_8036 Target: fact_nb_agent_statement_geotrans2: Partition 1 (Instance Name: [fact_nb_agent_statement_geotrans2])
+WRT_8038 Inserted rows - Requested: 265743     Applied: 265743     Rejected: 0          Affected: 265743    
+
+
+WRITER_1_*_1> WRT_8043 [2024-06-27 21:15:19.269] *****END LOAD SESSION*****
+WRITER_1_*_1> WRT_8006 [2024-06-27 21:15:19.270] Writer run completed.
+MANAGER> PETL_24031 [2024-06-27 21:15:19.638] 
+***** RUN INFO FOR TGT LOAD ORDER GROUP [1], CONCURRENT SET [1] *****
+Thread [READER_1_1_1] created for [the read stage] of partition point [SRC_HiveSrcRecs] has completed.
+	Total Run Time = [8.494107] secs
+	Total Idle Time = [0.000000] secs
+	Busy Percentage = [100.000000]
+Thread [TRANSF_1_1_1] created for [the transformation stage] of partition point [SRC_HiveSrcRecs] has completed.
+	Total Run Time = [3.288640] secs
+	Total Idle Time = [2.607329] secs
+	Busy Percentage = [20.717110]
+	Transformation-specific statistics for this thread were not accurate enough to report.
+Thread [READER_1_2_1] created for [the read stage] of partition point [SRC_HiveCountryRef] has completed.
+	Total Run Time = [6.082166] secs
+	Total Idle Time = [0.000000] secs
+	Busy Percentage = [100.000000]
+Thread [TRANSF_1_2_1] created for [the transformation stage] of partition point [SRC_HiveCountryRef] has completed.
+	Total Run Time = [2.751840] secs
+	Total Idle Time = [2.578630] secs
+	Busy Percentage = [6.294339]
+	Transformation-specific statistics for this thread were not accurate enough to report.
+Thread [TRANSF_1_5_1] created for [the transformation stage] of partition point [UN_Fnl] has completed.
+	Total Run Time = [3.389688] secs
+	Total Idle Time = [3.258466] secs
+	Busy Percentage = [3.871205]
+	Transformation-specific statistics for this thread were not accurate enough to report.
+Thread [TRANSF_1_6_1] created for [the transformation stage] of partition point [UN_FnlGeo] has completed. The total run time was insufficient for any meaningful statistics.
+Thread [WRITER_1_*_1] created for [the write stage] of partition point [fact_nb_agent_statement_geotrans2] has completed.
+	Total Run Time = [59.841654] secs
+	Total Idle Time = [1.508419] secs
+	Busy Percentage = [97.479316]
+
+MAPPING> CMN_1793 [2024-06-27 21:15:19.643] The index cache size that would hold [0] rows in the lookup table for [LKP_LkpDimGeo], in memory, is [40448] bytes
+MAPPING> CMN_1792 [2024-06-27 21:15:19.643] The data cache size that would hold [0] rows in the lookup table for [LKP_LkpDimGeo], in memory, is [16384] bytes
+MAPPING> CMN_1793 [2024-06-27 21:15:19.643] The index cache size that would hold [100] rows in the lookup table for [LKP_LkpLessGreaterThan_old], in memory, is [8400] bytes
+MAPPING> CMN_1792 [2024-06-27 21:15:19.643] The data cache size that would hold [100] rows in the lookup table for [LKP_LkpLessGreaterThan_old], in memory, is [24576] bytes
+MAPPING> CMN_1793 [2024-06-27 21:15:19.643] The index cache size that would hold [0] rows in the lookup table for [LKP_LkpDimGeo1], in memory, is [24576] bytes
+MAPPING> CMN_1792 [2024-06-27 21:15:19.643] The data cache size that would hold [0] rows in the lookup table for [LKP_LkpDimGeo1], in memory, is [16384] bytes
+MANAGER> PETL_24005 [2024-06-27 21:15:19.645] Starting post-session tasks. : (Thu Jun 27 21:15:19 2024)
+POST-SESS> PETL_24091 [2024-06-27 21:15:19.646] Thread [POST-SESS] has the ID [21].
+MANAGER> PETL_24029 [2024-06-27 21:15:19.647] Post-session task completed successfully. : (Thu Jun 27 21:15:19 2024)
+MAPPING> SDKS_38510 [2024-06-27 21:15:19.648] SDK target and group deinitialized with status [0].
+MAPPING> SDKS_38025 [2024-06-27 21:15:19.648] Plug-in 451600 deinitialized and unloaded with status [0].
+MAPPING> SDKS_38019 [2024-06-27 21:15:19.649] Writer SDK plug-ins deinitialized with status [0].
+MAPPING> SDKS_38025 [2024-06-27 21:15:19.649] Plug-in 451600 deinitialized and unloaded with status [0].
+MAPPING> SDKS_38018 [2024-06-27 21:15:19.649] Reader SDK plug-ins deinitialized with status [0].
+MAPPING> TE_7216 [2024-06-27 21:15:19.654] Deleting cache files [PMLKUP-742839009_24_0L64] for transformation [LKP_LkpLessGreaterThan_old].
+MAPPING> TE_7216 [2024-06-27 21:15:19.686] Deleting cache files [PMLKUP-742839009_29_0L64] for transformation [LKP_LkpDimGeo1].
+MAPPING> TE_7216 [2024-06-27 21:15:19.718] Deleting cache files [PMLKUP-742839009_31_0L64] for transformation [LKP_LkpDimGeo].
+MAPPING> TM_6018 [2024-06-27 21:15:19.744] The session completed with [0] row transformation errors. 
+MANAGER> PETL_24002 [2024-06-27 21:15:19.881] Parallel Pipeline Engine finished.
+DIRECTOR> PETL_24012 [2024-06-27 21:15:19.882] Session run completed successfully.
+DIRECTOR> VAR_27048 [2024-06-27 21:15:19.882] Persisting mapping variable values to the repository.
+DIRECTOR> VAR_27049 [2024-06-27 21:15:19.882] Mapping variable name: [$$jpSrcSysNm], persisted value: [NB21], run instance name [].
+DIRECTOR> VAR_27049 [2024-06-27 21:15:19.882] Mapping variable name: [$$jpTableName], persisted value: [fact_nb_agent_statement], run instance name [].
+DIRECTOR> VAR_27049 [2024-06-27 21:15:19.882] Mapping variable name: [$$jpBatchKey], persisted value: [20240624074045], run instance name [].
+DIRECTOR> VAR_27049 [2024-06-27 21:15:19.882] Mapping variable name: [$$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA], persisted value: [ext_pvt_lake_oracle_orap12_nyldprod60cl], run instance name [].
+DIRECTOR> VAR_27049 [2024-06-27 21:15:19.882] Mapping variable name: [$$EDM_REDSHIFT_PDM_SCHEMA], persisted value: [pdm], run instance name [].
+DIRECTOR> VAR_27049 [2024-06-27 21:15:19.882] Mapping variable name: [$$CachePath], persisted value: [/data/EDM_Agency/Cache], run instance name [].
+DIRECTOR> VAR_27049 [2024-06-27 21:15:19.882] Mapping variable name: [$$S3Bucket], persisted value: [nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp], run instance name [].
+DIRECTOR> VAR_27049 [2024-06-27 21:15:19.882] Mapping variable name: [$$TempCredentialsDuration], persisted value: [21600], run instance name [].
+DIRECTOR> VAR_27049 [2024-06-27 21:15:19.882] Mapping variable name: [$$EDM_REDSHIFT_TARGET_FULL_SCHEMA], persisted value: [ds_staging_conv], run instance name [].
+DIRECTOR> VAR_27049 [2024-06-27 21:15:19.882] Mapping variable name: [$$EDM_AURORA_SCHEMA_NAME], persisted value: [etl_config], run instance name [].
+DIRECTOR> VAR_27049 [2024-06-27 21:15:19.882] Mapping variable name: [$$EDM_REDSHIFT_PDM_AUDIT_SCHEMA], persisted value: [etl_audit], run instance name [].
+DIRECTOR> VAR_27049 [2024-06-27 21:15:19.882] Mapping variable name: [$$EDM_REDSHIFT_STRUCTURED_POSTGRES_DHDSVC_SCHEMA], persisted value: [ext_lake_postgresql_dhd_dhdsvc], run instance name [].
+DIRECTOR> VAR_27049 [2024-06-27 21:15:19.882] Mapping variable name: [$$jpCreatedNm], persisted value: [EDMETL], run instance name [].
+DIRECTOR> TM_6022 [2024-06-27 21:15:19.882] 
+
+SESSION LOAD SUMMARY
+================================================
+
+DIRECTOR> TM_6252 [2024-06-27 21:15:19.882] Source Load Summary.
+DIRECTOR> CMN_1740 [2024-06-27 21:15:19.882] Table: [SRC_HiveSrcRecs] (Instance Name: [SRC_HiveSrcRecs] Instance UI Name: [SRC_HiveSrcRecs])
+	 Output Rows [265743], Affected Rows [265743], Applied Rows [265743], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-06-27 21:15:19.882] Table: [SRC_HiveCountryRef] (Instance Name: [SRC_HiveCountryRef] Instance UI Name: [SRC_HiveCountryRef])
+	 Output Rows [76], Affected Rows [76], Applied Rows [76], Rejected Rows [0]
+DIRECTOR> TM_6253 [2024-06-27 21:15:19.882] Target Load Summary.
+DIRECTOR> CMN_1740 [2024-06-27 21:15:19.882] Table: [fact_nb_agent_statement_geotrans2] (Instance Name: [fact_nb_agent_statement_geotrans2] Instance UI Name: [TGT_fchdfsAgentStatementTrans2])
+	 Output Rows [265743], Affected Rows [265743], Applied Rows [265743], Rejected Rows [0]
+DIRECTOR> TM_6023 [2024-06-27 21:15:19.882] 
+===================================================
+
+DIRECTOR> TM_6020 [2024-06-27 21:15:19.882] Session [s_mtt_01CAKB0Z000000000A41] completed at [Thu Jun 27 21:15:19 2024].

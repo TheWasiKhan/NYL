@@ -1,0 +1,152 @@
+WITH req_declaration as (
+
+WITH 
+ req_declaration_in as (
+ SELECT
+       reqmntid_ref,
+       TRIM(kirdsgid_code) as kirdsgid_code,
+       SUBSTRING(signed_date,1,10) as signed_date,
+       countersign_code,
+       TRIM(title_onbehalf) as title_onbehalf,
+       TRIM(signee_signed_decode) as signee_signed_decode,
+       TRIM(signed_citytown) as signed_citytown,
+       TRIM(kcountyid_code) as kcountyid_code,
+       TRIM(ksttrgid_code) as ksttrgid_code,
+       TRIM(kcntryid_code) as kcntryid_code,
+       TRIM(status_code) as status_code,
+       reqdecid_ref,
+       kirdsgid_ref,
+       status_ref as status_ref_reqd,
+       RANK() OVER(partition by reqmntid_ref,kirdsgid_ref order by reqdecid_ref desc) as rnk
+ FROM
+       $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.req_declaration
+ WHERE   
+       reqmntid_ref > 999 AND  
+       TRIM(UPPER(kirdsgid_code)) like 'PART1%' AND  
+       edh_record_status_in= 'A')
+ SELECT
+	reqmntid_ref,
+	signed_date,
+	countersign_code,
+	title_onbehalf,
+	signee_signed_decode,
+	signed_citytown,
+	kcountyid_code,
+	ksttrgid_code,
+	kcntryid_code,
+	status_code,
+    '' as edh_record_status_in_reqd,
+	reqdecid_ref,
+	kirdsgid_ref,
+	status_ref_reqd
+ FROM
+       req_declaration_in
+ WHERE 
+       rnk= 1),
+
+declaration AS (
+	SELECT
+       TRIM(prefixid_code) as prefixid_code,
+       TRIM(pname_fname) as pname_fname,
+       TRIM(pname_mname) as pname_mname,
+       TRIM(pname_sname) as pname_sname,
+       TRIM(suffixid_code) as suffixid_code,
+       TRIM(address_add1) as address_add1,
+       TRIM(address_add2) as address_add2,
+       TRIM(address_add3) as address_add3,
+       TRIM(address_add4) as address_add4,
+       TRIM(address_citytown) as address_citytown,
+       TRIM(kcountyid_code) as d_kcountyid_code,
+       TRIM(address_zip) as address_zip,
+       TRIM(ksttrgid_code) as d_ksttrgid_code,
+       TRIM(kcntryid_code) as d_kcntryid_code,
+       TRIM(examnr_company) as examnr_company,
+       TRIM(examnr_id) as examnr_id,
+       TRIM(examnr_details) as examnr_details,
+       TRIM(examnr_appdstat_decode) as examnr_appdstat_decode,
+       reqdecid_ref,
+       '' as edh_record_status_in_dec,
+       status_ref as status_ref_dec
+ FROM
+       $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.declaration
+ WHERE   
+       declarid_ref > 999 AND  
+       edh_record_status_in= 'A'
+ ORDER BY reqdecid_ref),
+ 
+combined_q as(
+	with kwn_increq_declsgn as (
+		SELECT
+		   kirdsgid_ref,
+		   TRIM(kirdsgid_code) as kirdsgid_code,
+		   TRIM(kdecsgid_code) as kdecsgid_code
+		FROM
+		   $$EDM_REDSHIFT_STRUCTURED_NYLDPROD60CL_GLOBAL_SCHEMA.kwn_increq_declsgn
+		WHERE   
+		   kirdsgid_ref > 999 AND  
+		   edh_record_status_in= 'A'),
+	dim_nb_declaration_signee as (
+		SELECT
+		   dim_nb_declaration_signee_sk,
+		   decl_signee_cd_nk
+		FROM
+		   $$EDM_REDSHIFT_PDM_SCHEMA.dim_nb_declaration_signee
+		WHERE   
+		   edh_updated_batch_key is null AND 
+		   edh_record_status_in IN('A','D') AND 
+		   dim_nb_declaration_signee_sk NOT IN($$DEFAULT_REFERENCE_SK) AND  
+		   src_sys_nm_nk= 'jpSrcSysNm')
+	SELECT
+	kirdsgid_ref,
+	kirdsgid_code,
+	dim_nb_declaration_signee_sk,
+	kdecsgid_code as decl_signee_cd_nk
+	FROM kwn_increq_declsgn
+	LEFT JOIN dim_nb_declaration_signee ON dim_nb_declaration_signee.decl_signee_cd_nk= kwn_increq_declsgn.kdecsgid_code )
+ 
+
+SELECT
+
+reqmntid_ref,
+signed_date,
+countersign_code,
+title_onbehalf,
+signee_signed_decode,
+signed_citytown,
+kcountyid_code,
+ksttrgid_code,
+kcntryid_code,
+status_code,
+edh_record_status_in_reqd,
+RD.kirdsgid_ref,
+status_ref_reqd,
+prefixid_code,
+pname_fname,
+pname_mname,
+pname_sname,
+suffixid_code,
+address_add1,
+Address_add2,
+address_add3,
+address_add4,
+address_citytown,
+d_kcountyid_code,
+address_zip,
+d_ksttrgid_code,
+d_kcntryid_code,
+examnr_company,
+examnr_id,
+examnr_details,
+examnr_appdstat_decode,
+D.reqdecid_ref,
+edh_record_status_in_dec,
+status_ref_dec,
+C.kirdsgid_code,
+C.dim_nb_declaration_signee_sk,
+C.decl_signee_cd_nk
+
+FROM
+req_declaration RD
+LEFT JOIN declaration D ON RD.reqdecid_ref = D.reqdecid_ref
+LEFT JOIN combined_q C ON RD.kirdsgid_ref = C.kirdsgid_ref
+ORDER BY D.reqdecid_ref

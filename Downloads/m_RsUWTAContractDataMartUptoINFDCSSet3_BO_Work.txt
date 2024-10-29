@@ -1,0 +1,29 @@
+$$S3Bucket nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/
+$$CachePath = /data/EDM_NB/Cache/
+PARALLEL=ON;ADDQUOTES;ESCAPE
+$$TempCredentialsDuration
+
+timeformat=MM/DD/YYYY HH24:MI:SS
+
+DTM BUFFER SIZE	-->	1024MB
+
+TO_BIGINT($$jpBatchKey)
+'$CurrentMappingName'
+Systimestamp()
+
+TO_DATE(SUBSTR(Systimestamp(), 1, 19),'YYYY-MM-DD HH24:MI:SS')
+
+to_date(SUBSTR(minstart,1,19),'YYYY-MM-DD HH24:MI:SS')
+
+$$EDM_REDSHIFT_STG_SCHEMA = ds_staging_conv
+$$EDM_REDSHIFT_TARGET_FULL_SCHEMA = ds_staging_conv
+$$EDM_REDSHIFT_TARGET_FULL_SCHEMA_TGT
+
+-------------------
+$$EDM_REDSHIFT_TARGET_FULL_SCHEMA = ds_staging_conv
+$$EDM_REDSHIFT_SOURCE_FULL_SCHEMA = ds_staging_conv
+$$EDM_REDSHIFT_PDM_SCHEMA_TGT = pdm_conv
+
+##########################
+SELECT "ds_staging_conv.fact_nb_prescr_medical_claims_Trans1", tableowner FROM pg_tables;
+##########################

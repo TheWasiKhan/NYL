@@ -1,0 +1,12 @@
+Agent Group Id: 01CAKB2500000000001Q
+Agent Group Name: EDM_CDGC_SA_GRP
+Agent Name: edm.idmc.cdgc.sa2.dev.nylcloud.com
+Agent Id: 01CAKB08000000000019
+Task Name: m_RsFactNbAgentStatementDimGeo4
+Task Type: MTT_DP
+Task Id: 01CAKB17000000000AY2
+Run Id: 4
+Service Id: 2357526
+Started By: wkhan01
+Run Context Type: ICS_UI
+======================================================================

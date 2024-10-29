@@ -1,0 +1,410 @@
+Agent Group Id: 01CAKB25000000000009
+Agent Group Name: EDM_CDI_SA_GRP
+Agent Name: edm.idmc.sa3.dev.nylcloud.com
+Agent Id: 01CAKB0800000000000X
+Task Name: mt_SCD_2_load_v6_dim_nb_reason
+Task Type: MTT
+Task Id: 01CAKB0Z0000000009F0
+Run Id: 3
+Service Id: 2357746
+Started By: gelumalai01
+Run Context Type: ICS_UI
+05/29/2024 06:30:38 **** Importing Connection: Conn_01CAKB0B00000000000R ...
+05/29/2024 06:30:38 **** Importing Source Definition: CUSTOM_SOURCE ...
+05/29/2024 06:30:38 **** Importing Source Definition: dim_nb_reason_test ...
+05/29/2024 06:30:38 **** Importing Target Definition: dim_nb_reason_test_OPT_b74731bc526437b45a893c44a91600923d35c7ec_1 ...
+05/29/2024 06:30:38 **** Importing Target Definition: dim_nb_reason_test ...
+05/29/2024 06:30:38 **** Importing Target Definition: dim_nb_reason_test_OPT_b74731bc526437b45a893c44a91600923d35c7ec ...
+05/29/2024 06:30:38 **** Importing SessionConfig: default_session_config ...
+    <Warning> :  The Error Log DB Connection value should have Relational: as the prefix.
+    <Warning> :  Invalid value  for attribute Error Log DB Connection. Will use the default value 
+    Validating Source Definition  dim_nb_reason_test...
+    Validating Source Definition  CUSTOM_SOURCE...
+    Validating Target Definition  dim_nb_reason_test_OPT_b74731bc526437b45a893c44a91600923d35c7ec...
+    Validating Target Definition  dim_nb_reason_test...
+    Validating Target Definition  dim_nb_reason_test_OPT_b74731bc526437b45a893c44a91600923d35c7ec_1...
+05/29/2024 06:30:38 **** Importing Mapping: Mapping0 ...
+Validating transformations of mapping Mapping0...
+Validating mapping variable(s).
+    <Warning> :  Invalid table attribute: Exec SQL
+    <Warning> :  Invalid table attribute: Exec SQL
+05/29/2024 06:30:38 **** Importing Workflow: wf_mtt_01CAKB0Z0000000009F0 ...
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z0000000009F0 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z0000000009F0 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute Download S3 Files In Multiple Parts. Will use the default value NO    [Session< s_mtt_01CAKB0Z0000000009F0 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z0000000009F0 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute Select Distinct. Will use the default value NO    [Session< s_mtt_01CAKB0Z0000000009F0 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute Treat NULL Value as NULL. Will use the default value NO    [Session< s_mtt_01CAKB0Z0000000009F0 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z0000000009F0 >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value None for attribute Pushdown Optimization Context. Will use the default value None     [Session< s_mtt_01CAKB0Z0000000009F0 > ] 
+    <Warning> :  The value entered is not a valid integer.
+    <Warning> :  Invalid value NO for attribute Fail task after wait time. Will use the default value 
+[Summary for Application Source Qualifier Source_Query]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Application Source Qualifier Source_Ref_Target_Table]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+Successfully extracted session instance [s_mtt_01CAKB0Z0000000009F0].  Starting repository sequence id is [1027032495]
+======================================================================
+PETL_24036 [2024-05-29 06:30:37.498] Beginning the prepare phase for the session.
+TM_6721 [2024-05-29 06:30:37.498] Started [Connect to Repository].
+TM_6722 [2024-05-29 06:30:37.989] Finished [Connect to Repository].  It took [0.490421] seconds.
+TM_6721 [2024-05-29 06:30:37.989] Started [Fetch Session from Repository].
+TM_6722 [2024-05-29 06:30:38.311] Finished [Fetch Session from Repository].  It took [0.322293] seconds.
+VAR_27085 [2024-05-29 06:30:38.312] Parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB0Z0000000009F0.param] is opened for [session [wf_mtt_01CAKB0Z0000000009F0.s_mtt_01CAKB0Z0000000009F0]].
+VAR_27062 [2024-05-29 06:30:38.313] Warning! Cannot find section for worklet [wf_mtt_01CAKB0Z0000000009F0] and folder [] in parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB0Z0000000009F0.param].
+TM_6721 [2024-05-29 06:30:38.327] Started [Partition Group Formation].
+TM_6722 [2024-05-29 06:30:38.327] Finished [Partition Group Formation].  It took [0.000623941] seconds.
+PETL_24037 [2024-05-29 06:30:38.327] Finished the prepare phase for the session.
+DIRECTOR> TM_6228 [2024-05-29 06:30:38.328] Writing session output to log file [/app/iics_agent_dir/apps/Data_Integration_Server/data/../logs/s_mtt_12LueysPN3Wd7McAWuUjoZ_3.log].
+DIRECTOR> VAR_27085 [2024-05-29 06:30:38.330] Parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB0Z0000000009F0.param] is opened for [session [wf_mtt_01CAKB0Z0000000009F0.s_mtt_01CAKB0Z0000000009F0]].
+DIRECTOR> VAR_27062 [2024-05-29 06:30:38.330] Warning! Cannot find section for worklet [wf_mtt_01CAKB0Z0000000009F0] and folder [] in parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB0Z0000000009F0.param].
+DIRECTOR> TM_6014 [2024-05-29 06:30:38.331] Initializing session [s_mtt_01CAKB0Z0000000009F0] at [Wed May 29 06:30:38 2024].
+DIRECTOR> TM_6683 [2024-05-29 06:30:38.331] Repository Name: [XMLRepository]
+DIRECTOR> TM_6684 [2024-05-29 06:30:38.331] Server Name: [rDTM]
+DIRECTOR> TM_6686 [2024-05-29 06:30:38.331] Folder: []
+DIRECTOR> TM_6685 [2024-05-29 06:30:38.331] Workflow: [wf_mtt_01CAKB0Z0000000009F0] Run Instance Name: [] Run Id: [0]
+DIRECTOR> TM_6992 [2024-05-29 06:30:38.331] Operating System Type [Linux]
+DIRECTOR> TM_6101 [2024-05-29 06:30:38.331] Mapping name: Mapping0.
+DIRECTOR> TM_6964 [2024-05-29 06:30:38.332] Date format for the Session is [YYYY-MM-DD HH24:MI:SS]
+DIRECTOR> TM_6703 [2024-05-29 06:30:38.332] Session [s_mtt_01CAKB0Z0000000009F0] is run by 64-bit Integration Service  [], version [10.2.0 HotFix2], build [0320].
+MANAGER> PETL_24091 [2024-05-29 06:30:38.367] Thread [MANAGER] has the ID [1].
+MANAGER> PETL_24058 [2024-05-29 06:30:38.367] Running Partition Group [1].
+MANAGER> PETL_24000 [2024-05-29 06:30:38.367] Parallel Pipeline Engine initializing.
+MONITOR> PETL_24091 [2024-05-29 06:30:38.368] Thread [MONITOR] has the ID [2].
+MANAGER> PETL_24001 [2024-05-29 06:30:38.368] Parallel Pipeline Engine running.
+MANAGER> PETL_24003 [2024-05-29 06:30:38.369] Initializing session run.
+MAPPING> PETL_24091 [2024-05-29 06:30:38.369] Thread [MAPPING] has the ID [3].
+MAPPING> CMN_1569 [2024-05-29 06:30:38.372] Server Mode: [UNICODE]
+MAPPING> CMN_1570 [2024-05-29 06:30:38.372] Server Code page: [ISO 8859-1 Western European]
+MAPPING> TM_6151 [2024-05-29 06:30:38.372] The session sort order is [Binary].
+MAPPING> TM_6185 [2024-05-29 06:30:38.372] Warning. Code page validation is disabled in this session.
+MAPPING> CMN_65110 [2024-05-29 06:30:38.372] Current Timezone:[UTC -5:0]
+MAPPING> CMN_65111 [2024-05-29 06:30:38.372] Current Process ID:[29935]
+MAPPING> TM_6155 [2024-05-29 06:30:38.372] Using HIGH precision processing.
+MAPPING> TM_6180 [2024-05-29 06:30:38.372] Deadlock retry logic will not be implemented.
+MAPPING> TM_6187 [2024-05-29 06:30:38.372] Session target-based commit interval is [10000].
+MAPPING> PMJVM_42020 [2024-05-29 06:30:38.377] [INFO] Loaded library : /app/iics_agent_dir/apps/jdk/zulu8.70.0.52-sa-fx-jdk8.0.372/jre/lib/amd64/server/libjvm.so.
+MAPPING> PMJVM_42009 [2024-05-29 06:30:38.461] [INFO] Created Java VM successfully.
+MAPPING> SDKS_38029 [2024-05-29 06:30:38.537] Loaded plug-in 451600: [plugin description].
+MAPPING> SDKS_38024 [2024-05-29 06:30:38.572] Plug-in 451600 initialization complete.
+MAPPING> SDKS_38016 [2024-05-29 06:30:38.572] Reader SDK plug-in initialization complete.
+MAPPING> SDKS_38029 [2024-05-29 06:30:38.574] Loaded plug-in 451600: [plugin description].
+MAPPING> SDKS_38024 [2024-05-29 06:30:39.135] Plug-in 451600 initialization complete.
+MAPPING> SDKS_38017 [2024-05-29 06:30:39.135] Writer SDK plug-in initialization complete.
+MAPPING> CONNECTOR_10000 [2024-05-29 06:30:41.169] [INFO] The target object at runtime is overridden with the parameter name = $$Target_Table_Object table name = dim_nb_reason_test.
+MAPPING> CONNECTOR_10000 [2024-05-29 06:30:41.488] [INFO] The target object at runtime is overridden with the parameter name = $$Target_Table_Object table name = dim_nb_reason_test.
+MAPPING> CONNECTOR_10000 [2024-05-29 06:30:41.552] [INFO] The target object at runtime is overridden with the parameter name = $$Target_Table_Object table name = dim_nb_reason_test.
+MAPPING> SDKS_38509 [2024-05-29 06:30:41.568] SDK target and group initialization complete.
+MAPPING> TM_6307 [2024-05-29 06:30:41.569] DTM error log disabled. 
+MAPPING> TE_7022 [2024-05-29 06:30:41.569] TShmWriter: Initialized
+MAPPING> DBG_21366 [2024-05-29 06:30:41.579]   Note: Input column [NEXTVAL] default value is [ERROR('transformation error')]. Row will be skipped if input value is null
+MAPPING> DBG_21366 [2024-05-29 06:30:41.580]   Note: Input column [CURRVAL] default value is [ERROR('transformation error')]. Row will be skipped if input value is null
+MAPPING> TT_11171 [2024-05-29 06:30:41.586] The Sequence Generator transformation [SEQ_SK_Value] has the [CurrVal] port connected.  When you connect the CURRVAL port, the Integration Services processes one row in each block. 
+MAPPING> DBG_21694 [2024-05-29 06:30:41.588] Joiner Partition [0]: Index cache size = [178956970], Data cache size = [357913940]
+MAPPING> TT_11098 [2024-05-29 06:30:41.588] The Joiner transformation [Joiner] is configured with the join algorithm: Nested-Loop.
+MAPPING> TM_6007 [2024-05-29 06:30:41.588] DTM initialized successfully for session [s_mtt_01CAKB0Z0000000009F0]
+DIRECTOR> PETL_24033 [2024-05-29 06:30:41.588] All DTM Connection Info: [<NONE>].
+MANAGER> PETL_24004 [2024-05-29 06:30:41.589] Starting pre-session tasks. : (Wed May 29 06:30:41 2024)
+PRE-SESS> PETL_24091 [2024-05-29 06:30:41.589] Thread [PRE-SESS] has the ID [4].
+MANAGER> PETL_24027 [2024-05-29 06:30:41.591] Pre-session task completed successfully. : (Wed May 29 06:30:41 2024)
+DIRECTOR> PETL_24006 [2024-05-29 06:30:41.591] Starting data movement.
+MAPPING> TM_6660 [2024-05-29 06:30:41.598] Total Buffer Pool size is 59451040 bytes and Block size is 1318912 bytes.
+MAPPING> CONNECTOR_10000 [2024-05-29 06:30:41.658] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+MAPPING> CONNECTOR_10000 [2024-05-29 06:30:41.731] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = $$Src_Ref_Target_Table table name = dim_nb_reason_test.
+READER_1_1_1> PETL_24091 [2024-05-29 06:30:41.749] Thread [READER_1_1_1] has the ID [5].
+READER_1_1_1> CONNECTOR_10000 [2024-05-29 06:30:42.390] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Read data
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:44.339] [INFO] The S3 bucket name for staging the data during the read operation is nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:44.339] [INFO] The value of Enable Compression is set to true.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:44.339] [INFO] The value of the S3 Client Encryption is set to false.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:44.340] [INFO] Temporary Credentials valid for [900] seconds will be used.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:44.406] [INFO] Encryption Type : None
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:44.407] [INFO] S3 Client Encryption : false
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:44.407] [INFO] S3 Server Side Encryption : false
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:44.407] [INFO] The Encryption type honored is : NONE
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:46.600] [INFO] The local staging directory location is set to /tmp.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:46.600] [INFO] The value of Download S3 Files In Multiple Parts is set to false.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:46.600] [INFO] The Multipart Download Threshold size of an object is set as 5,242,880 bytes.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:46.602] [INFO] Staging dir location: /tmp/InfaRedshiftStaging000529063046602550
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:46.604] [INFO] Total time taken for staging: 0.0 sec.
+TRANSF_1_1_1> PETL_24091 [2024-05-29 06:30:46.607] Thread [TRANSF_1_1_1] has the ID [6].
+READER_1_2_1> PETL_24091 [2024-05-29 06:30:46.610] Thread [READER_1_2_1] has the ID [7].
+READER_1_2_1> CONNECTOR_10000 [2024-05-29 06:30:46.696] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Read data
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:46.972] [INFO] The S3 bucket name for staging the data during the read operation is nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:46.972] [INFO] The value of Enable Compression is set to true.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:46.972] [INFO] The value of the S3 Client Encryption is set to false.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:46.972] [INFO] Temporary Credentials valid for [900] seconds will be used.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:47.031] [INFO] Encryption Type : None
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:47.031] [INFO] S3 Client Encryption : false
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:47.032] [INFO] S3 Server Side Encryption : false
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:47.032] [INFO] The Encryption type honored is : NONE
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.307] [INFO] The local staging directory location is set to /tmp.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.307] [INFO] The value of Download S3 Files In Multiple Parts is set to false.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.307] [INFO] The Multipart Download Threshold size of an object is set as 5,242,880 bytes.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.308] [INFO] Staging dir location: /tmp/InfaRedshiftStaging0005290630493084440
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.308] [INFO] Native Filter expression edh_record_status_in = 'A' OR edh_record_status_in ='D'
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.309] [INFO] Total time taken for staging: 0.0 sec.
+TRANSF_1_2_1> PETL_24091 [2024-05-29 06:30:49.310] Thread [TRANSF_1_2_1] has the ID [8].
+WRITER_1_*_1> PETL_24091 [2024-05-29 06:30:49.311] Thread [WRITER_1_*_1] has the ID [9].
+WRITER_1_*_1> CONNECTOR_10000 [2024-05-29 06:30:49.321] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Write data
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.599] [INFO] Truncate table required : false
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.599] [INFO] Write operation selected [TreatSourceRowAs]  : UPDATE
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.599] [INFO] Writer Bucket name : nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.599] [INFO] Use Null value for Char types : ''
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.599] [INFO] Max errors per batch : 1
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.599] [INFO] Compression Enabled : true
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.599] [INFO] Server side encryption enabled : false
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.600] [INFO] Client side encryption enabled : false
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.600] [INFO] Vacuum option provided : None
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.600] [INFO] Analyze target table  : false
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.600] [INFO] Prefix to retain S3 files on staging dir  : 
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.600] [INFO] Minimum upload part size  : 5242880
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.600] [INFO] TransferManager Thead pool size  : 10
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.600] [INFO] Overriden Table Name  : 
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.600] [INFO] Target Schema Name Attribute : 
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.602] [INFO] Copy Options TIMEFORMAT : 'YYYY-MM-DD HH24:MI:SS'
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.602] [INFO] Temporary Credentials valid for [21,600] seconds will be used.
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.668] [INFO] S3 Consistency wait period : 0
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.822] [INFO] Batch size 2000000
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:49.822] [INFO] Staging dir location: /tmp
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:52.877] [INFO] Staging dir location: /tmp/InfaRedshiftStaging110529063052877820
+WRITER_1_*_1> CONNECTOR_10000 [2024-05-29 06:30:52.888] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Write data
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:53.126] [INFO] Truncate table required : false
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:53.127] [INFO] Write operation selected [TreatSourceRowAs]  : INSERT
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:53.127] [INFO] Writer Bucket name : nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:53.127] [INFO] Use Null value for Char types : ''
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:53.127] [INFO] Max errors per batch : 1
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:53.127] [INFO] Compression Enabled : true
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:53.127] [INFO] Server side encryption enabled : false
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:53.127] [INFO] Client side encryption enabled : false
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:53.127] [INFO] Vacuum option provided : None
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:53.127] [INFO] Analyze target table  : false
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:53.127] [INFO] Prefix to retain S3 files on staging dir  : 
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:53.127] [INFO] Minimum upload part size  : 5242880
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:53.127] [INFO] TransferManager Thead pool size  : 10
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:53.127] [INFO] Overriden Table Name  : 
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:53.127] [INFO] Target Schema Name Attribute : 
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:53.127] [INFO] Copy Options TIMEFORMAT : 'YYYY-MM-DD HH24:MI:SS'
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:53.127] [INFO] Temporary Credentials valid for [21,600] seconds will be used.
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:53.181] [INFO] S3 Consistency wait period : 0
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:53.281] [INFO] Batch size 2000000
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:53.281] [INFO] Staging dir location: /tmp
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.093] [INFO] Staging dir location: /tmp/InfaRedshiftStaging1105290630560927710
+WRITER_1_*_1> CONNECTOR_10000 [2024-05-29 06:30:56.096] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Write data
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.345] [INFO] Truncate table required : false
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.345] [INFO] Write operation selected [TreatSourceRowAs]  : INSERT
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.345] [INFO] Writer Bucket name : nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.345] [INFO] Use Null value for Char types : ''
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.345] [INFO] Max errors per batch : 1
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.345] [INFO] Compression Enabled : true
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.345] [INFO] Server side encryption enabled : false
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.345] [INFO] Client side encryption enabled : false
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.345] [INFO] Vacuum option provided : None
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.345] [INFO] Analyze target table  : false
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.345] [INFO] Prefix to retain S3 files on staging dir  : 
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.345] [INFO] Minimum upload part size  : 5242880
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.345] [INFO] TransferManager Thead pool size  : 10
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.345] [INFO] Overriden Table Name  : 
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.345] [INFO] Target Schema Name Attribute : 
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.345] [INFO] Copy Options TIMEFORMAT : 'YYYY-MM-DD HH24:MI:SS'
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.346] [INFO] Temporary Credentials valid for [21,600] seconds will be used.
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.402] [INFO] S3 Consistency wait period : 0
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.501] [INFO] Batch size 2000000
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:56.502] [INFO] Staging dir location: /tmp
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:59.288] [INFO] Staging dir location: /tmp/InfaRedshiftStaging1105290630592885220
+WRITER_1_*_1> WRT_8270 [2024-05-29 06:30:59.290] Target connection group #1 consists of target(s) [dim_nb_reason_test_OPT_b74731bc526437b45a893c44a91600923d35c7ec_1: Partition 1]
+WRITER_1_*_1> WRT_8270 [2024-05-29 06:30:59.290] Target connection group #2 consists of target(s) [dim_nb_reason_test_OPT_b74731bc526437b45a893c44a91600923d35c7ec: Partition 1]
+WRITER_1_*_1> WRT_8270 [2024-05-29 06:30:59.290] Target connection group #3 consists of target(s) [dim_nb_reason_test: Partition 1]
+WRITER_1_*_1> WRT_8003 [2024-05-29 06:30:59.290] Writer initialization complete.
+WRITER_1_*_1> WRT_8005 [2024-05-29 06:30:59.291] Writer run started.
+WRITER_1_*_1> WRT_8158 [2024-05-29 06:30:59.291] 
+
+*****START LOAD SESSION*****
+
+Load Start Time: Wed May 29 06:30:58 2024
+
+Target tables:
+
+     dim_nb_reason_test_OPT_b74731bc526437b45a893c44a91600923d35c7ec_1: Partition 1
+     dim_nb_reason_test_OPT_b74731bc526437b45a893c44a91600923d35c7ec: Partition 1
+     dim_nb_reason_test: Partition 1
+
+
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:59.298] [INFO] 
+/* partner: Informatica -v 2.0 */
+unload ('with 
+src as (
+select trim(kreasnid_code) rsn_cd_nk, 
+\'NB21\' src_sys_nm_nk, 
+trim(desc_text) rsn_desc, 
+trim(reason_type_decode) rsn_tp_desc, 
+trim(status_code) src_rec_sts_cd, 
+rank() over (partition by kreasnid_code order by kreasnid_ref desc) as rnk
+from ext_pvt_lake_oracle_orap12_nyldprod60cl.kwn_reason
+where kreasnid_ref > 999 and edh_record_status_in=\'A\'
+),
+mcc as 
+(select 
+src_ref_cd_nk,
+ent_ref_cd,
+ent_ref_cd_nm,
+ent_ref_cd_desc,
+rank() over(partition by src_ref_cd_nk order by lkp_master_code_conv_sk desc) as rnk
+FROM pdm.lkp_master_code_conversion_nb_stg  
+WHERE src_sys_nm_nk=\'NB21\' and trim(upper(ent_master_cd_ctgry_nk)) in (\'REASON_CODE\') and cnt_iss_cd_nk=\'ALL\' and dat_src_cd_nk=\'ALL\' and ADMN_SYS_CD_NK=\'ALL\' and edh_record_status_in=\'A\')
+select 
+src.rsn_cd_nk, src.src_sys_nm_nk, src.rsn_desc, src.rsn_tp_desc, src.src_rec_sts_cd,
+cast(\'REASON_CODE\' as varchar(100)) ent_master_cd_ctgry_nk,mcc.ent_ref_cd,mcc.ent_ref_cd_nm,mcc.ent_ref_cd_desc 
+from src left join mcc 
+on src.rsn_cd_nk=mcc.src_ref_cd_nk and src.rnk=1 and mcc.rnk=1') 
+ TO 's3://nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/6f443290-5377-4616-a285-bb1c2878913500171697864660081290161894572452993515/INFARS_CUSTOM_SCHEMA_' 
+credentials 'aws_access_key_id=********;aws_secret_access_key=********;token=********' 
+GZIP 
+NULL ''
+DELIMITER '\036'
+ESCAPE 
+
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-05-29 06:30:59.312] [INFO] 
+/* partner: Informatica -v 2.0 */
+unload ('SELECT "pdm"."dim_nb_reason_test"."dim_nb_reason_sk" , "pdm"."dim_nb_reason_test"."rsn_cd_nk" , "pdm"."dim_nb_reason_test"."src_sys_nm_nk" , "pdm"."dim_nb_reason_test"."rsn_desc" , "pdm"."dim_nb_reason_test"."rsn_tp_desc" , "pdm"."dim_nb_reason_test"."ent_master_cd_ctgry_nk" , "pdm"."dim_nb_reason_test"."ent_ref_cd" , "pdm"."dim_nb_reason_test"."ent_ref_cd_nm" , "pdm"."dim_nb_reason_test"."ent_ref_cd_desc" , "pdm"."dim_nb_reason_test"."src_rec_sts_cd" , "pdm"."dim_nb_reason_test"."chksum" , "pdm"."dim_nb_reason_test"."edh_record_status_in" , (to_char ("pdm"."dim_nb_reason_test"."edh_record_start_ts" ,\'YYYY-MM-DD HH24:MI:SS.USOF\')) , (to_char ("pdm"."dim_nb_reason_test"."edh_record_end_ts" ,\'YYYY-MM-DD HH24:MI:SS.USOF\')) , "pdm"."dim_nb_reason_test"."edh_created_batch_key" , (to_char ("pdm"."dim_nb_reason_test"."edh_created_ts" ,\'YYYY-MM-DD HH24:MI:SS.USOF\')) , "pdm"."dim_nb_reason_test"."edh_created_nm" , "pdm"."dim_nb_reason_test"."edh_updated_batch_key" , (to_char ("pdm"."dim_nb_reason_test"."edh_updated_ts" ,\'YYYY-MM-DD HH24:MI:SS.USOF\')) , "pdm"."dim_nb_reason_test"."edh_updated_nm" FROM "pdm"."dim_nb_reason_test" WHERE edh_record_status_in = \'A\' OR edh_record_status_in =\'D\'') 
+ TO 's3://nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/6f443290-5377-4616-a285-bb1c2878913500171697864930704045750452376542993521/dim_nb_reason_test_' 
+credentials 'aws_access_key_id=********;aws_secret_access_key=********;token=********' 
+GZIP 
+NULL ''
+DELIMITER '\036'
+ESCAPE 
+
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:02.614] [WARNING] UNLOAD Warning ..
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:02.615] [INFO] UNLOAD command successfully completed.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:02.615] [INFO]  Total time elapsed  3.0
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:02.888] [INFO] The total time taken to download the 8 file from Amazon S3 is 0 seconds.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:02.942] [INFO] The total time taken to read the files and push the data to the output buffer is 16.338 seconds.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:04.311] [WARNING] UNLOAD Warning ..
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:04.311] [INFO] UNLOAD command successfully completed.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:04.311] [INFO]  Total time elapsed  5.0
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:04.537] [INFO] The total time taken to download the 8 file from Amazon S3 is 0 seconds.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:04.540] [INFO] The total time taken to read the files and push the data to the output buffer is 15.231 seconds.
+TRANSF_1_2_1> DBG_21077 [2024-05-29 06:31:04.541] Create joiner cache on master relation : (Wed May 29 06:31:04 2024)
+TRANSF_1_2_1> TE_7212 [2024-05-29 06:31:04.541] Increasing [Index Cache] size for transformation [Joiner] from [178956970] to [178968064].
+TRANSF_1_2_1> TE_7212 [2024-05-29 06:31:04.541] Increasing [Data Cache] size for transformation [Joiner] from [357913940] to [357918840].
+TRANSF_1_2_1> CMN_1690 [2024-05-29 06:31:04.552] Created new data file [/app/iics_agent_dir/apps/Data_Integration_Server/data/cache/PMJNR1027032899_9_0.dat] and index file [/app/iics_agent_dir/apps/Data_Integration_Server/data/cache/PMJNR1027032899_9_0.idx] for Joiner [Joiner].
+TRANSF_1_2_1> DBG_21214 [2024-05-29 06:31:04.552] Finished joiner cache on master relation : (Wed May 29 06:31:04 2024)
+TRANSF_1_2_1> DBG_21216 [2024-05-29 06:31:04.552] Finished transformations for Source Qualifier [Source_Ref_Target_Table]. Total errors [0] 
+TRANSF_1_1_1> DBG_21603 [2024-05-29 06:31:04.552] Open master relation cache for detail joiner : (Wed May 29 06:31:04 2024)
+TRANSF_1_1_1> DBG_21215 [2024-05-29 06:31:04.556] Finished processing detail relation : (Wed May 29 06:31:04 2024)
+TRANSF_1_1_1> CMN_1795 [2024-05-29 06:31:04.556] The index cache size that would hold [0] input rows from the master for [Joiner], in memory, is [0] bytes
+TRANSF_1_1_1> CMN_1794 [2024-05-29 06:31:04.556] The data cache size that would hold [0] input rows from the master for [Joiner], in memory, is [6408] bytes
+WRITER_1_*_1> WRT_8167 [2024-05-29 06:31:04.556] Start loading table [dim_nb_reason_test_OPT_b74731bc526437b45a893c44a91600923d35c7ec_1: Partition 1] at: Wed May 29 06:31:04 2024
+WRITER_1_*_1> WRT_8167 [2024-05-29 06:31:04.556] Start loading table [dim_nb_reason_test_OPT_b74731bc526437b45a893c44a91600923d35c7ec: Partition 1] at: Wed May 29 06:31:04 2024
+TRANSF_1_1_1> DBG_21216 [2024-05-29 06:31:04.558] Finished transformations for Source Qualifier [Source_Query]. Total errors [0] 
+WRITER_1_*_1> WRT_8167 [2024-05-29 06:31:04.585] Start loading table [dim_nb_reason_test: Partition 1] at: Wed May 29 06:31:04 2024
+WRITER_1_*_1> WRT_8168 [2024-05-29 06:31:04.585] End loading table [dim_nb_reason_test_OPT_b74731bc526437b45a893c44a91600923d35c7ec_1: Partition 1] at: Wed May 29 06:31:04 2024
+WRITER_1_*_1> WRT_8168 [2024-05-29 06:31:04.585] End loading table [dim_nb_reason_test_OPT_b74731bc526437b45a893c44a91600923d35c7ec: Partition 1] at: Wed May 29 06:31:04 2024
+WRITER_1_*_1> WRT_8168 [2024-05-29 06:31:04.585] End loading table [dim_nb_reason_test: Partition 1] at: Wed May 29 06:31:04 2024
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:09.594] [INFO] The total time taken to stage 8 files in 0 batch is 5.019 seconds.
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:09.610] [INFO] The total time taken to upload 8 files in 0 batch to Amazon S3 is 0.015 seconds.
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:09.756] [INFO] The upload status for the file [INSERT_pdm.dim_nb_reason_test_.batch_0.csv.0] on Amazon S3 is [SUCCESS: Upload for file INSERT_pdm.dim_nb_reason_test_.batch_0.csv.0.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:09.756] [INFO] The upload status for the file [INSERT_pdm.dim_nb_reason_test_.batch_0.csv.1] on Amazon S3 is [SUCCESS: Upload for file INSERT_pdm.dim_nb_reason_test_.batch_0.csv.1.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:09.756] [INFO] The upload status for the file [INSERT_pdm.dim_nb_reason_test_.batch_0.csv.2] on Amazon S3 is [SUCCESS: Upload for file INSERT_pdm.dim_nb_reason_test_.batch_0.csv.2.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:09.756] [INFO] The upload status for the file [INSERT_pdm.dim_nb_reason_test_.batch_0.csv.3] on Amazon S3 is [SUCCESS: Upload for file INSERT_pdm.dim_nb_reason_test_.batch_0.csv.3.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:09.756] [INFO] The upload status for the file [INSERT_pdm.dim_nb_reason_test_.batch_0.csv.4] on Amazon S3 is [SUCCESS: Upload for file INSERT_pdm.dim_nb_reason_test_.batch_0.csv.4.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:09.757] [INFO] The upload status for the file [INSERT_pdm.dim_nb_reason_test_.batch_0.csv.5] on Amazon S3 is [SUCCESS: Upload for file INSERT_pdm.dim_nb_reason_test_.batch_0.csv.5.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:09.757] [INFO] The upload status for the file [INSERT_pdm.dim_nb_reason_test_.batch_0.csv.6] on Amazon S3 is [SUCCESS: Upload for file INSERT_pdm.dim_nb_reason_test_.batch_0.csv.6.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:09.757] [INFO] The upload status for the file [INSERT_pdm.dim_nb_reason_test_.batch_0.csv.7] on Amazon S3 is [SUCCESS: Upload for file INSERT_pdm.dim_nb_reason_test_.batch_0.csv.7.gz finished with status code: Completed].
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:09.764] [INFO] 
+/* partner: Informatica -v 2.0 */
+copy "pdm"."dim_nb_reason_test" ("dim_nb_reason_sk" , "rsn_cd_nk" , "src_sys_nm_nk" , "rsn_desc" , "rsn_tp_desc" , "ent_master_cd_ctgry_nk" , "ent_ref_cd" , "ent_ref_cd_nm" , "ent_ref_cd_desc" , "src_rec_sts_cd" , "chksum" , "edh_record_status_in" , "edh_record_start_ts" , "edh_record_end_ts" , "edh_created_ts") from 's3://nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/6f443290-5377-4616-a285-bb1c2878913511171697865609396993882957632482993527/INSERT_pdm.dim_nb_reason_test_.batch_0.csv.' 
+credentials 'aws_access_key_id=********;aws_secret_access_key=********;token=********' 
+
+MAXERROR 1
+ROUNDEC 
+DELIMITER '\036'
+IGNOREHEADER 1
+QUOTE '\037'
+TIMEFORMAT 'YYYY-MM-DD HH24:MI:SS'
+NULL ''
+CSV 
+GZIP 
+ ;
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:17.107] [WARNING] COPY WARNING: [Load into table 'dim_nb_reason_test' completed, 143 record(s) loaded successfully.]
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:17.107] [INFO] The total time taken to upload 8 files to Amazon Redshift from Amazon S3 is 7 seconds.
+WRITER_1_*_1> AMAZONREDSHIFT_10000 [2024-05-29 06:31:17.107] [INFO] The agent successfully uploaded 0 batch to Amazon Redshift.
+WRITER_1_*_1> WRT_8035 [2024-05-29 06:31:37.121] Load complete time: Wed May 29 06:31:36 2024
+
+LOAD SUMMARY
+============
+
+WRT_8036 Target: dim_nb_reason_test_OPT_b74731bc526437b45a893c44a91600923d35c7ec_1: Partition 1 (Instance Name: [dim_nb_reason_test])
+WRT_8044 No data loaded for this target
+
+
+WRT_8036 Target: dim_nb_reason_test_OPT_b74731bc526437b45a893c44a91600923d35c7ec: Partition 1 (Instance Name: [dim_nb_reason_test_2])
+WRT_8038 Inserted rows - Requested: 143        Applied: 143        Rejected: 0          Affected: 143       
+
+WRT_8036 Target: dim_nb_reason_test: Partition 1 (Instance Name: [dim_nb_reason_test_1])
+WRT_8044 No data loaded for this target
+
+
+
+WRITER_1_*_1> WRT_8043 [2024-05-29 06:31:37.121] *****END LOAD SESSION*****
+WRITER_1_*_1> WRT_8006 [2024-05-29 06:31:37.122] Writer run completed.
+MANAGER> PETL_24031 [2024-05-29 06:31:37.165] 
+***** RUN INFO FOR TGT LOAD ORDER GROUP [1], CONCURRENT SET [1] *****
+Thread [READER_1_1_1] created for [the read stage] of partition point [Source_Query] has completed.
+	Total Run Time = [3.651137] secs
+	Total Idle Time = [0.000000] secs
+	Busy Percentage = [100.000000]
+Thread [TRANSF_1_1_1] created for [the transformation stage] of partition point [Source_Query] has completed.
+	Total Run Time = [1.633888] secs
+	Total Idle Time = [1.626061] secs
+	Busy Percentage = [0.479044]
+	Transformation-specific statistics for this thread were not accurate enough to report.
+Thread [READER_1_2_1] created for [the read stage] of partition point [Source_Ref_Target_Table] has completed.
+	Total Run Time = [5.249339] secs
+	Total Idle Time = [0.000000] secs
+	Busy Percentage = [100.000000]
+Thread [TRANSF_1_2_1] created for [the transformation stage] of partition point [Source_Ref_Target_Table] has completed. The total run time was insufficient for any meaningful statistics.
+Thread [WRITER_1_*_1] created for [the write stage] of partition point [dim_nb_reason_test, dim_nb_reason_test_2, dim_nb_reason_test_1] has completed.
+	Total Run Time = [32.566417] secs
+	Total Idle Time = [0.000000] secs
+	Busy Percentage = [100.000000]
+
+MANAGER> PETL_24005 [2024-05-29 06:31:37.171] Starting post-session tasks. : (Wed May 29 06:31:37 2024)
+POST-SESS> PETL_24091 [2024-05-29 06:31:37.171] Thread [POST-SESS] has the ID [10].
+MANAGER> PETL_24029 [2024-05-29 06:31:37.173] Post-session task completed successfully. : (Wed May 29 06:31:37 2024)
+MAPPING> SDKS_38510 [2024-05-29 06:31:37.174] SDK target and group deinitialized with status [0].
+MAPPING> SDKS_38025 [2024-05-29 06:31:37.174] Plug-in 451600 deinitialized and unloaded with status [0].
+MAPPING> SDKS_38019 [2024-05-29 06:31:37.174] Writer SDK plug-ins deinitialized with status [0].
+MAPPING> SDKS_38025 [2024-05-29 06:31:37.175] Plug-in 451600 deinitialized and unloaded with status [0].
+MAPPING> SDKS_38018 [2024-05-29 06:31:37.175] Reader SDK plug-ins deinitialized with status [0].
+MAPPING> TM_6018 [2024-05-29 06:31:37.175] The session completed with [0] row transformation errors. 
+MANAGER> TE_7216 [2024-05-29 06:31:37.177] Deleting cache files [/app/iics_agent_dir/apps/Data_Integration_Server/data/cache/PMJNR1027032899_9_0.dat] for transformation [Joiner].
+MANAGER> TE_7216 [2024-05-29 06:31:37.177] Deleting cache files [/app/iics_agent_dir/apps/Data_Integration_Server/data/cache/PMJNR1027032899_9_0.idx] for transformation [Joiner].
+MANAGER> PETL_24002 [2024-05-29 06:31:37.482] Parallel Pipeline Engine finished.
+DIRECTOR> PETL_24012 [2024-05-29 06:31:37.483] Session run completed successfully.
+DIRECTOR> VAR_27048 [2024-05-29 06:31:37.484] Persisting mapping variable values to the repository.
+DIRECTOR> VAR_27049 [2024-05-29 06:31:37.484] Mapping variable name: [$$Src_Ref_Target_Table], persisted value: [dim_nb_reason_test], run instance name [].
+DIRECTOR> VAR_27049 [2024-05-29 06:31:37.484] Mapping variable name: [$$Target_Table_Object], persisted value: [dim_nb_reason_test], run instance name [].
+DIRECTOR> VAR_27049 [2024-05-29 06:31:37.484] Mapping variable name: [$$Src_Table_Query], persisted value: [dim_external_organization], run instance name [].
+DIRECTOR> TM_6022 [2024-05-29 06:31:37.484] 
+
+SESSION LOAD SUMMARY
+================================================
+
+DIRECTOR> TM_6252 [2024-05-29 06:31:37.484] Source Load Summary.
+DIRECTOR> CMN_1740 [2024-05-29 06:31:37.484] Table: [Source_Query] (Instance Name: [Source_Query] Instance UI Name: [Source_Query])
+	 Output Rows [143], Affected Rows [143], Applied Rows [143], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-05-29 06:31:37.484] Table: [Source_Ref_Target_Table] (Instance Name: [Source_Ref_Target_Table] Instance UI Name: [Source_Ref_Target_Table])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> TM_6253 [2024-05-29 06:31:37.484] Target Load Summary.
+DIRECTOR> CMN_1740 [2024-05-29 06:31:37.484] Table: [dim_nb_reason_test_OPT_b74731bc526437b45a893c44a91600923d35c7ec_1] (Instance Name: [dim_nb_reason_test] Instance UI Name: [Target_Update])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-05-29 06:31:37.484] Table: [dim_nb_reason_test_OPT_b74731bc526437b45a893c44a91600923d35c7ec] (Instance Name: [dim_nb_reason_test_2] Instance UI Name: [Target_Insert])
+	 Output Rows [143], Affected Rows [143], Applied Rows [143], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-05-29 06:31:37.484] Table: [dim_nb_reason_test] (Instance Name: [dim_nb_reason_test_1] Instance UI Name: [Target_Delete_Record_Insert])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> TM_6023 [2024-05-29 06:31:37.484] 
+===================================================
+
+DIRECTOR> TM_6020 [2024-05-29 06:31:37.484] Session [s_mtt_01CAKB0Z0000000009F0] completed at [Wed May 29 06:31:37 2024].

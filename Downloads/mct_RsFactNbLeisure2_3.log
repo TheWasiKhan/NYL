@@ -1,0 +1,406 @@
+Agent Group Id: 01CAKB25000000000009
+Agent Group Name: EDM_CDI_SA_GRP
+Agent Name: edm.idmc.sa3.dev.nylcloud.com
+Agent Id: 01CAKB0800000000000X
+Task Name: mct_RsFactNbLeisure2
+Task Type: MTT
+Task Id: 01CAKB0Z000000000CTS
+Run Id: 3
+Service Id: 2506806
+Started By: wkhan01
+Run Context Type: ICS_UI
+09/18/2024 07:35:49 **** Importing Connection: Conn_01CAKB0B00000000002M ...
+09/18/2024 07:35:50 **** Importing Source Definition: DUMMY_SRC_HiveValidProdcutPlanRecs ...
+09/18/2024 07:35:50 **** Importing Source Definition: DUMMY_SRC_HiveDimNbApplicantRef ...
+09/18/2024 07:35:50 **** Importing Source Definition: DUMMY_SRC_HiveDimPartyRef ...
+09/18/2024 07:35:50 **** Importing Source Definition: DUMMY_SRC_HiveDimNbApplPartyRole ...
+09/18/2024 07:35:50 **** Importing Source Definition: DUMMY_LKP_LkpDimNbQuestion ...
+09/18/2024 07:35:50 **** Importing Source Definition: DUMMY_LKP_LkpValipProduct ...
+09/18/2024 07:35:50 **** Importing Source Definition: fact_nb_leisure_srcrecs1 ...
+09/18/2024 07:35:50 **** Importing Target Definition: fact_nb_leisure_srcrecs21 ...
+09/18/2024 07:35:50 **** Importing Target Definition: fact_nb_leisure_srcrecs22 ...
+09/18/2024 07:35:50 **** Importing SessionConfig: default_session_config ...
+    <Warning> :  The Error Log DB Connection value should have Relational: as the prefix.
+    <Warning> :  Invalid value  for attribute Error Log DB Connection. Will use the default value 
+    Validating Source Definition  DUMMY_LKP_LkpDimNbQuestion...
+    Validating Source Definition  DUMMY_LKP_LkpValipProduct...
+    Validating Source Definition  DUMMY_SRC_HiveDimNbApplPartyRole...
+    Validating Source Definition  DUMMY_SRC_HiveDimPartyRef...
+    Validating Source Definition  fact_nb_leisure_srcrecs1...
+    Validating Source Definition  DUMMY_SRC_HiveDimNbApplicantRef...
+    Validating Source Definition  DUMMY_SRC_HiveValidProdcutPlanRecs...
+    Validating Target Definition  fact_nb_leisure_srcrecs22...
+    Validating Target Definition  fact_nb_leisure_srcrecs21...
+09/18/2024 07:35:50 **** Importing Mapping: Mapping0 ...
+    <Warning> :  transformation: LKP_LkpValipProduct - The subsecond Presicion should be greater than or equal 0 and less than or equal to 9.    [transformation< LKP_LkpValipProduct > ] 
+    <Warning> :  transformation: LKP_LkpValipProduct - Invalid value  for attribute Subsecond Precision. Will use the default value 6    [transformation< LKP_LkpValipProduct > ] 
+    <Warning> :  transformation: LKP_LkpValipProduct - Invalid value  for attribute Null ordering. Will use the default value Null Is Highest Value    [transformation< LKP_LkpValipProduct > ] 
+    <Warning> :  transformation: JNR_LkpValidPlan - Invalid value Null is Higest Value for attribute Null ordering in detail. Will use the default value Null Is Highest Value    [transformation< JNR_LkpValidPlan > ] 
+    <Warning> :  transformation: JNR_LkpValidProdPlan - Invalid value Null is Higest Value for attribute Null ordering in detail. Will use the default value Null Is Highest Value    [transformation< JNR_LkpValidProdPlan > ] 
+    <Warning> :  transformation: JNR_JoinDimParty - Invalid value Null is Higest Value for attribute Null ordering in detail. Will use the default value Null Is Highest Value    [transformation< JNR_JoinDimParty > ] 
+    <Warning> :  transformation: JNR_JoinDimParty_1 - Invalid value Null is Higest Value for attribute Null ordering in detail. Will use the default value Null Is Highest Value    [transformation< JNR_JoinDimParty_1 > ] 
+    <Warning> :  transformation: JNR_JoinDimNbApplPartyRole - Invalid value Null is Higest Value for attribute Null ordering in detail. Will use the default value Null Is Highest Value    [transformation< JNR_JoinDimNbApplPartyRole > ] 
+    <Warning> :  transformation: LKP_LkpDimNbQuestion - The subsecond Presicion should be greater than or equal 0 and less than or equal to 9.    [transformation< LKP_LkpDimNbQuestion > ] 
+    <Warning> :  transformation: LKP_LkpDimNbQuestion - Invalid value  for attribute Subsecond Precision. Will use the default value 6    [transformation< LKP_LkpDimNbQuestion > ] 
+    <Warning> :  transformation: LKP_LkpDimNbQuestion - Invalid value  for attribute Null ordering. Will use the default value Null Is Highest Value    [transformation< LKP_LkpDimNbQuestion > ] 
+Validating transformations of mapping Mapping0...
+Validating mapping variable(s).
+    <Warning> :  Invalid table attribute: Exec SQL
+    <Warning> :  Invalid table attribute: Exec SQL
+    <Warning> :  Invalid table attribute: Exec SQL
+    <Warning> :  Invalid table attribute: Exec SQL
+    <Warning> :  Invalid table attribute: Exec SQL
+    <Warning> :  Invalid table attribute: Exec SQL
+    <Warning> :  Invalid table attribute: Exec SQL
+09/18/2024 07:35:50 **** Importing Workflow: wf_mtt_01CAKB0Z000000000CTS ...
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup source is static for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup cache directory name for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup Index Cache Size for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Tracing Level for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup Data Cache Size for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Cache File Name Prefix for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Insert Else Update for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Case Sensitive String Comparison for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Re-cache from lookup source for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Dynamic Lookup Cache for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Null ordering for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Subsecond Precision for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Update Dynamic Cache Condition for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Optional for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Output Old Value On Update for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Pre-build lookup cache for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup caching enabled for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup cache persistent for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Sorted Input for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup Source Filter for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup Sql Override for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup source is static for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Server Side Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup cache directory name for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup Index Cache Size for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Tracing Level for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup Data Cache Size for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Cache File Name Prefix for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Insert Else Update for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Case Sensitive String Comparison for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  Invalid value false for attribute S3 Client Encryption. Will use the default value NO    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Re-cache from lookup source for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Dynamic Lookup Cache for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Null ordering for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Subsecond Precision for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Update Dynamic Cache Condition for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Optional for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Output Old Value On Update for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Pre-build lookup cache for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup caching enabled for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup cache persistent for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Sorted Input for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup Source Filter for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  invalid attribute Lookup Sql Override for element ATTRIBUTE    [Session< s_mtt_01CAKB0Z000000000CTS >  --> AmazonRedshiftV2_amazonredshift Reader< AmazonRedshiftV2_amazonredshift Reader > ] 
+    <Warning> :  The DTM Buffer Size should be atleast 10 times the Buffer Block Size (defined in the session configuration object).     [Session< s_mtt_01CAKB0Z000000000CTS > ] 
+    <Warning> :  Invalid value 15MB for attribute DTM buffer size. Will use the default value Auto    [Session< s_mtt_01CAKB0Z000000000CTS > ] 
+    <Warning> :  Invalid value None for attribute Pushdown Optimization Context. Will use the default value None     [Session< s_mtt_01CAKB0Z000000000CTS > ] 
+    <Warning> :  The value entered is not a valid integer.
+    <Warning> :  Invalid value NO for attribute Fail task after wait time. Will use the default value 
+[Summary for Application Source Qualifier SRC_HiveValidProdcutPlanRecs]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Application Source Qualifier SRC_HiveDimNbApplicantRef]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Application Source Qualifier SRC_fchdfs_SrcRecs1]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Application Source Qualifier SRC_HiveDimPartyRef]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Application Source Qualifier SRC_HiveDimNbApplPartyRole]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Application Source Qualifier ISourceNode33]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Application Source Qualifier ISourceNode34]
+     Is a new repartition point.
+     Partition type changed from None to Pass Through.
+[Summary for Custom Transformation UN_Fnl_ProdPlan]
+     Is a new repartition point.
+     Number of groups changed from 1 to 4.
+
+Successfully extracted session instance [s_mtt_01CAKB0Z000000000CTS].  Starting repository sequence id is [-1868368816]
+======================================================================
+PETL_24036 [2024-09-18 07:35:49.268] Beginning the prepare phase for the session.
+TM_6721 [2024-09-18 07:35:49.268] Started [Connect to Repository].
+TM_6722 [2024-09-18 07:35:49.768] Finished [Connect to Repository].  It took [0.499594] seconds.
+TM_6721 [2024-09-18 07:35:49.768] Started [Fetch Session from Repository].
+TM_6722 [2024-09-18 07:35:50.380] Finished [Fetch Session from Repository].  It took [0.61166] seconds.
+VAR_27085 [2024-09-18 07:35:50.381] Parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB0Z000000000CTS.param] is opened for [session [wf_mtt_01CAKB0Z000000000CTS.s_mtt_01CAKB0Z000000000CTS]].
+VAR_27062 [2024-09-18 07:35:50.381] Warning! Cannot find section for worklet [wf_mtt_01CAKB0Z000000000CTS] and folder [] in parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB0Z000000000CTS.param].
+TT_11094 [2024-09-18 07:35:50.383] The Lookup transformation [LKP_LkpDimNbQuestion] requires that a string or binary lookup port and an input port in any lookup condition have the same length. Since lookup port [o_quest_cd_nk] had a length of [50] and input port [quest_cd_nk] had a length of [20], the larger length for both ports is used.
+TM_6721 [2024-09-18 07:35:50.398] Started [Partition Group Formation].
+TM_6722 [2024-09-18 07:35:50.399] Finished [Partition Group Formation].  It took [0.001261] seconds.
+PETL_24037 [2024-09-18 07:35:50.399] Finished the prepare phase for the session.
+DIRECTOR> TM_6228 [2024-09-18 07:35:50.400] Writing session output to log file [/app/iics_agent_dir/apps/Data_Integration_Server/data/../logs/s_mtt_9TFfD1J81JjdvDsgUqujoX_3.log].
+DIRECTOR> VAR_27085 [2024-09-18 07:35:50.403] Parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB0Z000000000CTS.param] is opened for [session [wf_mtt_01CAKB0Z000000000CTS.s_mtt_01CAKB0Z000000000CTS]].
+DIRECTOR> VAR_27062 [2024-09-18 07:35:50.403] Warning! Cannot find section for worklet [wf_mtt_01CAKB0Z000000000CTS] and folder [] in parameter file [/app/iics_agent_dir/apps/Data_Integration_Server/data/parameters/s_mtt_01CAKB0Z000000000CTS.param].
+DIRECTOR> TM_6014 [2024-09-18 07:35:50.404] Initializing session [s_mtt_01CAKB0Z000000000CTS] at [Wed Sep 18 07:35:50 2024].
+DIRECTOR> TM_6683 [2024-09-18 07:35:50.404] Repository Name: [XMLRepository]
+DIRECTOR> TM_6684 [2024-09-18 07:35:50.404] Server Name: [rDTM]
+DIRECTOR> TM_6686 [2024-09-18 07:35:50.404] Folder: []
+DIRECTOR> TM_6685 [2024-09-18 07:35:50.404] Workflow: [wf_mtt_01CAKB0Z000000000CTS] Run Instance Name: [] Run Id: [0]
+DIRECTOR> TM_6992 [2024-09-18 07:35:50.404] Operating System Type [Linux]
+DIRECTOR> TM_6101 [2024-09-18 07:35:50.404] Mapping name: Mapping0.
+DIRECTOR> TM_6964 [2024-09-18 07:35:50.405] Date format for the Session is [MM/DD/YYYY HH24:MI:SS.US]
+DIRECTOR> TM_6703 [2024-09-18 07:35:50.405] Session [s_mtt_01CAKB0Z000000000CTS] is run by 64-bit Integration Service  [], version [10.2.0 HotFix2], build [0320].
+MANAGER> PETL_24091 [2024-09-18 07:35:50.442] Thread [MANAGER] has the ID [1].
+MANAGER> PETL_24058 [2024-09-18 07:35:50.442] Running Partition Group [1].
+MANAGER> PETL_24000 [2024-09-18 07:35:50.443] Parallel Pipeline Engine initializing.
+MONITOR> PETL_24091 [2024-09-18 07:35:50.443] Thread [MONITOR] has the ID [2].
+MANAGER> PETL_24001 [2024-09-18 07:35:50.443] Parallel Pipeline Engine running.
+MANAGER> PETL_24003 [2024-09-18 07:35:50.444] Initializing session run.
+MAPPING> PETL_24091 [2024-09-18 07:35:50.444] Thread [MAPPING] has the ID [3].
+MAPPING> CMN_1569 [2024-09-18 07:35:50.448] Server Mode: [UNICODE]
+MAPPING> CMN_1570 [2024-09-18 07:35:50.448] Server Code page: [ISO 8859-1 Western European]
+MAPPING> TM_6151 [2024-09-18 07:35:50.448] The session sort order is [Binary].
+MAPPING> TM_6185 [2024-09-18 07:35:50.448] Warning. Code page validation is disabled in this session.
+MAPPING> CMN_65110 [2024-09-18 07:35:50.448] Current Timezone:[UTC -5:0]
+MAPPING> CMN_65111 [2024-09-18 07:35:50.448] Current Process ID:[14473]
+MAPPING> TM_6155 [2024-09-18 07:35:50.448] Using HIGH precision processing.
+MAPPING> TM_6180 [2024-09-18 07:35:50.448] Deadlock retry logic will not be implemented.
+MAPPING> TM_6187 [2024-09-18 07:35:50.448] Session target-based commit interval is [10000].
+MAPPING> PMJVM_42020 [2024-09-18 07:35:50.453] [INFO] Loaded library : /app/iics_agent_dir/apps/jdk/zulu8.70.0.52-sa-fx-jdk8.0.372/jre/lib/amd64/server/libjvm.so.
+MAPPING> PMJVM_42009 [2024-09-18 07:35:50.540] [INFO] Created Java VM successfully.
+MAPPING> SDKS_38029 [2024-09-18 07:35:50.619] Loaded plug-in 451600: [plugin description].
+MAPPING> SDKS_38024 [2024-09-18 07:35:50.657] Plug-in 451600 initialization complete.
+MAPPING> SDKS_38016 [2024-09-18 07:35:50.659] Reader SDK plug-in initialization complete.
+MAPPING> SDKS_38029 [2024-09-18 07:35:50.661] Loaded plug-in 451600: [plugin description].
+MAPPING> SDKS_38024 [2024-09-18 07:35:51.228] Plug-in 451600 initialization complete.
+MAPPING> SDKS_38017 [2024-09-18 07:35:51.228] Writer SDK plug-in initialization complete.
+MAPPING> CONNECTOR_10000 [2024-09-18 07:35:52.835] [INFO] TPL's are loaded from /app/iics_agent_dir/apps/Data_Integration_Server/70.0.4.3/connectors/../connectors/thirdparty/informatica.amazonredshift/upgraded
+MAPPING> CONNECTOR_10000 [2024-09-18 07:35:53.360] [INFO] The target object at runtime is overridden with the parameter name = fact_nb_leisure_srcrecs21 table name = fact_nb_leisure_srcrecs21.
+MAPPING> AMAZONREDSHIFT_10000 [2024-09-18 07:35:56.266] [INFO] Executing PRE-SQL: 
+
+/* partner: Informatica -v 2.0 */
+DELETE FROM ds_staging_conv.fact_nb_leisure_srcrecs21
+MAPPING> CONNECTOR_10000 [2024-09-18 07:35:56.823] [INFO] The target object at runtime is overridden with the parameter name = fact_nb_leisure_srcrecs22 table name = fact_nb_leisure_srcrecs22.
+MAPPING> AMAZONREDSHIFT_10000 [2024-09-18 07:35:57.059] [INFO] Executing PRE-SQL: 
+
+/* partner: Informatica -v 2.0 */
+DELETE FROM ds_staging_conv.fact_nb_leisure_srcrecs22
+MAPPING> SDKS_38509 [2024-09-18 07:35:57.580] SDK target and group initialization complete.
+MAPPING> TM_6307 [2024-09-18 07:35:57.580] DTM error log disabled. 
+MAPPING> TE_7022 [2024-09-18 07:35:57.584] TShmWriter: Initialized
+MAPPING> DBG_21693 [2024-09-18 07:35:57.591] SRT_JoinDimNbApplPartyRole_Srt0: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-09-18 07:35:57.689] For Transformation [SRT_JoinDimNbApplPartyRole_Srt0], memory used is [1073741824] bytes and row size is 128 bytes.
+MAPPING> DBG_21693 [2024-09-18 07:35:57.708] SRT_JoinDimParty_1_Srt1: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-09-18 07:35:57.762] For Transformation [SRT_JoinDimParty_1_Srt1], memory used is [1073741824] bytes and row size is 152 bytes.
+MAPPING> DBG_21693 [2024-09-18 07:35:57.781] SRT_JoinDimParty_Srt1: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-09-18 07:35:57.836] For Transformation [SRT_JoinDimParty_Srt1], memory used is [1073741824] bytes and row size is 20 bytes.
+MAPPING> DBG_21693 [2024-09-18 07:35:57.861] SRT_LkpValidPlan_Srt0: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-09-18 07:35:57.916] For Transformation [SRT_LkpValidPlan_Srt0], memory used is [1073741824] bytes and row size is 856 bytes.
+MAPPING> DBG_21693 [2024-09-18 07:35:57.933] SRT_LkpValidProdPlan_Srt1: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-09-18 07:35:57.988] For Transformation [SRT_LkpValidProdPlan_Srt1], memory used is [1073741824] bytes and row size is 856 bytes.
+MAPPING> DBG_21693 [2024-09-18 07:35:58.008] SRT_LkpValidProdPlan_Srt0: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-09-18 07:35:58.066] For Transformation [SRT_LkpValidProdPlan_Srt0], memory used is [1073741824] bytes and row size is 20 bytes.
+MAPPING> DBG_21693 [2024-09-18 07:35:58.082] SRT_LkpValidPlan_Srt1: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-09-18 07:35:58.139] For Transformation [SRT_LkpValidPlan_Srt1], memory used is [1073741824] bytes and row size is 20 bytes.
+MAPPING> DBG_21694 [2024-09-18 07:35:58.157] JNR_LkpValidPlan Partition [0]: Index cache size = [25565281], Data cache size = [51130562]
+MAPPING> TT_11098 [2024-09-18 07:35:58.157] The Joiner transformation [JNR_LkpValidPlan] is configured with the join algorithm: Sorted-Merge.
+MAPPING> DBG_21077 [2024-09-18 07:35:58.157] Create joiner cache on master relation : (Wed Sep 18 07:35:58 2024)
+MAPPING> CMN_1690 [2024-09-18 07:35:58.194] Created new data file [/data/EDM_NB/Cache//PMJNR-1868368246_36_0.dat] and index file [/data/EDM_NB/Cache//PMJNR-1868368246_36_0.idx] for Joiner [JNR_LkpValidPlan].
+MAPPING> DBG_21691 [2024-09-18 07:35:58.194] Create joiner cache on detail relation : (Wed Sep 18 07:35:58 2024)
+MAPPING> CMN_1690 [2024-09-18 07:35:58.232] Created new data file [/data/EDM_NB/Cache//PMJNRD-1868368246_36_0.dat] and index file [/data/EDM_NB/Cache//PMJNRD-1868368246_36_0.idx] for Joiner [JNR_LkpValidPlan].
+MAPPING> DBG_21694 [2024-09-18 07:35:58.233] JNR_LkpValidProdPlan Partition [0]: Index cache size = [25565281], Data cache size = [51130562]
+MAPPING> TT_11098 [2024-09-18 07:35:58.233] The Joiner transformation [JNR_LkpValidProdPlan] is configured with the join algorithm: Sorted-Merge.
+MAPPING> DBG_21077 [2024-09-18 07:35:58.234] Create joiner cache on master relation : (Wed Sep 18 07:35:58 2024)
+MAPPING> CMN_1690 [2024-09-18 07:35:58.270] Created new data file [/data/EDM_NB/Cache//PMJNR-1868368246_37_0.dat] and index file [/data/EDM_NB/Cache//PMJNR-1868368246_37_0.idx] for Joiner [JNR_LkpValidProdPlan].
+MAPPING> DBG_21603 [2024-09-18 07:35:58.270] Open master relation cache for detail joiner : (Wed Sep 18 07:35:58 2024)
+MAPPING> DBG_21693 [2024-09-18 07:35:58.278] SRT_JoinDimParty_Srt0: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-09-18 07:35:58.335] For Transformation [SRT_JoinDimParty_Srt0], memory used is [1073741824] bytes and row size is 88208 bytes.
+MAPPING> DBG_21694 [2024-09-18 07:35:58.354] JNR_JoinDimParty Partition [0]: Index cache size = [25565281], Data cache size = [51130562]
+MAPPING> TT_11098 [2024-09-18 07:35:58.354] The Joiner transformation [JNR_JoinDimParty] is configured with the join algorithm: Sorted-Merge.
+MAPPING> DBG_21077 [2024-09-18 07:35:58.354] Create joiner cache on master relation : (Wed Sep 18 07:35:58 2024)
+MAPPING> CMN_1690 [2024-09-18 07:35:58.389] Created new data file [/data/EDM_NB/Cache//PMJNR-1868368246_40_0.dat] and index file [/data/EDM_NB/Cache//PMJNR-1868368246_40_0.idx] for Joiner [JNR_JoinDimParty].
+MAPPING> DBG_21603 [2024-09-18 07:35:58.389] Open master relation cache for detail joiner : (Wed Sep 18 07:35:58 2024)
+MAPPING> DBG_21693 [2024-09-18 07:35:58.389] SRT_JoinDimParty_1_Srt0: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-09-18 07:35:58.447] For Transformation [SRT_JoinDimParty_1_Srt0], memory used is [1073741824] bytes and row size is 88228 bytes.
+MAPPING> DBG_21694 [2024-09-18 07:35:58.467] JNR_JoinDimParty_1 Partition [0]: Index cache size = [25565281], Data cache size = [51130562]
+MAPPING> TT_11098 [2024-09-18 07:35:58.467] The Joiner transformation [JNR_JoinDimParty_1] is configured with the join algorithm: Sorted-Merge.
+MAPPING> DBG_21077 [2024-09-18 07:35:58.467] Create joiner cache on master relation : (Wed Sep 18 07:35:58 2024)
+MAPPING> CMN_1690 [2024-09-18 07:35:58.502] Created new data file [/data/EDM_NB/Cache//PMJNR-1868368246_42_0.dat] and index file [/data/EDM_NB/Cache//PMJNR-1868368246_42_0.idx] for Joiner [JNR_JoinDimParty_1].
+MAPPING> DBG_21603 [2024-09-18 07:35:58.502] Open master relation cache for detail joiner : (Wed Sep 18 07:35:58 2024)
+MAPPING> DBG_21693 [2024-09-18 07:35:58.503] SRT_JoinDimNbApplPartyRole_Srt1: Cache size for partition [1] = [1073741824]
+MAPPING> SORT_40419 [2024-09-18 07:35:58.562] For Transformation [SRT_JoinDimNbApplPartyRole_Srt1], memory used is [1073741824] bytes and row size is 88360 bytes.
+MAPPING> DBG_21694 [2024-09-18 07:35:58.586] JNR_JoinDimNbApplPartyRole Partition [0]: Index cache size = [25565281], Data cache size = [51130562]
+MAPPING> TT_11098 [2024-09-18 07:35:58.586] The Joiner transformation [JNR_JoinDimNbApplPartyRole] is configured with the join algorithm: Sorted-Merge.
+MAPPING> DBG_21077 [2024-09-18 07:35:58.586] Create joiner cache on master relation : (Wed Sep 18 07:35:58 2024)
+MAPPING> CMN_1690 [2024-09-18 07:35:58.624] Created new data file [/data/EDM_NB/Cache//PMJNR-1868368246_44_0.dat] and index file [/data/EDM_NB/Cache//PMJNR-1868368246_44_0.idx] for Joiner [JNR_JoinDimNbApplPartyRole].
+MAPPING> DBG_21603 [2024-09-18 07:35:58.624] Open master relation cache for detail joiner : (Wed Sep 18 07:35:58 2024)
+MAPPING> TM_6007 [2024-09-18 07:35:58.630] DTM initialized successfully for session [s_mtt_01CAKB0Z000000000CTS]
+DIRECTOR> PETL_24033 [2024-09-18 07:35:58.630] All DTM Connection Info: [<NONE>].
+MANAGER> PETL_24004 [2024-09-18 07:35:58.631] Starting pre-session tasks. : (Wed Sep 18 07:35:58 2024)
+PRE-SESS> PETL_24091 [2024-09-18 07:35:58.631] Thread [PRE-SESS] has the ID [4].
+MANAGER> PETL_24027 [2024-09-18 07:35:58.634] Pre-session task completed successfully. : (Wed Sep 18 07:35:58 2024)
+DIRECTOR> PETL_24006 [2024-09-18 07:35:58.634] Starting data movement.
+DIRECTOR> TT_11183 [2024-09-18 07:35:58.634] Enabled using [1 (auto)] additional concurrent pipelines to build lookup caches. (Session likely will build or refresh [2] lookup caches; [0] on-demand only).
+MAPPING> TM_6966 [2024-09-18 07:35:58.635] Reducing estimate of the amount of buffer pool memory required for high performance.
+MAPPING> TM_6660 [2024-09-18 07:35:58.635] Total Buffer Pool size is 37581103840 bytes and Block size is 1073741824 bytes.
+MAPPING> CONNECTOR_10000 [2024-09-18 07:35:58.706] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+MAPPING> CONNECTOR_10000 [2024-09-18 07:35:58.764] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+MAPPING> CONNECTOR_10000 [2024-09-18 07:35:58.809] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+MAPPING> CONNECTOR_10000 [2024-09-18 07:35:58.971] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = fact_nb_leisure_srcrecs1 table name = fact_nb_leisure_srcrecs1.
+MAPPING> CONNECTOR_10000 [2024-09-18 07:35:59.033] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+LKPDP_1> PETL_24091 [2024-09-18 07:35:59.062] Thread [LKPDP_1] has the ID [5].
+LKPDP_1> DBG_21693 [2024-09-18 07:35:59.066] LKP_LkpValipProduct{{SRT}}: Cache size for partition [1] = [93473059]
+LKPDP_1> SORT_40419 [2024-09-18 07:35:59.127] For Transformation [LKP_LkpValipProduct{{SRT}}], memory used is [93473059] bytes and row size is 100 bytes.
+LKPDP_1> TE_7212 [2024-09-18 07:35:59.155] Increasing [Index Cache] size for transformation [LKP_LkpValipProduct] from [25565281] to [25566800].
+LKPDP_1> TE_7212 [2024-09-18 07:35:59.155] Increasing [Data Cache] size for transformation [LKP_LkpValipProduct] from [51130562] to [51134464].
+LKPDP_2> PETL_24091 [2024-09-18 07:35:59.176] Thread [LKPDP_2] has the ID [6].
+LKPDP_2> DBG_21693 [2024-09-18 07:35:59.178] LKP_LkpDimNbQuestion{{SRT}}: Cache size for partition [1] = [93473059]
+LKPDP_2> SORT_40419 [2024-09-18 07:35:59.236] For Transformation [LKP_LkpDimNbQuestion{{SRT}}], memory used is [93473059] bytes and row size is 120 bytes.
+LKPDP_2> TE_7212 [2024-09-18 07:35:59.263] Increasing [Index Cache] size for transformation [LKP_LkpDimNbQuestion] from [25565281] to [25568800].
+LKPDP_2> TE_7212 [2024-09-18 07:35:59.263] Increasing [Data Cache] size for transformation [LKP_LkpDimNbQuestion] from [51130562] to [51134464].
+DIRECTOR> TT_11184 [2024-09-18 07:35:59.284] Starting additional concurrent pipeline to build the lookup cache needed by Lookup transformation [LKP_LkpValipProduct].
+READER_1_1_1> PETL_24091 [2024-09-18 07:35:59.285] Thread [READER_1_1_1] has the ID [7].
+LKPDP_1> TM_6660 [2024-09-18 07:35:59.285] Total Buffer Pool size is 609824 bytes and Block size is 65536 bytes.
+LKPDP_1> CONNECTOR_10000 [2024-09-18 07:35:59.361] [INFO] The source or cached lookup object at runtime is overridden with the parameter name = INFARS_CUSTOM_SCHEMA table name = INFARS_CUSTOM_SCHEMA.
+LKPDP_1:READER_1_1> PETL_24091 [2024-09-18 07:35:59.416] Thread [LKPDP_1:READER_1_1] has the ID [8].
+READER_1_1_1> CONNECTOR_10000 [2024-09-18 07:35:59.433] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Read data
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-09-18 07:35:59.733] [INFO] The S3 bucket name for staging the data during the read operation is nyl-datawarehouse-dev-rs-temp-20230120223907439400000003/rs-idmc-temp/.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-09-18 07:35:59.733] [INFO] The value of Enable Compression is set to true.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-09-18 07:35:59.733] [INFO] The value of the S3 Client Encryption is set to false.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-09-18 07:35:59.734] [INFO] Unload Options ADDQUOTES : 
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-09-18 07:35:59.734] [INFO] Unload Options PARALLEL : ON
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-09-18 07:35:59.734] [INFO] Unload Options ESCAPE : 
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-09-18 07:35:59.736] [INFO] Temporary Credentials valid for [21,600] seconds will be used.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-09-18 07:35:59.807] [INFO] Encryption Type : None
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-09-18 07:35:59.808] [INFO] S3 Client Encryption : false
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-09-18 07:35:59.808] [INFO] S3 Server Side Encryption : false
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-09-18 07:35:59.808] [INFO] The Encryption type honored is : NONE
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-09-18 07:36:00.619] [INFO] The local staging directory location is set to /data/EDM_NB/Cache/.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-09-18 07:36:00.621] [INFO] The value of Download S3 Files In Multiple Parts is set to true.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-09-18 07:36:00.621] [INFO] The Multipart Download Threshold size of an object is set as 5,242,880 bytes.
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-09-18 07:36:00.633] [INFO] Staging dir location: /data/EDM_NB/Cache//InfaRedshiftStaging0009180736006258350
+READER_1_1_1> AMAZONREDSHIFT_10000 [2024-09-18 07:36:00.634] [INFO] Total time taken for staging: 0.0 sec.
+LKPDP_1:READER_1_1> CONNECTOR_10000 [2024-09-18 07:36:10.704] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Read data
+TRANSF_1_1_1> PETL_24091 [2024-09-18 07:36:10.704] Thread [TRANSF_1_1_1] has the ID [9].
+READER_1_2_1> PETL_24091 [2024-09-18 07:36:10.706] Thread [READER_1_2_1] has the ID [10].
+LKPDP_1:READER_1_1> CMN_1761 [2024-09-18 07:36:21.494] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-09-18 07:36:21.494] [ERROR] The connection attempt failed.
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-09-18 07:36:21.494] [WARNING] Failed to establish connection with the Data Souce.
+LKPDP_1:READER_1_1> CMN_1761 [2024-09-18 07:36:21.494] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+LKPDP_1:READER_1_1> AMAZONREDSHIFT_10000 [2024-09-18 07:36:21.494] [ERROR] Connection failed for CCI Client
+LKPDP_1:READER_1_1> CMN_1761 [2024-09-18 07:36:21.494] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+LKPDP_1:READER_1_1> CONNECTOR_10000 [2024-09-18 07:36:21.494] [ERROR] Error occured while initializing reader partition driver for Transformation - ISourceNode33 | Connector Name - AmazonRedshift - Connection failed.
+LKPDP_1:READER_1_1> CMN_1761 [2024-09-18 07:36:21.495] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+LKPDP_1:READER_1_1> JAVA PLUGIN_1762 [2024-09-18 07:36:21.495] [ERROR] com.informatica.cci.cloud.client.impl.CCIClientExceptionImpl: Connection failed.
+LKPDP_1:READER_1_1> CMN_1761 [2024-09-18 07:36:21.495] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+LKPDP_1:READER_1_1> JAVA PLUGIN_1762 [2024-09-18 07:36:21.495] [ERROR] 	at com.informatica.cci.cloud.client.impl.CCIRuntimeConnectionClientImpl.connect(CCIRuntimeConnectionClientImpl.java:37)
+LKPDP_1:READER_1_1> CMN_1761 [2024-09-18 07:36:21.495] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+LKPDP_1:READER_1_1> JAVA PLUGIN_1762 [2024-09-18 07:36:21.495] [ERROR] 	at com.informatica.cloud.api.adapter.cci.reader.CCIRdrPartitionDriver.initialize(CCIRdrPartitionDriver.java:169)
+LKPDP_1:READER_1_1> CMN_1761 [2024-09-18 07:36:21.495] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+LKPDP_1:READER_1_1> JAVA PLUGIN_1762 [2024-09-18 07:36:21.495] [ERROR] 	at com.informatica.cloud.api.adapter.cci.reader.CCIRdrPartitionDriver.init(CCIRdrPartitionDriver.java:105)
+LKPDP_1:READER_1_1> CMN_1761 [2024-09-18 07:36:21.495] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+LKPDP_1:READER_1_1> JAVA PLUGIN_1762 [2024-09-18 07:36:21.495] [ERROR] com.informatica.powercenter.sdk.SDKException: Connection failed.
+LKPDP_1:READER_1_1> CMN_1761 [2024-09-18 07:36:21.495] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+LKPDP_1:READER_1_1> JAVA PLUGIN_1762 [2024-09-18 07:36:21.495] [ERROR] 	at com.informatica.cloud.api.adapter.cci.reader.CCIRdrPartitionDriver.initialize(CCIRdrPartitionDriver.java:230)
+LKPDP_1:READER_1_1> CMN_1761 [2024-09-18 07:36:21.495] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+LKPDP_1:READER_1_1> JAVA PLUGIN_1762 [2024-09-18 07:36:21.495] [ERROR] 	at com.informatica.cloud.api.adapter.cci.reader.CCIRdrPartitionDriver.init(CCIRdrPartitionDriver.java:105)
+LKPDP_1:READER_1_1> CMN_1761 [2024-09-18 07:36:21.495] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+LKPDP_1:READER_1_1> SDKS_38200 [2024-09-18 07:36:21.495] Partition-level [ISourceNode33]: Plug-in #451600 failed in init().
+READER_1_2_1> CONNECTOR_10000 [2024-09-18 07:36:21.496] [INFO] Normal Mode (Non-Bulk Processing) is enabled to Read data
+MANAGER> PETL_24007 [2024-09-18 07:36:21.496] Received request to stop session run.  Attempting to stop worker threads.
+DIRECTOR> TT_11184 [2024-09-18 07:36:21.498] Starting additional concurrent pipeline to build the lookup cache needed by Lookup transformation [LKP_LkpDimNbQuestion].
+DIRECTOR> TT_11203 [2024-09-18 07:36:21.498] Cancelled the additional pipeline previously started to build Lookup cache of [LKP_LkpDimNbQuestion]. The current concurrent source set did not use the cache.
+READER_1_2_1> SDKS_38401 [2024-09-18 07:36:21.696] Notified plug-in that DTM has requested stop.
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-09-18 07:36:21.697] [WARNING] Internal Error: Adapter InitDataSession failed
+READER_1_2_1> CMN_1761 [2024-09-18 07:36:21.697] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+READER_1_2_1> AMAZONREDSHIFT_10000 [2024-09-18 07:36:21.697] [ERROR] Error occured while trying to initialize CCI Data Adapter com.informatica.cci.runtime.internal.utils.impl.CExceptionImpl: Internal Error: Adapter InitDataSession failed
+READER_1_2_1> CMN_1761 [2024-09-18 07:36:21.697] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+READER_1_2_1> CONNECTOR_10000 [2024-09-18 07:36:21.697] [ERROR] Error occured while initializing reader partition driver for Transformation - SRC_HiveDimPartyRef | Connector Name - AmazonRedshift - Internal Error: Adapter InitDataSession failed
+READER_1_2_1> CMN_1761 [2024-09-18 07:36:21.698] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+READER_1_2_1> JAVA PLUGIN_1762 [2024-09-18 07:36:21.698] [ERROR] com.informatica.cci.cloud.client.impl.CCIClientExceptionImpl: Internal Error: Adapter InitDataSession failed
+READER_1_2_1> CMN_1761 [2024-09-18 07:36:21.698] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+READER_1_2_1> JAVA PLUGIN_1762 [2024-09-18 07:36:21.698] [ERROR] 	at com.informatica.cci.cloud.client.impl.CCIRuntimeDataClientImpl.initDataAdapter(CCIRuntimeDataClientImpl.java:195)
+READER_1_2_1> CMN_1761 [2024-09-18 07:36:21.698] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+READER_1_2_1> JAVA PLUGIN_1762 [2024-09-18 07:36:21.698] [ERROR] 	at com.informatica.cloud.api.adapter.cci.reader.CCIRdrPartitionDriver.initialize(CCIRdrPartitionDriver.java:219)
+READER_1_2_1> CMN_1761 [2024-09-18 07:36:21.698] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+READER_1_2_1> JAVA PLUGIN_1762 [2024-09-18 07:36:21.698] [ERROR] 	at com.informatica.cloud.api.adapter.cci.reader.CCIRdrPartitionDriver.init(CCIRdrPartitionDriver.java:105)
+READER_1_2_1> CMN_1761 [2024-09-18 07:36:21.698] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+READER_1_2_1> JAVA PLUGIN_1762 [2024-09-18 07:36:21.698] [ERROR] Caused by: com.informatica.cci.runtime.internal.utils.impl.CExceptionImpl: Internal Error: Adapter InitDataSession failed
+READER_1_2_1> CMN_1761 [2024-09-18 07:36:21.698] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+READER_1_2_1> JAVA PLUGIN_1762 [2024-09-18 07:36:21.698] [ERROR] 	at com.informatica.cci.runtime.impl.CDataAdapterImpl.init(CDataAdapterImpl.java:135)
+READER_1_2_1> CMN_1761 [2024-09-18 07:36:21.698] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+READER_1_2_1> JAVA PLUGIN_1762 [2024-09-18 07:36:21.698] [ERROR] 	at com.informatica.cci.cloud.client.impl.CCIRuntimeDataClientImpl.initDataAdapter(CCIRuntimeDataClientImpl.java:189)
+READER_1_2_1> CMN_1761 [2024-09-18 07:36:21.698] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+READER_1_2_1> JAVA PLUGIN_1762 [2024-09-18 07:36:21.698] [ERROR] 	... 2 more
+READER_1_2_1> CMN_1761 [2024-09-18 07:36:21.698] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+READER_1_2_1> JAVA PLUGIN_1762 [2024-09-18 07:36:21.698] [ERROR] com.informatica.powercenter.sdk.SDKException: Internal Error: Adapter InitDataSession failed
+READER_1_2_1> CMN_1761 [2024-09-18 07:36:21.698] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+READER_1_2_1> JAVA PLUGIN_1762 [2024-09-18 07:36:21.698] [ERROR] 	at com.informatica.cloud.api.adapter.cci.reader.CCIRdrPartitionDriver.initialize(CCIRdrPartitionDriver.java:230)
+READER_1_2_1> CMN_1761 [2024-09-18 07:36:21.698] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+READER_1_2_1> JAVA PLUGIN_1762 [2024-09-18 07:36:21.698] [ERROR] 	at com.informatica.cloud.api.adapter.cci.reader.CCIRdrPartitionDriver.init(CCIRdrPartitionDriver.java:105)
+READER_1_2_1> CMN_1761 [2024-09-18 07:36:21.698] Timestamp Event: [Wed Sep 18 07:36:21 2024]
+READER_1_2_1> SDKS_38200 [2024-09-18 07:36:21.698] Partition-level [SRC_HiveDimPartyRef]: Plug-in #451600 failed in init().
+MANAGER> PETL_24031 [2024-09-18 07:36:21.721] 
+***** RUN INFO FOR TGT LOAD ORDER GROUP [1], CONCURRENT SET [1] *****
+Thread [READER_1_1_1] created for [the read stage] of partition point [SRC_HiveDimNbApplPartyRole] has completed. The total run time was insufficient for any meaningful statistics.
+Thread [TRANSF_1_1_1] created for [the transformation stage] of partition point [SRC_HiveDimNbApplPartyRole] has completed. The total run time was insufficient for any meaningful statistics.
+Thread [READER_1_2_1] created for [the read stage] of partition point [SRC_HiveDimPartyRef] has completed. The total run time was insufficient for any meaningful statistics.
+
+MAPPING> CMN_1793 [2024-09-18 07:36:21.778] The index cache size that would hold [0] rows in the lookup table for [LKP_LkpDimNbQuestion], in memory, is [0] bytes
+MAPPING> CMN_1792 [2024-09-18 07:36:21.778] The data cache size that would hold [0] rows in the lookup table for [LKP_LkpDimNbQuestion], in memory, is [0] bytes
+MAPPING> CMN_1793 [2024-09-18 07:36:21.778] The index cache size that would hold [0] rows in the lookup table for [LKP_LkpValipProduct], in memory, is [0] bytes
+MAPPING> CMN_1792 [2024-09-18 07:36:21.778] The data cache size that would hold [0] rows in the lookup table for [LKP_LkpValipProduct], in memory, is [0] bytes
+MANAGER> PETL_24005 [2024-09-18 07:36:21.830] Starting post-session tasks. : (Wed Sep 18 07:36:21 2024)
+MANAGER> PETL_24007 [2024-09-18 07:36:21.830] Received request to stop session run.  Attempting to stop worker threads.
+POST-SESS> PETL_24091 [2024-09-18 07:36:21.830] Thread [POST-SESS] has the ID [11].
+MANAGER> PETL_24007 [2024-09-18 07:36:21.830] Received request to stop session run.  Attempting to stop worker threads.
+MANAGER> PETL_24029 [2024-09-18 07:36:21.831] Post-session task completed successfully. : (Wed Sep 18 07:36:21 2024)
+MAPPING> SDKS_38510 [2024-09-18 07:36:21.832] SDK target and group deinitialized with status [-1].
+MAPPING> SDKS_38025 [2024-09-18 07:36:21.832] Plug-in 451600 deinitialized and unloaded with status [-1].
+MAPPING> SDKS_38019 [2024-09-18 07:36:21.832] Writer SDK plug-ins deinitialized with status [-1].
+MAPPING> SDKS_38025 [2024-09-18 07:36:21.833] Plug-in 451600 deinitialized and unloaded with status [-1].
+MAPPING> SDKS_38018 [2024-09-18 07:36:21.833] Reader SDK plug-ins deinitialized with status [-1].
+MAPPING> TE_7216 [2024-09-18 07:36:21.842] Deleting cache files [PMLKUP-1868368246_33_0L64] for transformation [LKP_LkpValipProduct].
+MAPPING> TE_7216 [2024-09-18 07:36:21.884] Deleting cache files [PMLKUP-1868368246_46_0L64] for transformation [LKP_LkpDimNbQuestion].
+MAPPING> TM_6018 [2024-09-18 07:36:21.917] The session completed with [0] row transformation errors. 
+MANAGER> PETL_24002 [2024-09-18 07:36:22.806] Parallel Pipeline Engine finished.
+DIRECTOR> PETL_24013 [2024-09-18 07:36:22.806] Session run completed with failure.
+DIRECTOR> TM_6022 [2024-09-18 07:36:22.806] 
+
+SESSION LOAD SUMMARY
+================================================
+
+DIRECTOR> TM_6252 [2024-09-18 07:36:22.806] Source Load Summary.
+DIRECTOR> CMN_1740 [2024-09-18 07:36:22.806] Table: [SRC_HiveDimNbApplPartyRole] (Instance Name: [SRC_HiveDimNbApplPartyRole] Instance UI Name: [SRC_HiveDimNbApplPartyRole])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-09-18 07:36:22.806] Table: [SRC_HiveDimPartyRef] (Instance Name: [SRC_HiveDimPartyRef] Instance UI Name: [SRC_HiveDimPartyRef])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-09-18 07:36:22.807] Table: [SRC_HiveDimNbApplicantRef] (Instance Name: [SRC_HiveDimNbApplicantRef] Instance UI Name: [SRC_HiveDimNbApplicantRef])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-09-18 07:36:22.807] Table: [SRC_fchdfs_SrcRecs1] (Instance Name: [SRC_fchdfs_SrcRecs1] Instance UI Name: [SRC_fchdfs_SrcRecs1])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-09-18 07:36:22.807] Table: [SRC_HiveValidProdcutPlanRecs] (Instance Name: [SRC_HiveValidProdcutPlanRecs] Instance UI Name: [SRC_HiveValidProdcutPlanRecs])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> TM_6253 [2024-09-18 07:36:22.807] Target Load Summary.
+DIRECTOR> CMN_1740 [2024-09-18 07:36:22.807] Table: [fact_nb_leisure_srcrecs21] (Instance Name: [fact_nb_leisure_srcrecs21] Instance UI Name: [TGT_fchdfsAlipSrcRecs21])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> CMN_1740 [2024-09-18 07:36:22.807] Table: [fact_nb_leisure_srcrecs22] (Instance Name: [fact_nb_leisure_srcrecs22] Instance UI Name: [TGT_fchdfsAlipSrcRecs22])
+	 Output Rows [0], Affected Rows [0], Applied Rows [0], Rejected Rows [0]
+DIRECTOR> TM_6023 [2024-09-18 07:36:22.807] 
+===================================================
+
+DIRECTOR> TM_6020 [2024-09-18 07:36:22.807] Session [s_mtt_01CAKB0Z000000000CTS] completed at [Wed Sep 18 07:36:22 2024].
