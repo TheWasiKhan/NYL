@@ -1,2 +1,13 @@
-PzBrgNbPegaAuditTransRule
-PzBrgNbPegaAuditTransRuleCDC	brg_nb_pega_audit_trans_rule
+Subject: IDMS Support for Double Data Type Length (15 Characters)
+ 
+HI Gokul/sreeni,
+ 
+Currently, the IDMS system supports the double data type with a maximum length of 15 characters.
+However, in DataStage, the configuration for this data type allows for lengths greater than 15 characters.
+As a result, when comparing data between N1 and Conv, 
+values that exceed the 15-character limit are being truncated, leading to discrepancies and mismatches.
+We would appreciate your assistance in addressing this issue to ensure consistent data handling across the systems.
+ 
+Please let me know if you require any further information or clarification regarding this issue.
+ 
+Thank you.
