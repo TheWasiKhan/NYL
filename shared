@@ -1,1 +1,20 @@
 nyl-datawarehouse-qa-rs-temp-20230124213253646500000003/rs-idmc-temp/
+
+S3Bucket: nyl-datawarehouse-qa-rs-temp-20230124213253646500000003/rs-idmc-temp/
+
+CachePath: /data/EDM_NB/Cache/
+
+
+
+ERROR CCITaskUtils - Unload/Copy command failed with error: ERROR: Specified unload destination on S3 is not empty. Consider using a different bucket / prefix, manually removing the target files in S3, or using the ALLOWOVERWRITE option.
+  Detail: 
+  -----------------------------------------------
+  error:  Specified unload destination on S3 is not empty. Consider using a different bucket / prefix, manually removing the target files in S3, or using the ALLOWOVERWRITE option.
+  code:      8001
+  context:   Path prefix: s3://nyl-datawarehouse-qa-rs-temp-20230124213253646500000003/rs-idmc-temp/6f443290-5377-4616-a285-bb1c28789135001731342617747243268744910301041869920/brg_nb_pega_audit_trans_rule_audittrans1_*
+
+
+
+
+
+Need to clean up in S3
