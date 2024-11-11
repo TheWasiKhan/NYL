@@ -1,7 +1,1 @@
-the Timestamp column, as mentioned below. It appears that the column contains extra spaces, 
-which is causing discrepancies in the data. While the data from DS and IDMC is functioning as expected,
-these additional spaces are affecting the overall accuracy.
- 
-Could you kindly review this matter at your earliest convenience and take appropriate action to resolve the discrepancies?
- 
-Thank you for your attention to this issue. Please feel free to reach out if you need any further information.
+nyl-datawarehouse-qa-rs-temp-20230124213253646500000003/rs-idmc-temp/
